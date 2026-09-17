@@ -1,0 +1,22 @@
+{
+  "id": "gen-fenced-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700100,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "Here is my assessment of the posting.\n\n```json\n{\n  \"score\": 54,\n  \"likelihood\": 71,\n  \"verdict\": \"maybe\",\n  \"hardViolations\": [],\n  \"softNotes\": [{\"constraintId\": \"interest\", \"satisfied\": false, \"note\": \"Mostly internal CRUD tooling.\"}],\n  \"strengths\": [\"React and TypeScript match the resume\"],\n  \"gaps\": [\"Little systems depth\"],\n  \"summary\": \"Reasonable fallback role. The work is routine but the stack matches. Extra sentence that should be trimmed away.\"\n}\n```\n\nLet me know if you want a different weighting."
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2100,
+    "completion_tokens": 240,
+    "total_tokens": 2340,
+    "cost": 0.0002175
+  }
+}

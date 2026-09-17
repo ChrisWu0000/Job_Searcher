@@ -1,0 +1,22 @@
+{
+  "id": "gen-good-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700000,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"score\":88,\"likelihood\":62,\"verdict\":\"apply\",\"hardViolations\":[],\"softNotes\":[{\"constraintId\":\"pay\",\"satisfied\":true,\"note\":\"Pays 65 CAD per hour, well above the floor.\"},{\"constraintId\":\"interest\",\"satisfied\":true,\"note\":\"Distributed systems work on the ingestion pipeline.\"},{\"constraintId\":\"company\",\"satisfied\":true,\"note\":\"Well funded observability company.\"}],\"strengths\":[\"Backend distributed systems\",\"Strong pay\"],\"gaps\":[\"No Go experience listed\"],\"summary\":\"Strong backend internship with pay well above the floor. The Go requirement is the only real gap.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2450,
+    "completion_tokens": 260,
+    "total_tokens": 2710,
+    "cost": 0.00025375
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gen-tailoring-fabricated-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700500,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"entries\":[{\"experienceId\":\"datadog\",\"bullets\":[{\"bulletId\":\"dd-2\",\"text\":\"Cut p95 latency by 60% with a Redis cache.\"},{\"bulletId\":\"dd-1\",\"text\":null}]}],\"skills\":[{\"groupId\":\"languages\",\"items\":[\"Go\"]}],\"rationale\":\"Backend role, so the Datadog entry leads.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3100,
+    "completion_tokens": 190,
+    "total_tokens": 3290,
+    "cost": 0.00027
+  }
+}

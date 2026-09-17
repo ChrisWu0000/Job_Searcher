@@ -1,0 +1,22 @@
+{
+  "id": "gen-tailoring-good-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700400,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"entries\":[{\"experienceId\":\"datadog\",\"bullets\":[{\"bulletId\":\"dd-2\",\"text\":\"Cut p95 latency 40% by tuning PostgreSQL queries.\"},{\"bulletId\":\"dd-1\",\"text\":null}]},{\"experienceId\":\"waterloo\",\"bullets\":[{\"bulletId\":\"uw-1\",\"text\":null}]},{\"experienceId\":\"ghost\",\"bullets\":[{\"bulletId\":\"nope\",\"text\":\"Invented work.\"}]}],\"skills\":[{\"groupId\":\"languages\",\"items\":[\"go\",\"TypeScript\",\"Rust\"]},{\"groupId\":\"ghost-group\",\"items\":[\"Anything\"]}],\"rationale\":\"The posting is a Go backend role. Datadog covers the ingestion pipeline work. Waterloo covers the distributed systems coursework. This sentence should be trimmed away.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3200,
+    "completion_tokens": 310,
+    "total_tokens": 3510,
+    "cost": 0.0003175
+  }
+}

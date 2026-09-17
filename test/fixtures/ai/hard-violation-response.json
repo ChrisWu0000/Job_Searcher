@@ -1,0 +1,22 @@
+{
+  "id": "gen-hard-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700300,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"score\":71,\"likelihood\":55,\"verdict\":\"maybe\",\"hardViolations\":[\"no-hw\",\"made-up-id\"],\"softNotes\":[{\"constraintId\":\"interest\",\"satisfied\":true,\"note\":\"PCB bring-up is interesting but not software.\"},{\"constraintId\":\"ghost\",\"satisfied\":false,\"note\":\"Unknown constraint the model invented.\"}],\"strengths\":[\"Embedded C exposure\"],\"gaps\":[\"Not a software engineering role\"],\"summary\":\"Hardware bring-up role at a robotics company. It violates the no-hardware constraint. This third sentence should be trimmed.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1980,
+    "completion_tokens": 190,
+    "total_tokens": 2170,
+    "cost": 0.000196
+  }
+}

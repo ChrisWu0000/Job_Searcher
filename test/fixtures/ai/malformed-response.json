@@ -1,0 +1,22 @@
+{
+  "id": "gen-malformed-1",
+  "model": "z-ai/glm-5.3-flash",
+  "object": "chat.completion",
+  "created": 1788700200,
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"score\":\"very high\",\"verdict\":\"apply\",\"hardViolations\":[],\"strengths\":[],\"gaps\":[]}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2050,
+    "completion_tokens": 40,
+    "total_tokens": 2090,
+    "cost": 0.00016375
+  }
+}
