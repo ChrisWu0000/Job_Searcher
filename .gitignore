@@ -1,9 +1,0 @@
-node_modules
-.output
-.wxt
-dist
-*.log
-.env*
-stats.html
-
-public/resumes/
