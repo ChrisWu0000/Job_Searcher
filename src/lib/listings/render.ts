@@ -95,7 +95,7 @@ export function renderListings(
     }
   }
 
-  const counts: ListingCounts = { byTerm: { "winter-2027": 0, "summer-2027": 0 } };
+  const counts: ListingCounts = { byTerm: { "winter-2027": 0, "summer-2027": 0, later: 0 } };
   const sections: string[] = [];
   for (const term of jobTerms) {
     const bucket = byTerm.get(term) ?? new Map<JobCategory, Listing[]>();
@@ -113,9 +113,9 @@ export function renderListings(
 
   const header = [
     "# JobScope: 2027 Internship Listings",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027**, gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
-    `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]}`,
-    "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Sources](#sources)",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
+    `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
+    "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)",
   ].join("\n\n");
 
   const sourceRows = statuses.map(

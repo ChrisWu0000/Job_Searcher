@@ -58,5 +58,5 @@ writeFileSync(readmeUrl, markdown);
 mkdirSync(dataDir, { recursive: true });
 writeFileSync(new URL("listings.csv", dataDir), renderCsv(all));
 console.log(
-  `README.md updated: ${counts.byTerm["winter-2027"]} winter, ${counts.byTerm["summer-2027"]} summer`,
+  `README.md updated: ${counts.byTerm["winter-2027"]} winter, ${counts.byTerm["summer-2027"]} summer, ${counts.byTerm.later} later`,
 );

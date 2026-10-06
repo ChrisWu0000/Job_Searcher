@@ -1,22 +1,25 @@
 import type { Job } from "@/types/job";
 
-export const jobTerms = ["winter-2027", "summer-2027"] as const;
+export const jobTerms = ["winter-2027", "summer-2027", "later"] as const;
 
 export type JobTerm = (typeof jobTerms)[number];
 
 export const jobTermLabels: Record<JobTerm, string> = {
   "winter-2027": "Winter 2027",
   "summer-2027": "Summer 2027",
+  later: "Later terms",
 };
 
 const termPatterns: Record<JobTerm, RegExp> = {
   "winter-2027": /\b(?:winter|january)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b/i,
   "summer-2027": /\b(?:summer|may|june|july)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b/i,
+  later:
+    /\b(?:fall|autumn|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b|\b(?:winter|spring|summer|fall|autumn|january|february|march|april|may|june|july|august|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')(?:2[89]|3\d)\b/i,
 };
 
 const internshipTitle = /\b(?:intern(?:ship)?s?|co[ -]?op|student)\b/i;
 const otherTermPattern =
-  /\b(?:winter|spring|summer|fall|autumn|january|february|march|april|may|june|july|august|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')(?:2[0-6]|2[89])\b|\b(?:fall|autumn|spring|august|september|october|november|december|february|march|april)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b/i;
+  /\b(?:winter|spring|summer|fall|autumn|january|february|march|april|may|june|july|august|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')2[0-6]\b|\b(?:spring|february|march|april)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b/i;
 
 export function classifyJobTerms(job: Job): JobTerm[] {
   const explicit = (job.terms ?? []).join("\n");
@@ -29,5 +32,5 @@ export function classifyJobTerms(job: Job): JobTerm[] {
   const dated = jobTerms.filter((term) => termPatterns[term].test(text));
   if (dated.length > 0) return dated;
   if (!internshipTitle.test(job.title) || otherTermPattern.test(`${job.title}\n${text}`)) return [];
-  return [...jobTerms];
+  return ["winter-2027", "summer-2027"];
 }

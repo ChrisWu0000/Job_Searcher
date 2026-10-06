@@ -1,10 +1,10 @@
 # JobScope: 2027 Internship Listings
 
-Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027**, gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.
+Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.
 
-Last updated: 2026-10-06 | Winter 2027: 195 | Summer 2027: 770
+Last updated: 2026-10-06 | Winter 2027: 195 | Summer 2027: 770 | Later terms: 0
 
-Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Sources](#sources)
+Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)
 
 ## Winter 2027
 
@@ -1277,6 +1277,28 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Sources](#
 | Rippling | Machine Learning Software Engineer Intern - Summer 2027 | SF |  | 2026-09-22 | [Apply](https://ats.rippling.com/rippling/jobs/f9de04c3-e2c5-41f9-8e46-a0684707f89d) |
 | Rippling | Software Engineer Intern - Backend Focused | Seattle, WA, SF, NYC | 10,500 - 10,500 USD per month | 2026-09-22 | [Apply](https://ats.rippling.com/rippling/jobs/a07e4e46-3721-4934-b57b-0d58412e22ba) |
 | Two Sigma | Hardware Engineering Intern | NYC | $3,800/Week | 2026-09-22 | [Apply](https://twosigma.avature.net/careers/JobDetail/14289) |
+
+## Later terms
+
+### Software engineering (0)
+
+_No listings right now._
+
+### Data science (0)
+
+_No listings right now._
+
+### Cyber security (0)
+
+_No listings right now._
+
+### Hardware engineering (0)
+
+_No listings right now._
+
+### Fintech (0)
+
+_No listings right now._
 
 ## Sources
 

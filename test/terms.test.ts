@@ -42,6 +42,15 @@ describe("classifyJobTerms", () => {
     ).toEqual(["summer-2027"]);
   });
 
+  it("keeps later terms in their own section", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern", summary: "Starts Fall 2027." }),
+      ),
+    ).toEqual(["later"]);
+    expect(classifyJobTerms(makeJob("j", { terms: ["Summer 2028"] }))).toEqual(["later"]);
+  });
+
   it("skips internships for other terms", () => {
     expect(
       classifyJobTerms(
