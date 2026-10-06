@@ -17,8 +17,8 @@ There is no JobScope backend or account. Job data is stored in IndexedDB in your
 
 ## Sources and coverage
 
-JobScope currently reads public structured listing feeds from SimplifyJobs, vanshb03, zshah101, and
-aprameyak. It discovers supported boards from HTTPS job links in those feeds and uses public listings
+JobScope currently reads public structured listing feeds from SimplifyJobs, zshah101, and aprameyak.
+It discovers supported boards from HTTPS job links in those feeds and uses public listings
 APIs for Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, and Workday.
 
 This is a curated, best-effort source set, not a complete scraper for every website in a report or a

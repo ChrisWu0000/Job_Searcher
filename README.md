@@ -1923,7 +1923,6 @@ Nothing scrapes automatically. To refresh a source, open the **Actions** tab, ch
 | Source | Last scraped | Listings |
 | --- | --- | --- |
 | SimplifyJobs Summer 2027 | 2026-10-06 | 2275 |
-| vanshb03 Summer 2027 | 2026-10-06 | 0 |
 | zshah101 internships | 2026-10-06 | 736 |
 | aprameyak tech jobs | 2026-10-06 | 1733 |
 | Ashby boards | 2026-10-06 | 272 |

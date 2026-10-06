@@ -20,12 +20,6 @@ export const publicJobFeeds: PublicJobFeed[] = [
     parse: asArray,
   },
   {
-    id: "vanshb03",
-    label: "vanshb03 Summer 2027",
-    url: `${githubRaw}/vanshb03/Summer2027-Internships/main/.github/scripts/listings.json`,
-    parse: asArray,
-  },
-  {
     id: "zshah101",
     label: "zshah101 internships",
     url: `${githubRaw}/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships/main/data/jobs.json`,

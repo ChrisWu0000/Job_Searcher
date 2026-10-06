@@ -70,9 +70,9 @@ export default function SourceSyncPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-muted-foreground text-sm">
-            Sources include SimplifyJobs, vanshb03, zshah101, and aprameyak. Discovered boards use
-            public Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, and Workday
-            job APIs. Private, markdown-only, and unresolved sources are not polled.
+            Sources include SimplifyJobs, zshah101, and aprameyak. Discovered boards use public
+            Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, and Workday job
+            APIs. Private, markdown-only, and unresolved sources are not polled.
           </p>
           <RunnerStatus
             title="Source sync"
