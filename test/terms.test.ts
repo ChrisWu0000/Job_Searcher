@@ -23,7 +23,30 @@ describe("classifyJobTerms", () => {
 
   it("does not treat dates as terms", () => {
     expect(
-      classifyJobTerms(makeJob("j", { title: "Intern", summary: "Apply by May 27." })),
+      classifyJobTerms(makeJob("j", { title: "Engineer", summary: "Apply by May 27." })),
+    ).toEqual([]);
+  });
+
+  it("puts internships with no start date in both terms", () => {
+    expect(classifyJobTerms(makeJob("j", { title: "Software Engineer Intern" }))).toEqual([
+      "winter-2027",
+      "summer-2027",
+    ]);
+  });
+
+  it("uses the start date from the description", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern", summary: "Starts May 2027." }),
+      ),
+    ).toEqual(["summer-2027"]);
+  });
+
+  it("skips internships for other terms", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern", summary: "Fall 2026 term." }),
+      ),
     ).toEqual([]);
   });
 });
