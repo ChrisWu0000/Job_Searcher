@@ -25,7 +25,12 @@ if (target && target !== "render") {
   mkdirSync(dataDir, { recursive: true });
   for (const id of ids) {
     const { listings, failures } = await scrapeSource(id, (url, init) => fetch(url, init));
-    for (const failure of failures) console.warn(`warning: ${failure}`);
+    const missing = failures.filter((failure) => failure.endsWith("HTTP 404 Not Found"));
+    for (const failure of failures) {
+      if (!missing.includes(failure)) console.warn(`warning: ${failure}`);
+    }
+    if (missing.length > 0)
+      console.log(`${id}: skipped ${missing.length} boards that no longer exist (404)`);
     const previous = load(id);
     if (listings.length === 0 && previous) {
       console.warn(`${id}: nothing found, keeping previous results`);
