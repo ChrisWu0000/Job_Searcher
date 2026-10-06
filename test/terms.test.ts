@@ -5,11 +5,10 @@ import { makeJob } from "./helpers/jobs";
 
 describe("classifyJobTerms", () => {
   it("uses explicit feed terms", () => {
-    expect(classifyJobTerms(makeJob("j", { terms: ["Summer 2027", "Winter 2027"] }))).toEqual([
-      "winter-2027",
-      "summer-2027",
-    ]);
-    expect(classifyJobTerms(makeJob("j", { terms: ["Summer 2026"] }))).toEqual([]);
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Intern", terms: ["Summer 2027", "Winter 2027"] })),
+    ).toEqual(["winter-2027", "summer-2027"]);
+    expect(classifyJobTerms(makeJob("j", { title: "Intern", terms: ["Summer 2026"] }))).toEqual([]);
   });
 
   it("falls back to the title and description", () => {
@@ -24,6 +23,20 @@ describe("classifyJobTerms", () => {
   it("does not treat dates as terms", () => {
     expect(
       classifyJobTerms(makeJob("j", { title: "Engineer", summary: "Apply by May 27." })),
+    ).toEqual([]);
+  });
+
+  it("excludes full-time roles even when they mention an internship term", () => {
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Software Engineer", terms: ["Summer 2027"] })),
+    ).toEqual([]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Software Engineer",
+          summary: "Starts May 2027. Prior internship required.",
+        }),
+      ),
     ).toEqual([]);
   });
 
@@ -48,7 +61,9 @@ describe("classifyJobTerms", () => {
         makeJob("j", { title: "Software Engineer Intern", summary: "Starts Fall 2027." }),
       ),
     ).toEqual(["later"]);
-    expect(classifyJobTerms(makeJob("j", { terms: ["Summer 2028"] }))).toEqual(["later"]);
+    expect(classifyJobTerms(makeJob("j", { title: "Intern", terms: ["Summer 2028"] }))).toEqual([
+      "later",
+    ]);
   });
 
   it("skips internships for other terms", () => {

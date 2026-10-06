@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { type Listing, listingSources, scrapeSource } from "../src/lib/listings/collect";
 import { renderCsv, renderListings, type SourceStatus } from "../src/lib/listings/render";
+import { isInternshipTitle } from "../src/lib/ranking/terms";
 
 interface StoredSource {
   scrapedAt: string;
@@ -46,10 +47,14 @@ const statuses: SourceStatus[] = [];
 const all: Listing[] = [];
 for (const source of listingSources) {
   const stored = load(source.id);
-  all.push(...(stored?.listings ?? []));
+  const listings = (stored?.listings ?? []).filter((listing) => isInternshipTitle(listing.title));
+  if (stored && listings.length !== stored.listings.length) {
+    writeFileSync(fileFor(source.id), `${JSON.stringify({ ...stored, listings })}\n`);
+  }
+  all.push(...listings);
   statuses.push({
     source,
-    count: stored?.listings.length ?? 0,
+    count: listings.length,
     ...(stored ? { scrapedAt: stored.scrapedAt } : {}),
   });
 }

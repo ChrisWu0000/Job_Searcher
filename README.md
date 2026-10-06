@@ -1,14 +1,14 @@
 # JobScope: 2027 Internship Listings
 
-Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.
+Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.
 
-Last updated: 2026-10-06 | Winter 2027: 490 | Summer 2027: 1076 | Later terms: 37
+Last updated: 2026-10-06 | Winter 2027: 459 | Summer 2027: 1039 | Later terms: 27
 
 Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)
 
 ## Winter 2027
 
-### Software engineering (160)
+### Software engineering (154)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -64,7 +64,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | autodesk | Intern, Software Engineer in Test [AEC Autocad Engineering] | Singapore, SGP |  | 2026-10-05 | [Apply](https://autodesk.wd1.myworkdayjobs.com/job/Singapore-SGP/Intern--Software-Engineer-in-Test--AEC-Autocad-Engineering-_26WD101362) |
 | Arc Boat Company | Mechanical Engineering Intern - Powertrain | Torrance, CA | $36 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/arcboatcompany/jobs/5442958008) |
 | solink | Software Engineer Co-op, Apps | Ottawa Office | CAD 55000-68000/year | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/solink/c973029a-83fa-449e-b4a9-0a1514165430) |
-| incident | Sales Academy January 2027 Cohort | San Francisco | USD 75000/year | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/incident/0a008c9e-b6d1-4a21-9aee-8d82d547a28e) |
 | Lumentum | Embedded Software Developer Co-op - Optical Circuit Switch | Ottawa, ON, Canada |  | 2026-10-05 | [Apply](https://lumentum.wd5.myworkdayjobs.com/LITE/job/Canada---Ottawa-Bill-Leathem/Embedded-Software-Developer-Co-op--Optical-Circuit-Switch-_20261320) |
 | Royal Bank of Canada | AI Developer Intern - Grm - Innovation & AI Center of Excellence | Toronto, ON, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter---GRM--AI-Developer-Intern---Innovation---AI-Center-of-Excellence--4-Months-_R-0000188001-1) |
 | Royal Bank of Canada | AI Developer Intern - Innovation & AI Center of Excellence | Toronto, ON, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/rbcglobal1/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter---GRM--AI-Developer-Intern---Innovation---AI-Center-of-Excellence--4-Months-_R-0000188001) |
@@ -72,8 +71,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | clearwateranalytics | Software Development Intern | Office - London |  | 2026-10-02 | [Apply](https://clearwateranalytics.wd1.myworkdayjobs.com/job/Office---London/Software-Development-Intern_R12097) |
 | clearwateranalytics | Software Development Intern | Office - London |  | 2026-10-02 | [Apply](https://clearwateranalytics.wd1.myworkdayjobs.com/job/Office---London/Software-Development-Intern_R12096) |
 | Arc Boat Company | Software Engineering Intern | Torrance, CA | $42 per hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/arcboatcompany/jobs/5442881008) |
-| harvey | Software Engineer, New Grad (2027) | New York | $165,000-$181,500 | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/4d8dc9ba-eb86-4d88-af7d-65d2fdaf3fdc) |
-| harvey | Software Engineer, New Grad (2027) | San Francisco | $165,000-$181,500 | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/b0996df6-6b6e-42be-a4f9-0084536068f5) |
 | solink | Software Engineer Co-op, Agents | Canada | CAD 55000-68000/year | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/solink/8493613d-ea47-4182-ac0b-f5f24d11f49e) |
 | harvey | Software Engineering Intern (Winter 2027) | Toronto | $45/hr | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/d40e15aa-2351-4be8-ac8f-1faf60bfcdbf) |
 | Kodiak | Winter 2027 Intern, Security | Mountain View, CA | $10,000 - $10,000 USD | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/kodiak/jobs/4430607009) |
@@ -82,7 +79,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | upbound | Sales and Web Lead Management Intern | Plano, TX |  | 2026-10-01 | [Apply](https://upbound.wd501.myworkdayjobs.com/job/Plano-TX/Sales-and-Web-Lead-Management-Intern_R-100785) |
 | rb | SCS - Community Banking and Applications Intern - 2027 | Cleveland, OH |  | 2026-10-01 | [Apply](https://rb.wd5.myworkdayjobs.com/job/Cleveland-OH/SCS---Community-Banking-and-Applications-Intern---2027_R-0000033638) |
 | costar | Embedded Software Engineering Intern | Sunnyvale (US) |  | 2026-10-01 | [Apply](https://costar.wd1.myworkdayjobs.com/job/Sunnyvale-US/Embedded-Software-Engineering-Intern_R39950) |
-| sunlife | Student, Associate Software Engineer (Winter 2027) | 2 Locations |  | 2026-10-01 | [Apply](https://sunlife.wd3.myworkdayjobs.com/job/Toronto-Ontario/Student--Associate-Software-Engineer--Winter-2027-_JR00128318) |
 | autodesk | Software Development Internship (Winter 2027) | Toronto, ON, CAN |  | 2026-10-01 | [Apply](https://autodesk.wd1.myworkdayjobs.com/job/Toronto-ON-CAN/Software-Development-Internship--Winter-2027-_26WD101435) |
 | Gas South | Software Engineering Intern | Atlanta, Georgia | $18.00 to $22.00/hourly | 2026-10-01 | [Apply](https://job-boards.greenhouse.io/gassouth/jobs/8247622) |
 | exegy | Software Automation Developer Intern | Montreal |  | 2026-10-01 | [Apply](https://jobs.ashbyhq.com/exegy/1dfd3209-2714-4ccd-8fb9-779765151897) |
@@ -141,7 +137,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | AbbVie | 2027 Business Technology Solutions Intern - Data & Software Engineering (Undergraduate) | Irvine, CA, us |  | 2026-09-25 | [Apply](https://api.smartrecruiters.com/v1/companies/AbbVie/postings/3743990015684476) |
 | AbbVie | 2027 Business Technology Solutions Intern - Data & Software Engineering (Undergraduate) | North Chicago, IL, us |  | 2026-09-25 | [Apply](https://api.smartrecruiters.com/v1/companies/AbbVie/postings/3743990015679386) |
 | AbbVie | 2027 Business Technology Solutions Intern - Cloud Engineering (Undergraduate) | North Chicago, IL, us |  | 2026-09-25 | [Apply](https://api.smartrecruiters.com/v1/companies/AbbVie/postings/3743990015679346) |
-| Bluestaq US External | Software Engineering Residency Program | Colorado Springs | $5,000 annual | 2026-09-25 | [Apply](https://job-boards.greenhouse.io/bluestaq/jobs/4420189009) |
 | Greenheck Group | Application Developer Co-op | Schofield, WI |  | 2026-09-25 | [Apply](https://greenheckgroup.wd5.myworkdayjobs.com/external/job/Schofield-WI/Application-Developer-Co-op_JR104721) |
 | Rockwell Automation | AI Software Engineering Co-op - 6 months - 8 months | Mayfield Heights, OH, Milwaukee, WI |  | 2026-09-25 | [Apply](https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Mayfield-Heights-Ohio-United-States/Co-op--AI-Software-Engineering--6-8-months-_R26-6982) |
 | Rockwell Automation | AI Software Engineering Co-op - 6 months - 8 months | Mayfield Heights, OH, Milwaukee, WI |  | 2026-09-25 | [Apply](https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Co-op--AI-Software-Engineering--6-8-months-_R26-6982-1) |
@@ -153,7 +148,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | semtech | Applications Engineering Intern | CAN - Burlington, ON |  | 2026-09-24 | [Apply](https://semtech.wd1.myworkdayjobs.com/job/CAN---Burlington-ON/Applications-Engineering-Intern_REQ3616) |
 | Notion | Mobile Software Engineer Intern | SF, NYC |  | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/notion/2b587e66-deac-421a-a824-9415ba78b5a7/application?embed=true) |
 | notion | Software Engineer Intern, Mobile (Winter 2027) | San Francisco, California | $57/hr | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/notion/2b587e66-deac-421a-a824-9415ba78b5a7) |
-| Astranis | Software Developer, Network Software Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705617006) |
 | Astranis | Software Developer, Network Software Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705599006) |
 | reflect-orbital | Ground Software Engineering Intern | Hawthorne, CA | USD 27-31/hour | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952) |
 | EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008) |
@@ -173,7 +167,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | XPENG | 2027 Stanford Career Fair Internship Position | Santa Clara, CA |  | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/xpengmotors/jobs/8827791002) |
 | Astranis | Flight Software Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704595006) |
 
-### Data science (125)
+### Data science (122)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -205,7 +199,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | sterlingmets | Intern, Data Science | Citi Field – Queens, New York |  | 2026-10-05 | [Apply](https://sterlingmets.wd5.myworkdayjobs.com/job/Citi-Field--Queens-New-York/Intern--Data-Science_R1508) |
 | rbc | Winter 2027 Co-op Student – Data Analyst, Personal Banking ( 8 months) | TORONTO, Ontario, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/Winter-2027-Co-op-Student---Data-Analyst--Personal-Banking---8-months-_R-0000189535) |
 | cai | Data Analyst Intern | PA-CLIENT-STATE |  | 2026-10-05 | [Apply](https://cai.wd5.myworkdayjobs.com/job/PA-CLIENT-STATE/Data-Analyst-Intern_R8551) |
-| sunlife | Student, Data Analyst (Winter 2027) | 2 Locations |  | 2026-10-05 | [Apply](https://sunlife.wd3.myworkdayjobs.com/job/Toronto-Ontario/Student--Data-Analyst---Winter-2027-_JR00128365) |
 | marvell | Supply Chain Technology & Analytics Intern - Bachelor's Degree | Singapore |  | 2026-10-05 | [Apply](https://marvell.wd1.myworkdayjobs.com/job/Singapore/Supply-Chain-Technology---Analytics-Intern---Bachelor-s-Degree_2603845) |
 | brunswick | Mercury Marine: Power BI/Ops Analytics Co-op | Fond du Lac, WI |  | 2026-10-05 | [Apply](https://brunswick.wd1.myworkdayjobs.com/job/Fond-du-Lac-WI/Mercury-Marine--Power-BI-Ops-Analytics-Co-op_JR-051236) |
 | ATOMS Careers page | Machine Learning Engineer Intern | San Francisco, CA | $70.00 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/cssmerge/jobs/8869106002) |
@@ -221,7 +214,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Royal Bank of Canada | Data Analyst Co-op - Personal Banking | Toronto, ON, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/ExternalPrivatePostingStudents/job/TORONTO-Ontario-Canada/Winter-2027-Co-op-Student---Data-Analyst--Personal-Banking---8-months-_R-0000189535) |
 | SOTI | Data Scientist Intern | Mississauga, ON, Canada |  | 2026-10-05 | [Apply](https://soti.wd3.myworkdayjobs.com/SOTI-Next-Gen/job/Mississauga-Canada--Meadowvale-Office-HQ/Data-Scientist--Intern--Jan-2027-12-Months-_R10571) |
 | Sun Life | Data Analyst Intern | Toronto, ON, Canada, Waterloo, ON, Canada |  | 2026-10-05 | [Apply](https://sunlife.wd3.myworkdayjobs.com/en-US/Campus/job/Toronto-Ontario/Student--Data-Analyst---Winter-2027-_JR00128365) |
-| X Development | PhD Resident - AI for Science - Early Stage Project | Mountain View, CA | $109,000 - $157,000 | 2026-10-03 | [Apply](https://x.company/careers/8865083002?gh_jid=8865083002) |
 | Figure | Supply Chain Analytics Intern [Winter 2027] | San Jose, CA | $35 - $40/hr | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/figureai/jobs/4718858006) |
 | cboe | Quant & Data Analytics Intern | Chicago, IL |  | 2026-10-02 | [Apply](https://cboe.wd1.myworkdayjobs.com/job/Chicago-IL/Quant---Data-Analytics-Intern_R-4708) |
 | boseallaboutme | Data Science Co-Op (NLP & GenAI) | 3 Locations |  | 2026-10-02 | [Apply](https://boseallaboutme.wd503.myworkdayjobs.com/job/US-MA---Framingham/Data-Science-Co-Op--NLP---GenAI-_R29251) |
@@ -283,7 +275,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | barclays | 2027 Customer and Digital - Data and Analytics Summer Internship Programme London | Canary Wharf, 1 Churchill Place |  | 2026-09-25 | [Apply](https://barclays.wd3.myworkdayjobs.com/job/Canary-Wharf-1-Churchill-Place/XMLNAME-2027-Customer-and-Digital---Data-and-Analytics-Summer-Internship-Programme-London_JR-0000129280) |
 | barclays | 2027 Customer and Digital - Data and Analytics Summer Internship Programme Glasgow | Glasgow Campus |  | 2026-09-25 | [Apply](https://barclays.wd3.myworkdayjobs.com/job/Glasgow-Campus/XMLNAME-2027-Customer-and-Digital---Data-and-Analytics-Summer-Internship-Programme-Glasgow_JR-0000129278) |
 | rivianvw.tech | Embedded Systems Software Engineering Intern at UIUC Research Park (January- August 2027) | Champaign, Illinois | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e) |
-| Bluestaq US External | Software Engineering Residency Program | Colorado Springs | $5,000 annual | 2026-09-25 | [Apply](https://job-boards.greenhouse.io/bluestaq/jobs/4420189009) |
 | Intuitive Surgical | AI Research Intern | Sunnyvale, CA |  | 2026-09-25 | [Apply](https://jobs.smartrecruiters.com/Intuitive/744000151714759) |
 | radiancetech | 2027 Modeling, Analytics, & Simulation Sciences (MASS) Engineer Intern | Beavercreek, OH |  | 2026-09-24 | [Apply](https://radiancetech.wd12.myworkdayjobs.com/job/Beavercreek-OH/XMLNAME-2027-Modeling--Analytics----Simulation-Sciences--MASS--Engineer-Intern_HR102441) |
 | radiancetech | 2027 Modeling, Analytics, & Simulation Sciences (MASS) Engineer Intern | Beavercreek, OH |  | 2026-09-24 | [Apply](https://radiancetech.wd12.myworkdayjobs.com/job/Beavercreek-OH/XMLNAME-2027-Modeling--Analytics----Simulation-Sciences--MASS--Engineer-Intern_HR102440-1) |
@@ -303,7 +294,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Western Digital | Intern - Data Analytics | Biñan City, LAGUNA, ph |  | 2026-09-23 | [Apply](https://api.smartrecruiters.com/v1/companies/WesternDigital/postings/744000151235109) |
 | XPENG | 2027 Stanford Career Fair Internship Position | Santa Clara, CA |  | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/xpengmotors/jobs/8827791002) |
 
-### Cyber security (67)
+### Cyber security (46)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -318,9 +309,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Commure | Intern, HR Operations (Bangladesh) | Dhaka, Bangladesh |  | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/Commure/99c269fa-008a-4848-af20-c65201a7f552) |
 | solink | Software Engineer Co-op, Apps | Ottawa Office | CAD 55000-68000/year | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/solink/c973029a-83fa-449e-b4a9-0a1514165430) |
 | archgroup | Security Operations Intern | Greensboro, NC United States of America |  | 2026-10-02 | [Apply](https://archgroup.wd1.myworkdayjobs.com/job/Greensboro-NC-United-States-of-America/Security-Operations-Intern_R26_1016) |
-| nasdaq | Verafin - Information Security Student (January 2027) | 2 Locations |  | 2026-10-02 | [Apply](https://nasdaq.wd1.myworkdayjobs.com/job/Canada---St-Johns---Newfoundland--Labrador/Verafin---Information-Security-Student--January-2027-_R0027086) |
-| harvey | Software Engineer, New Grad (2027) | New York | $165,000-$181,500 | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/4d8dc9ba-eb86-4d88-af7d-65d2fdaf3fdc) |
-| harvey | Software Engineer, New Grad (2027) | San Francisco | $165,000-$181,500 | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/b0996df6-6b6e-42be-a4f9-0084536068f5) |
 | solink | Software Engineer Co-op, Agents | Canada | CAD 55000-68000/year | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/solink/8493613d-ea47-4182-ac0b-f5f24d11f49e) |
 | Kodiak | Winter 2027 Intern, Security | Mountain View, CA | $10,000 - $10,000 USD | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/kodiak/jobs/4430607009) |
 | TTP | Summer Internship - Cyber / AI Consultant - 2027 | Melbourn, England, gb |  | 2026-10-02 | [Apply](https://api.smartrecruiters.com/v1/companies/TTP1/postings/744000153148930) |
@@ -328,54 +316,36 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | aba | Intern, Cybersecurity Policy Analyst | US DC Main Office |  | 2026-10-01 | [Apply](https://aba.wd1.myworkdayjobs.com/job/US-DC-Main-Office/Intern--Cybersecurity-Policy-Analyst_R611) |
 | cai | Cybersecurity Analyst Intern | California |  | 2026-10-01 | [Apply](https://cai.wd5.myworkdayjobs.com/job/California/Cybersecurity-Analyst-Intern_R8488) |
 | geaerospace | Security Intern | Queretaro |  | 2026-10-01 | [Apply](https://geaerospace.wd5.myworkdayjobs.com/job/Queretaro/Security-Intern_R5040750) |
-| Astranis | Radiation Effects Associate Engineer (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704282006) |
 | Astranis | Radiation Effects Engineer Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704335006) |
-| Astranis | Automation & Controls Engineering Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718209006) |
 | Astranis | Automation & Controls Engineering Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718203006) |
-| Astranis | RF Hardware Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4707943006) |
 | Astranis | RF Hardware Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708417006) |
 | Wellmark, Inc. | Security Analyst Internship | Des Moines, IA, us |  | 2026-09-30 | [Apply](https://api.smartrecruiters.com/v1/companies/WellmarkInc/postings/744000152694203) |
 | upbound | Cybersecurity Intern | Plano, TX |  | 2026-09-28 | [Apply](https://upbound.wd501.myworkdayjobs.com/job/Plano-TX/Cybersecurity-Intern_R-100776) |
 | disney | Intern, Global Security Operations, Southeast Asia - Jan to Jun 2027 | Singapore, Singapore |  | 2026-09-27 | [Apply](https://disney.wd5.myworkdayjobs.com/job/Singapore-Singapore/Intern--Global-Security-Operations--Southeast-Asia---Jan-to-Jun-2027_10161153-1) |
 | Astranis | Electrical Integration Intern - Avionics (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704826006) |
-| Astranis | Electrical Integration Associate - Avionics (Winter 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704795006) |
-| Astranis | RF Validation Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716835006) |
 | talentmanagementsolution | Cyber Security Intern | Remote - USA |  | 2026-09-25 | [Apply](https://talentmanagementsolution.wd3.myworkdayjobs.com/job/Remote---USA/Cyber-Security-Intern_R52980-2) |
 | barclays | 2027 Technology Cyber and Security Summer Internship Programme Knutsford | Knutsford, Radbroke Hall |  | 2026-09-25 | [Apply](https://barclays.wd3.myworkdayjobs.com/job/Knutsford-Radbroke-Hall/XMLNAME-2027-Technology-Cyber-and-Security-Summer-Internship-Programme-Knutsford_JR-0000129173) |
 | rivianvw.tech | Embedded Systems Software Engineering Intern at UIUC Research Park (January- August 2027) | Champaign, Illinois | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e) |
 | AbbVie | 2027 Business Technology Solutions Intern - Cybersecurity (Undergraduate) | North Chicago, IL, us |  | 2026-09-25 | [Apply](https://api.smartrecruiters.com/v1/companies/AbbVie/postings/3743990015679246) |
-| Bluestaq US External | Software Engineering Residency Program | Colorado Springs | $5,000 annual | 2026-09-25 | [Apply](https://job-boards.greenhouse.io/bluestaq/jobs/4420189009) |
-| Astranis | IT Support Technician Associate (Winter 2027) | San Francisco | $1,750 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716175006) |
 | Astranis | Thermal Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704818006) |
-| Astranis | Thermal Associate Engineer (Winter 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704829006) |
 | Astranis | Harness Design Engineer Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704778006) |
 | Astranis | RF Validation Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716184006) |
-| Astranis | Software Developer, Network Software Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705617006) |
 | Astranis | Software Developer, Network Software Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705599006) |
-| Astranis | Supplier Quality Engineer Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705665006) |
 | Astranis | Supplier Quality Engineer Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715989006) |
 | Astranis | Technical Project Management Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708364006) |
-| Astranis | FPGA Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704811006) |
 | Astranis | FPGA Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704803006) |
-| Astranis | Software Defined Radio Hardware Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715985006) |
 | Astranis | Software Defined Radio Hardware Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716087006) |
 | swbc | Application Security Intern | San Antonio, TX |  | 2026-09-23 | [Apply](https://swbc.wd1.myworkdayjobs.com/job/San-Antonio-TX/Application-Security-Intern_R0015572-2) |
-| Verkada | Global Operations Allocation Manager | San Mateo, CA United States | $120,000 - $160,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/verkada/jobs/5238306007) |
 | Astranis | Propulsion Engineer Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4713183006) |
 | Internship List | Corporate Compliance Intern (Winter/January 2027, 12 Months) | Oakville, Ontario - Canada, Toronto, Ontario - Canada, Waterloo, Ontario - Canada | Hourly Rate $21 - $27 CAD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/internshiplist2000/jobs/5309952008) |
-| Astranis | Antenna Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704298006) |
 | Astranis | Antenna Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704284006) |
 | Astranis | Reliability Test Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705626006) |
 | Astranis | Electrical Reliability Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704782006) |
-| Astranis | Electrical Reliability Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704788006) |
 | Astranis | Power Electronics Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706427006) |
 | Astranis | Avionics Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706025006) |
-| Astranis | Avionics Associate Engineer (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4680321006) |
-| Verkada | Recruiting Coordinator, HQ | San Mateo, CA United States | $65,000 - $80,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/verkada/jobs/5246191007) |
 | Astranis | Flight Software Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704595006) |
-| Astranis | Flight Software Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704714006) |
 
-### Hardware engineering (110)
+### Hardware engineering (100)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -429,11 +399,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | costar | Embedded Software Engineering Intern | Sunnyvale (US) |  | 2026-10-01 | [Apply](https://costar.wd1.myworkdayjobs.com/job/Sunnyvale-US/Embedded-Software-Engineering-Intern_R39950) |
 | General Dynamics Mission Systems | Electrical Engineering Co-op | Pittsfield, MA | USD $22.00 - USD $29.25 /Yr | 2026-10-01 | [Apply](https://careers-gdms.icims.com/jobs/74924/job?mobile=true&needsRedirect=false) |
 | RTX | Electrical Engineer Co-op | Cedar Rapids, IA |  | 2026-10-01 | [Apply](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-131--5450-C-Ave-NE--BLDG-131/Electrical-Engineering-Co-op--Winter-Spring-2027-_01877304) |
-| Astranis | Radiation Effects Associate Engineer (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704282006) |
 | Astranis | Radiation Effects Engineer Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704335006) |
-| Astranis | Automation & Controls Engineering Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718209006) |
 | Astranis | Automation & Controls Engineering Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718203006) |
-| Astranis | RF Hardware Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4707943006) |
 | Astranis | RF Hardware Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708417006) |
 | base-power | Hardware Reliability & Test Engineering Intern | Austin, TX |  | 2026-09-30 | [Apply](https://jobs.ashbyhq.com/base-power/fbb553e1-5fb8-49a1-b5a5-9c7dde6b4406) |
 | bracco | Firmware Engineering Co-op | USA, Pleasanton, California, 94566 |  | 2026-09-30 | [Apply](https://bracco.wd103.myworkdayjobs.com/job/USA-Pleasanton-California-94566/Firmware-Engineering-Co-op_JR100319) |
@@ -450,15 +417,12 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Olsson | Electrical Engineering Internship - Facilities (Healthcare) | Omaha, NE |  | 2026-09-28 | [Apply](https://job-boards.greenhouse.io/olsson/jobs/5423876008) |
 | General Motors | Infotainment Software Developer Co-op | Markham, ON, Canada |  | 2026-09-28 | [Apply](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Markham-Ontario-Canada/XMLNAME-2027-Winter-Co-op-Infotainment-Software-Developer_JR-202621159) |
 | Astranis | Electrical Integration Intern - Avionics (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704826006) |
-| Astranis | Electrical Integration Associate - Avionics (Winter 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704795006) |
-| Astranis | RF Validation Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716835006) |
 | Moment Energy | Data Scientist Co-op | Surrey, BC |  | 2026-09-25 | [Apply](https://job-boards.greenhouse.io/momentenergy/jobs/4421775009) |
 | micron | DOW SkillsBridge Intern – Semiconductor Equipment Technician | 2 Locations |  | 2026-09-25 | [Apply](https://micron.wd1.myworkdayjobs.com/job/Boise-ID---ID1/DOW-SkillsBridge-Intern---Semiconductor-Equipment-Technician_JR108935) |
 | moog | Intern, Electrical Engineering | Buffalo, NY |  | 2026-09-25 | [Apply](https://moog.wd5.myworkdayjobs.com/job/Buffalo-NY/Intern--Electrical-Engineering_R-26-20268) |
 | Rivian and Volkswagen Group Technologies | Embedded Systems Software Engineering Intern - January - August 2027 | Champaign, IL | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e/application?embed=true) |
 | bedrock-robotics | 2027 Internship State Estimation, Learned Mapping & Semantic SLAM | San Francisco, CA |  | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/bedrock-robotics/8c7bad61-50e3-4702-be36-72e9b72a9760) |
 | rivianvw.tech | Embedded Systems Software Engineering Intern at UIUC Research Park (January- August 2027) | Champaign, Illinois | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e) |
-| Bluestaq US External | Software Engineering Residency Program | Colorado Springs | $5,000 annual | 2026-09-25 | [Apply](https://job-boards.greenhouse.io/bluestaq/jobs/4420189009) |
 | Tesla | Optical Engineer Intern - Electronic Systems | Palo Alto, CA |  | 2026-09-25 | [Apply](https://www.tesla.com/careers/search/job/284607) |
 | Ciena | Hardware Design and Verification Intern - PCBA | Ottawa, ON, Canada |  | 2026-09-25 | [Apply](https://ciena.wd5.myworkdayjobs.com/Careers/job/Canada--Ottawa--383-Terry-Fox--Bldg-C/Hardware--PCBA--Design-and-Verification-Intern--Winter-2027---4-months-_R031752) |
 | reflect-orbital | Mission Operations Engineering Intern | Hawthorne, CA | USD 27-31/hour | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/reflect-orbital/7ec00657-344f-4a53-b1b2-b6623a8b95bc) |
@@ -473,31 +437,26 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Tesla | Software Engineer Industrial Firmware Intern - Energy Engineering | Palo Alto, CA |  | 2026-09-24 | [Apply](https://www.tesla.com/careers/search/job/284448) |
 | Tesla | Solar Hardware Engineer Intern - PV Cell - Energy Engineering | Palo Alto, CA |  | 2026-09-24 | [Apply](https://www.tesla.com/careers/search/job/284489) |
 | Johnson & Johnson | Electrical Engineer Co-op - Beatbox | Danvers, MA |  | 2026-09-24 | [Apply](https://jj.wd5.myworkdayjobs.com/JJ/job/Danvers-Massachusetts-United-States-of-America/Beatbox-Electrical-Engineering-Co-op_R-101679) |
-| Astranis | FPGA Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704811006) |
 | Astranis | FPGA Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704803006) |
-| Astranis | Software Defined Radio Hardware Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715985006) |
 | Astranis | Software Defined Radio Hardware Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716087006) |
 | hypertherm | Firmware Developer - Internship | Hanover, NH |  | 2026-09-23 | [Apply](https://hypertherm.wd503.myworkdayjobs.com/job/Hanover-NH/Intern_R4100) |
 | sonos | Electrical Engineering Co-Op | Boston, MA |  | 2026-09-23 | [Apply](https://sonos.wd1.myworkdayjobs.com/job/Boston-MA/Electrical-Engineering-Co-Op_R2824-2) |
 | IMC | Hardware Machine Learning PhD Research Internship | Chicago, United States |  | 2026-09-23 | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4975945101) |
 | Astranis | Power Electronics Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706427006) |
 | Astranis | Avionics Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706025006) |
-| Astranis | Avionics Associate Engineer (Winter 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4680321006) |
 | Hitachi Energy | Electrical Component Engineering Intern | Toronto, ON, Canada |  | 2026-09-23 | [Apply](https://hitachi.wd1.myworkdayjobs.com/hitachi/job/Toronto-Ontario-Canada/Electrical-Component-Engineering-Intern--Fall-2026-or-Winter-2027-_R0144279) |
 | Intel | Firmware Development Undergraduate Engineering Co-op | Remote in Canada |  | 2026-09-23 | [Apply](https://intel.wd1.myworkdayjobs.com/en-us/external/job/Virtual-Canada/Firmware-Development-Undergraduate-Engineering-Co-op_JR0286862) |
 | Sonos | Software Engineering Co-op - Signal Processing | Boston, MA |  | 2026-09-23 | [Apply](https://sonos.wd1.myworkdayjobs.com/Sonos/job/Boston-MA/Software-Engineering-Co-op--Signal-Processing-_R2821-2) |
 | acronaviation | Supply Chain Intern | Grand Rapids, MI |  | 2026-09-22 | [Apply](https://jobs.lever.co/acronaviation/a655f828-8c33-4624-ac3d-ba677af3de27) |
 | Astranis | Flight Software Intern (Winter 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704595006) |
-| Astranis | Flight Software Associate (Winter 2027) | San Francisco | $1,925 per week | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704714006) |
 
-### Fintech (132)
+### Fintech (126)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
 | bmo | Process Automation Intern, Winter 2027 (Co-op/Internship) - 4 months | Toronto, ON, CAN |  | 2026-10-06 | [Apply](https://bmo.wd3.myworkdayjobs.com/job/Toronto-ON-CAN/Process-Automation-Intern--Winter-2027--Co-op-Internship----4-months_R260026571-1) |
 | mastercard | Global Markets Summer Internship 2027 - Product Management intern & Sales Analyst Intern - Dubai, UAE (UAE Nationals Preferred) | Dubai, United Arab Emirates |  | 2026-10-06 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Dubai-United-Arab-Emirates/Global-Markets-Summer-Internship-2027---Product-Management-intern---Sales-Analyst-Intern---Dubai--UAE--UAE-Nationals-Preferred-_R-287598-1) |
 | mastercard | Global Markets Summer Internship 2027- Product Management Intern & Sales Analyst Intern - Riyadh, Saudi Arabia | Riyadh, Saudi Arabia |  | 2026-10-06 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Riyadh-Saudi-Arabia/Global-Markets-Summer-Internship-2027--Product-Management-Intern---Sales-Analyst-Intern---Riyadh--Saudi-Arabia_R-292933-1) |
-| rbc | Global Asset Management, GAM Risk, Student Analyst (4 months) | TORONTO, Ontario, Canada |  | 2026-10-06 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/Global-Asset-Management--GAM-Risk--Student-Analyst--4-months-_R-0000189095) |
 | rb | 2027 Intern - Credit, Risk and Reserves Management | Dallas, TX |  | 2026-10-06 | [Apply](https://rb.wd5.myworkdayjobs.com/job/Dallas-TX/XMLNAME-2027-Intern---Credit--Risk-and-Reserves-Management_R-0000033579) |
 | rbc | Client Advisor Intern | HAMILTON, Ontario, Canada |  | 2026-10-06 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/HAMILTON-Ontario-Canada/Client-Advisor-Intern_R-0000188434) |
 | cibc | Business Intelligence Enterprise Anti-Money Laundering Winter 2027 Co-op | Toronto, ON |  | 2026-10-06 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Business-Intelligence--Enterprise-Anti-Money-Laundering-Winter-2027-Co-op_2620595) |
@@ -522,7 +481,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | rbc | 2027 Wealth Management Winter Intern | TORONTO, Ontario, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Wealth-Management-Winter-Intern_R-0000186770) |
 | rbc | 2027 Winter – GRM, AI Business Analyst Intern – Innovation & AI Centre of Excellence (4 Months) | TORONTO, Ontario, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter---GRM--AI-Business-Analyst-Intern---Innovation---AI-Centre-of-Excellence--4-Months-_R-0000188000-1) |
 | rbc | 2027 Winter – GRM, AI Developer Intern - Innovation & AI Center of Excellence (4 Months) | TORONTO, Ontario, Canada |  | 2026-10-05 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter---GRM--AI-Developer-Intern---Innovation---AI-Center-of-Excellence--4-Months-_R-0000188001-1) |
-| cibc | Business Analyst, Controllership Winter 2027 Co-opp | Toronto, ON |  | 2026-10-05 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Business-Analyst--Controllership---Winter-2027-Co-Op-_2618748-1) |
 | cibc | Investment Strategy Analyst, Wealth Solutions Winter Co-op 2027 | Toronto, ON |  | 2026-10-05 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Investment-Strategy-Analyst--Wealth-Solutions-Winter-Co-op-2027_2620494) |
 | cibc | Optimization & Process Engineering Analyst Co-op (16 Month Term) | Toronto, ON |  | 2026-10-05 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Optimization---Process-Engineering-Analyst-Co-op--16-Month-Term-_2618669) |
 | eqbank | Intern - Public Relations (External Comms) Winter 2027 | Toronto |  | 2026-10-05 | [Apply](https://jobs.lever.co/eqbank/4c22ff71-0543-4e3d-9cf9-79afc1d4e5a5) |
@@ -553,7 +511,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | mastercard | Associate Consultant Intern, Winter 2027 – Morocco | Casablanca, Morocco |  | 2026-10-01 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Casablanca-Morocco/Associate-Consultant-Intern--Winter-2027---Morocco_R-287592-1) |
 | mastercard | Global Markets, Account Management & Product Management, Summer Internship Program – 2027, Istanbul, Türkiye | Besiktas, Istanbul Turkey |  | 2026-10-01 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Besiktas-Istanbul-Turkey/Global-Markets--Account-Management---Product-Management--Summer-Internship-Program---2027--Istanbul--Trkiye_R-292561-1) |
 | rbc | Winter 2027 Co-op Student – Data Analyst, Personal Banking (4, 8, 12 months) | TORONTO, Ontario, Canada |  | 2026-10-01 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/Winter-2027-Co-op-Student---Data-Analyst--Personal-Banking--4--8--12-months-_R-0000184514-1) |
-| rbc | Winter 2027 Student - Financial Analyst, Commercial Banking (4 months) | TORONTO, Ontario, Canada |  | 2026-10-01 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/Winter-2027-Student---Financial-Analyst--Commercial-Banking--4-months-_R-0000184520-1) |
 | rb | SCS - Community Banking and Applications Intern - 2027 | Cleveland, OH |  | 2026-10-01 | [Apply](https://rb.wd5.myworkdayjobs.com/job/Cleveland-OH/SCS---Community-Banking-and-Applications-Intern---2027_R-0000033638) |
 | rb | SCS - Credit Risk Management Intern - 2027 | Cleveland, OH |  | 2026-10-01 | [Apply](https://rb.wd5.myworkdayjobs.com/job/Cleveland-OH/SCS---Credit-Risk-Management-Intern---2027_R-0000033643) |
 | theocc | Summer Intern – Credit Risk Management | Chicago - 125 S Franklin |  | 2026-10-01 | [Apply](https://theocc.wd5.myworkdayjobs.com/job/Chicago---125-S-Franklin/Summer-Intern---Credit-Risk-Management_REQ-4841) |
@@ -575,7 +532,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | ing | Human Resources Internship \| Recruitment Area @ING Bank | Expo Business Park |  | 2026-09-30 | [Apply](https://ing.wd3.myworkdayjobs.com/job/Expo-Business-Park/Human-Resources-Internship---Recruitment-Area--ING-Bank_REQ-10122452) |
 | barclays | Banking Off Cycle Internship Programme 2027 Tel Aviv | Tel Aviv, The Platinum Building |  | 2026-09-30 | [Apply](https://barclays.wd3.myworkdayjobs.com/job/Tel-Aviv-The-Platinum-Building/Banking-Off-Cycle-Internship-Programme-2027-Tel-Aviv_JR-0000124637) |
 | cibc | Summer Intern 2027- Private Wealth Management | Chicago, IL |  | 2026-09-30 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Chicago-IL/Summer-Intern-2027--Private-Wealth-Management_2618397) |
-| Compeer Financial | Casual/Seasonal Tax & Accounting Assistant | WI-Dodgeville | $19 - $21 USD | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/compeerfinancial/jobs/5411100008) |
 | Charles River Associates | Analyst Intern (Labor & Employment practice) - Winter/Spring 2027 | College Station, TX, United States, Tallahassee, FL, United States |  | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/charlesriverassociates/jobs/8243522) |
 | bmo | Business Analyst, Winter 2027 (Co-op/Internship) - 8 month | Toronto, ON, CAN |  | 2026-09-29 | [Apply](https://bmo.wd3.myworkdayjobs.com/job/Toronto-ON-CAN/Business-Analyst--Winter-2027--Co-op-Internship----8-month_R260025805) |
 | fis | Consulting & Implementations Intern Pipeline | 3 Locations |  | 2026-09-29 | [Apply](https://fis.wd5.myworkdayjobs.com/job/US-FL-JAX-347/Intern--Consulting-and-Implementations--FIS-University-Program_JR0309688) |
@@ -589,7 +545,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | cibc | Administrative Assistant Co-op, Vancouver, BC - Winter 2027 | Vancouver, BC |  | 2026-09-29 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Vancouver-BC/Administrative-Assistant-Co-op--Vancouver--BC---Winter-2027_2620020) |
 | cibc | Background Screening Analyst- Winter 2027 Co-op | Toronto, ON |  | 2026-09-29 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Background-Screening-Analyst-Co-op_2619866) |
 | cibc | Early Talent Programs and Strategy- Winter 2027 Co-op | Toronto, ON |  | 2026-09-29 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Early-Talent-Programs-and-Strategy-Co-op_2619417-1) |
-| cibc | Winter 2027 Direct Applicant Portal | Toronto, ON |  | 2026-09-29 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Winter-2027-Direct-Applicant-Portal_2617371) |
 | Schonfeld | 2027 Quantitative Research Intern | Hong Kong, Hong Kong |  | 2026-09-29 | [Apply](https://job-boards.greenhouse.io/schonfeld/jobs/8238448) |
 | Schonfeld | 2027 Quantitative C++ Developer Intern | Hong Kong, Hong Kong |  | 2026-09-29 | [Apply](https://job-boards.greenhouse.io/schonfeld/jobs/8238451) |
 | TD Bank | Data Analytics & Insights Intern Co-op | Montreal, QC, Canada, Toronto, ON, Canada |  | 2026-09-29 | [Apply](https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/Montral-Qubec/Data-Analytics---Insights-Intern---Co-op--Winter-2027-_R_1513914) |
@@ -614,7 +569,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | rivianvw.tech | Embedded Systems Software Engineering Intern at UIUC Research Park (January- August 2027) | Champaign, Illinois | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e) |
 | bmo | AI Engineer, Winter 2027 (Co-op/Internship) - 8 months | Toronto, ON, CAN |  | 2026-09-24 | [Apply](https://bmo.wd3.myworkdayjobs.com/job/Toronto-ON-CAN/AI-Engineer--Winter-2027--Co-op-Internship----8-months_R260027622) |
 | bmo | Public Relations Intern, Winter 2027 (Co-op/Internship) - 4 Months | Toronto, ON, CAN |  | 2026-09-24 | [Apply](https://bmo.wd3.myworkdayjobs.com/job/Toronto-ON-CAN/Public-Relations-Intern--Winter-2027--Co-op-Internship----4-Months_R260027583) |
-| cibc | Referred Student Portal | Chicago, IL |  | 2026-09-24 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Chicago-IL/Referred-Student-Portal_2504264) |
 | rbc | 2027 CFO Winter Process Re-Engineering Intern (4 Months) | TORONTO, Ontario, Canada |  | 2026-09-24 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-CFO-Winter-Process-Re-Engineering-Intern--4-Months-_R-0000188575) |
 | rbc | 2027 Winter Student Opportunities Technology & Operations - Quantum Technologies Intern, 8 Months | TORONTO, Ontario, Canada |  | 2026-09-24 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter-Student-Opportunities-Technology---Operations---Quantum-Computing-Specialist--8-Months_R-0000188860-1) |
 | Samsara | Firmware Engineer Co-Op | San Francisco - SF9 |  | 2026-09-24 | [Apply](https://www.samsara.com/company/careers/roles/8226602?gh_jid=8226602) |
@@ -629,7 +583,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 
 ## Summer 2027
 
-### Software engineering (395)
+### Software engineering (389)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -713,7 +667,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Cirrus Logic | Mixed Signal Products Applications Engineer Intern | Austin, TX |  | 2026-10-05 | [Apply](https://jobs.eu.lever.co/cirrus/2ca7b254-5c91-4a4e-9ba8-d05c8604eca2/apply) |
 | Waymo | Software Engineer Intern - MS/PhD - Eval Data Infra | Mountain View, CA |  | 2026-10-05 | [Apply](https://careers.withwaymo.com/jobs?gh_jid=8257205) |
 | Arc Boat Company | Mechanical Engineering Intern - Powertrain | Torrance, CA | $36 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/arcboatcompany/jobs/5442958008) |
-| Gallup | Product Manager — Digital Commerce | Omaha Riverfront | $85,000-$105,000 | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/gallup/jobs/4433447009) |
 | solink | Software Engineer Co-op, Apps | Ottawa Office | CAD 55000-68000/year | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/solink/c973029a-83fa-449e-b4a9-0a1514165430) |
 | Khan Academy | Software Engineer Intern (Summer 2027) | Remote (US + Canada Only) |  | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/khanacademy/jobs/8250259) |
 | Quantum Signal AI | Software Engineer Intern - Tools and Prototypes | Saline, MI | USD 29/hour | 2026-10-05 | [Apply](https://quantumsignalai.applytojob.com/apply/MWrhQD8Hn9/Software-Engineering-Intern-Tools-And-Prototypes) |
@@ -730,7 +683,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Motorola | Android Applications Developer Intern - Summer 2027 | Chicago, IL |  | 2026-10-05 | [Apply](https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Chicago-IL/Android-Applications-Developer-Intern---Summer-2027_R69313) |
 | NVIDIA | Software Engineer Intern | Santa Clara, CA |  | 2026-10-05 | [Apply](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/NVIDIA-2027-Ignite-Internships--Software-Engineering_JR2026958) |
 | Stantec | Civil Engineering Internship - Infrastructure (Summer 2027) | Okemos, MI, United States |  | 2026-10-05 | [Apply](https://hdhl.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1008180) |
-| Thales | Software Engineering Apprentice | Cheadle, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Cheadle/XMLNAME-2027-Software-Engineering-Apprentice_R0337863) |
 | Electronic Arts | Software Engineer Intern | Austin, TX |  | 2026-10-03 | [Apply](https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern-Summer-2027/216239) |
 | Databricks | Software Engineer Intern | London, UK |  | 2026-10-02 | [Apply](https://boards.greenhouse.io/embed/job_app?token=8847738002) |
 | Harvey | Software Engineer Intern | NYC | USD 62-72/hour | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/harvey/06d64648-b84b-48ae-94a2-d9c06dfdcb5d/application?embed=true) |
@@ -837,8 +789,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | RTX | Software Engineer Intern - Summer 2027 | Fort Wayne, IN |  | 2026-09-30 | [Apply](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IN-FT-WAYNE-150A--1010-Production-Rd--BLDG-150A/Software-Engineering--Intern--Summer-2027-_01878986) |
 | Stantec | Project Coordinator Intern - Infrastructure (Summer 2027) | Raleigh, NC, United States |  | 2026-09-30 | [Apply](https://hdhl.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1008053) |
 | Stantec | Project Coordinator Intern - Infrastructure (Summer 2027) | Burlington, MA, United States |  | 2026-09-30 | [Apply](https://hdhl.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1008055) |
-| clearwateranalytics | Associate Software Development Engineer (June 2027 Start Date) | Office - London |  | 2026-09-29 | [Apply](https://clearwateranalytics.wd1.myworkdayjobs.com/job/Office---London/Associate-Software-Development-Engineer-1_R12354) |
-| clearwateranalytics | Associate Software Development Engineer (June 2027 Start Date) | Office - London |  | 2026-09-29 | [Apply](https://clearwateranalytics.wd1.myworkdayjobs.com/job/Office---London/Associate-Software-Development-Engineer_R12353) |
 | monolithicpower | Applications Engineer Intern | San Jose, CA |  | 2026-09-29 | [Apply](https://monolithicpower.wd12.myworkdayjobs.com/job/San-Jose-CA/Applications-Engineer-Intern_R-2025) |
 | moog | Intern, Software Engineering | Torrance, CA |  | 2026-09-29 | [Apply](https://moog.wd5.myworkdayjobs.com/job/Torrance-CA/Intern--Software-Engineering_R-26-19948) |
 | thrivent | IT Application Engineer Intern, Investments - Summer 2027 | Mpls-Investments Office |  | 2026-09-29 | [Apply](https://thrivent.wd5.myworkdayjobs.com/job/Mpls-Investments-Office/IT-Application-Engineer-Intern--Investments---Summer-2027_REQ-48511-2) |
@@ -976,11 +926,11 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | semtech | Applications Engineering Intern | CAN - Burlington, ON |  | 2026-09-24 | [Apply](https://semtech.wd1.myworkdayjobs.com/job/CAN---Burlington-ON/Applications-Engineering-Intern_REQ3616) |
 | ciena | WaveLogic Software Intern (Summer 2027) | Atlanta |  | 2026-09-24 | [Apply](https://ciena.wd5.myworkdayjobs.com/job/Atlanta/WaveLogic-Software-Intern--Summer-2027-_R031695) |
 | Lazard | AI and Data Transformation Intern | NYC |  | 2026-09-24 | [Apply](https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardProfessionalCareers/job/6650) |
-| Astranis | Software Developer, Network Software Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705615006) |
 | Astranis | Software Developer, Network Software Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705597006) |
 | reflect-orbital | Ground Software Engineering Intern | Hawthorne, CA | USD 27-31/hour | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952) |
 | EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008) |
 | Arconic | Software Developer Intern | Davenport, IA |  | 2026-09-24 | [Apply](https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114233) |
+| Astranis | Software Defined Radio Hardware Associate Intern | SF | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715983006) |
 | ABB | IS Common Infrastructure Intern- Summer 2027 | USA, NC, Cary |  | 2026-09-24 | [Apply](https://abb.wd3.myworkdayjobs.com/external_career_page/job/USA-NC-Cary/IS-Common-Infrastructure-Intern--Summer-2027_JR00047125) |
 | Amazon | Software Development Engineer Intern - Summer 2027 (USA) , Amazon Dedicated Cloud (ADC) | Seattle, Washington, USA | 109,395.00 USD Annually | 2026-09-24 | [Apply](https://www.amazon.jobs/en/jobs/10559746/software-development-engineer-intern-summer-2027-usa-amazon-dedicated-cloud-adc) |
 | Amazon | Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA) | Redmond, Washington, USA | 109,395.00 USD Annually | 2026-09-24 | [Apply](https://www.amazon.jobs/en/jobs/10559762/software-development-engineer-intern-amazon-leo-summer-2027-usa) |
@@ -1004,7 +954,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | gdit | GDIT Summer Internship Program – Summer 2027 Generative AI Software Development Internship | USA LA Bossier City |  | 2026-09-23 | [Apply](https://gdit.wd5.myworkdayjobs.com/job/USA-LA-Bossier-City/GDIT-Summer-Internship-Program---Summer-2027-Generative-AI-Software-Development-Internship_RQ228933-1) |
 | gdit | GDIT Summer Internship Program – Summer 2027 Software Development Internship | USA LA Bossier City |  | 2026-09-23 | [Apply](https://gdit.wd5.myworkdayjobs.com/job/USA-LA-Bossier-City/GDIT-Summer-Internship-Program---Summer-2027-Software-Development-Internship_RQ228931-2) |
 | lthc | College Intern - Summer 2027 - Mobile Software Engineering Team | 6 Locations |  | 2026-09-23 | [Apply](https://lthc.wd1.myworkdayjobs.com/job/Rochester/College-Intern---Summer-2027---Mobile-Software-Engineering-Team_JR104025-3) |
-| cmegroup | Software Engineering Fellowship - Summer 2027 | Chicago - 20 S. Wacker |  | 2026-09-23 | [Apply](https://cmegroup.wd1.myworkdayjobs.com/job/Chicago---20-S-Wacker/Software-Engineering-Fellowship---Summer-2027_34824) |
 | caci | Software Engineering Intern - Summer 2027 | Reston, VA, US |  | 2026-09-23 | [Apply](https://caci.wd1.myworkdayjobs.com/job/Reston-VA-US/Software-Engineering-Intern---Summer-2027_332041) |
 | entrust | Intern – Software Development - 8 months - Hybrid Ottawa | Canada - Ottawa |  | 2026-09-23 | [Apply](https://entrust.wd1.myworkdayjobs.com/job/Canada---Ottawa/XMLNAME--Intern---Software-Development----8-months---Hybrid-Ottawa_R004359) |
 | Qumulo | Software Development Engineer Intern | Seattle, WA |  | 2026-09-23 | [Apply](https://jobs.ashbyhq.com/qumulo/43855947-3a85-4d1c-8b8e-e0c0ddcaf183/application?embed=true) |
@@ -1027,9 +976,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | TC Energy | Work Management Capabilities & Platforms Intern | Houston, TX |  | 2026-09-23 | [Apply](https://tcenergy.wd3.myworkdayjobs.com/CAREER_SITE_TC/job/Houston-Texas/Intern--Work-Management-Capabilities---Platforms_JR-10951) |
 | XPENG | 2027 Stanford Career Fair Internship Position | Santa Clara, CA |  | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/xpengmotors/jobs/8827791002) |
 | Astranis | Flight Software Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704598006) |
-| Grow Therapy | Software Engineer Intern | NYC | USD 50/hour | 2026-09-22 | [Apply](https://jobs.ashbyhq.com/grow-therapy/92bfe88a-4c23-48c8-8f7b-4959ab6cd8d8/application?embed=true) |
 
-### Data science (339)
+### Data science (333)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1099,7 +1047,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Atoms | Machine Learning Engineer Intern | San Francisco, CA | $70.00 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/atoms/jobs/8869105002) |
 | mercor | Research Intern | San Francisco | $200 monthly | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/mercor/e6502490-37c6-471a-9ffb-cf397764c518) |
 | Figma | PhD Intern, AI Applied Scientist (2027) | San Francisco, CA • New York, NY |  | 2026-10-05 | [Apply](https://boards.greenhouse.io/figma/jobs/6207801004?gh_jid=6207801004) |
-| Gallup | Product Manager — Digital Commerce | Omaha Riverfront | $85,000-$105,000 | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/gallup/jobs/4433447009) |
 | solink | Software Engineer Co-op, Apps | Ottawa Office | CAD 55000-68000/year | 2026-10-05 | [Apply](https://jobs.ashbyhq.com/solink/c973029a-83fa-449e-b4a9-0a1514165430) |
 | NBCUniversal | Data Analytics Intern | London, England, gb |  | 2026-10-05 | [Apply](https://api.smartrecruiters.com/v1/companies/NBCUniversal3/postings/744000153459110) |
 | NBCUniversal | Audience Insights & Analytics Intern | London, England, gb |  | 2026-10-05 | [Apply](https://api.smartrecruiters.com/v1/companies/NBCUniversal3/postings/744000153442839) |
@@ -1144,7 +1091,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Solidigm | Talent Acquisition Data Engineering & Analytics Graduate Intern | Rancho Cordova, CA, us |  | 2026-10-02 | [Apply](https://api.smartrecruiters.com/v1/companies/Solidigm/postings/744000153246129) |
 | Anduril Industries | 2027 Industrial Engineer Intern | Ashville, Ohio, United States, Costa Mesa, California, United States | $28 - $40 USD | 2026-10-02 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5255593007?gh_jid=5255593007) |
 | bedrock-robotics | 2027 Internship Behavior ML Engineer, Learned Manipulation Policies | San Francisco, CA |  | 2026-10-02 | [Apply](https://jobs.ashbyhq.com/bedrock-robotics/96a6423e-7439-4cb4-9109-117b14e47f7c) |
-| Internship List | Legal Summer Student (Summer/May 2027, 4 Months) | Atlanta, Georgia - USA, Oakville, Ontario - Canada, Toronto, Ontario - Canada | Hourly Rate $21 - $27 USD | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/internshiplist2000/jobs/5441309008) |
 | Gas South | Summer Analyst Intern | Atlanta, Georgia | $85,000- $95,000 | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/gassouth/jobs/8247586) |
 | American Family Insurance Group | GenAI/ML Intern | Madison, WI, Boston, MA |  | 2026-10-02 | [Apply](https://amfam.wd1.myworkdayjobs.com/AmFamGroupInternCareers/job/WI-Madison/AMFAM---2027-Summer-GenAI-ML-Intern_R39514) |
 | Centene | Medical Economics Analyst Intern | Florida |  | 2026-10-02 | [Apply](https://centene.wd5.myworkdayjobs.com/Centene_External/job/Remote-FL/Medical-Economics-Analyst-Intern--Undergraduate---Summer-2027-_1662248-1) |
@@ -1215,7 +1161,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | boseallaboutme | Supply Chain & Data Analytics - Analyst Co-op | US, GA - Atlanta |  | 2026-09-30 | [Apply](https://boseallaboutme.wd503.myworkdayjobs.com/job/US-GA---Atlanta/Supply-Chain---Data-Analytics---Analyst-Co-op_R29240) |
 | lifefitness | Marketing Analytics Intern | Rosemont, IL |  | 2026-09-30 | [Apply](https://lifefitness.wd1.myworkdayjobs.com/job/Rosemont-IL/Marketing-Analytics-Intern_JR-025253) |
 | dfwairport | 2027 Undergraduate Summer Internship – Enterprise Data & Analytics | DFW Intl. Airport Board |  | 2026-09-30 | [Apply](https://dfwairport.wd5.myworkdayjobs.com/job/DFW-Intl-Airport-Board/XMLNAME-2027-Undergraduate-Summer-Internship---Enterprise-Data---Analytics_JR102162-1) |
-| sunlife | Student, Digital Analytics (Summer 2027-Summer 2028) | Toronto, Ontario |  | 2026-09-30 | [Apply](https://sunlife.wd3.myworkdayjobs.com/job/Toronto-Ontario/Student--Digital-Analytics--Summer-2027-Summer-2028--_JR00126578) |
 | ITT | Data Analytics / AI Intern - Summer 2027 | Irvine, CA | $28.00 to $33.00 | 2026-09-30 | [Apply](https://careersenus-itt-inc.icims.com/jobs/17657/job?mobile=true&needsRedirect=false) |
 | Bosch Group | Data Analytics Intern - Engineering & SAP Operations | Lincolnshire, IL, us |  | 2026-09-30 | [Apply](https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000152737589) |
 | ibotta | Customer Operations Intern | Hybrid - Denver | $19.84 per hour | 2026-09-30 | [Apply](https://jobs.ashbyhq.com/ibotta/eee07586-5d5f-4da9-8004-d49c0d5274f5) |
@@ -1310,7 +1255,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | AbbVie | 2027 Business Technology Solutions Intern - Data & Software Engineering (Undergraduate) | Irvine, CA, United States (Hybrid) |  | 2026-09-25 | [Apply](https://jobs.smartrecruiters.com/AbbVie/3743990015684476) |
 | AbbVie | 2027 Business Technology Solutions Intern - Data & Software Engineering (Undergraduate) | North Chicago, IL, United States (Hybrid) |  | 2026-09-25 | [Apply](https://jobs.smartrecruiters.com/AbbVie/3743990015679386) |
 | American Century Investments | Enterprise Data Intern | Southlake, TX, Kansas City, MO |  | 2026-09-25 | [Apply](https://americancentury.wd5.myworkdayjobs.com/AmericanCenturyInvestments/job/Kansas-City-Missouri/Enterprise-Data-Intern_R0005751) |
-| Capital Group | Data & Technology Summer Associate - Capital Group Rotational Program | London, UK |  | 2026-09-25 | [Apply](https://capgroup.wd1.myworkdayjobs.com/en-US/capitalgroupcareers/job/London/CAMPUS--Capital-Group-Rotational-Program---Data---Tech-Track-Summer-Associate--London--2027-_JR7451) |
 | Cerity Partners | Investment Data & Technology Intern - Central Solutions | NYC |  | 2026-09-25 | [Apply](https://ceritypartners.wd12.myworkdayjobs.com/ceritypartnerscareers/job/New-York-City-NY/Investment-Data---Technology-Analyst-Internship_R929) |
 | ICF International | Data Scientist Intern | Remote in USA, Reston, VA, Denver, CO |  | 2026-09-25 | [Apply](https://icf.wd5.myworkdayjobs.com/icfexternal_career_site/job/Reston-VA/XMLNAME-2027-Summer-Intern--Data-Scientist--Reston--VA--Denver--CO--Remote-_R2603252) |
 | Pacific Life | Data Engineering Intern | Newport Beach, CA |  | 2026-09-25 | [Apply](https://pacificlife.wd1.myworkdayjobs.com/en-US/PacificLifeCareers/job/Newport-Beach-CA-700/Summer-2027-Data-Engineering-Internship_R17828) |
@@ -1331,7 +1275,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008) |
 | Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009) |
 | Enterprise Holdings | Data Engineer Intern - IT | St. Louis, MO |  | 2026-09-24 | [Apply](https://us-erac.icims.com/jobs/567651/job?mobile=true&needsRedirect=false) |
-| DV Trading | 2027 Quantitative Researcher Graduate (DV Equities) | Hong Kong |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/dvtrading/jobs/4736954005) |
 | DoorDash USA | Machine Learning Intern (Masters) - Summer 2027 | San Francisco, CA, Sunnyvale, CA , New York City, NY, Seattle, WA | $130,600 - $192,000 USD | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/doordashusa/jobs/8204111) |
 | LabCorp | Commercial Analytics Intern - ED/Chemistry Solutions Commercial Analytics Team | Remote in USA, Milwaukee, WI |  | 2026-09-24 | [Apply](https://labcorp.wd1.myworkdayjobs.com/external/job/USA----WI---Milwaukee---3727-W-Wisconsin-Avenue/Intern---Commercial-Analytics_2633615) |
 | Radiance Technologies | Modeling Engineer Intern - Analytics - Simulation Sciences | Beavercreek, OH |  | 2026-09-24 | [Apply](https://radiancetech.wd12.myworkdayjobs.com/Radiance_External/job/Beavercreek-OH/XMLNAME-2027-Modeling--Analytics----Simulation-Sciences--MASS--Engineer-Intern_HR102439) |
@@ -1347,7 +1290,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Resultant | Data & Analytics Consultant Intern - Summer 2027 | Chicago, IL |  | 2026-09-23 | [Apply](https://jobs.smartrecruiters.com/Resultant/744000151474767) |
 | West Bend Insurance | Data Scientist Intern | Madison, WI, West Bend, WI |  | 2026-09-23 | [Apply](https://careers-thesilverlining.icims.com/jobs/3785/job?mobile=true&needsRedirect=false) |
 | West Bend Insurance | Data Solution Engineer Intern | Madison, WI, West Bend, WI |  | 2026-09-23 | [Apply](https://careers-thesilverlining.icims.com/jobs/3786/job?mobile=true&needsRedirect=false) |
-| Klaviyo Campus | AI Engineer I | Boston, MA | $104,000 - $156,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003259003) |
 | Klaviyo Campus | AI Engineer Intern (Summer 2027) | Boston, MA |  | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003260003) |
 | Resultant | Data & Analytics Consultant Intern - Summer 2027 (Hybrid in Chicago) | Chicago, IL, us |  | 2026-09-23 | [Apply](https://api.smartrecruiters.com/v1/companies/Resultant/postings/744000151474767) |
 | Resultant | Data & Analytics Consultant Intern - Summer 2027 (Hybrid in Indianapolis) | Indianapolis, IN, us |  | 2026-09-23 | [Apply](https://api.smartrecruiters.com/v1/companies/Resultant/postings/744000151474719) |
@@ -1373,7 +1315,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Waymo | Data Science Intern - PhD | SF, Mountain View, CA | $85—$85 USD | 2026-09-22 | [Apply](https://careers.withwaymo.com/jobs?gh_jid=8221956) |
 | Waymo | Machine Learning Engineer Intern - MS/PhD | SF | $70—$70 USD | 2026-09-22 | [Apply](https://careers.withwaymo.com/jobs?gh_jid=8223735) |
 
-### Cyber security (163)
+### Cyber security (147)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1382,7 +1324,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | rivet | Intern, Software Engineering (Summer 2027) | San Jose, CA |  | 2026-10-06 | [Apply](https://jobs.ashbyhq.com/rivet/03fcb078-7371-4cfd-89a9-368e5b60d914) |
 | DV Trading | Database Engineer Intern - Summer 2027 | Chicago | $40.00 per hour | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/dvtrading/jobs/4741016005) |
 | MEMX | Information Security Intern, Summer 2027 (Hybrid) | United States | $30/hourly | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/memx/jobs/5445236008) |
-| Rothesay Graduates | 2027 Graduate Programme - Macro Risk | London |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8870454002) |
 | Tenstorrent University Jobs | Hardware Intern - AI HW & System on a Chip | Ottawa, Ontario, Canada, Toronto, Ontario, Canada |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/tenstorrentuniversity/jobs/5256568007) |
 | Anduril Industries | 2027 Systems Engineer Intern | Boston, Massachusetts, United States, Costa Mesa, California, United States, Fort Collins, Colorado, United States, Reston, Virginia, United States, Seattle, Washington, United States | $32 - $48 USD | 2026-10-06 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5257690007?gh_jid=5257690007) |
 | Anduril Industries | 2027 Reliability Engineer Intern | Costa Mesa, California, United States | $28 - $40 USD | 2026-10-06 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5257682007?gh_jid=5257682007) |
@@ -1418,7 +1359,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Rocket Lab Corporation | Government Operations Intern Summer 2027 | Littleton, CO | $22.00 USD Hourly | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/rocketlab/jobs/8001401003) |
 | Rocket Lab Corporation | Government Operations Intern Summer 2027 | Washington, DC | $22.00 USD Hourly | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/rocketlab/jobs/7992754003) |
 | Anduril Industries | 2027 Industrial Engineer Intern | Ashville, Ohio, United States, Costa Mesa, California, United States | $28 - $40 USD | 2026-10-02 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5255593007?gh_jid=5255593007) |
-| Internship List | Legal Summer Student (Summer/May 2027, 4 Months) | Atlanta, Georgia - USA, Oakville, Ontario - Canada, Toronto, Ontario - Canada | Hourly Rate $21 - $27 USD | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/internshiplist2000/jobs/5441309008) |
 | TTP | Summer Internship - Cyber / AI Consultant - 2027 | Melbourn, England, gb |  | 2026-10-02 | [Apply](https://api.smartrecruiters.com/v1/companies/TTP1/postings/744000153148930) |
 | Muon Space | Electrical Engineering Intern (Summer 2027) | San Jose, CA | $40/hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/muonspace/jobs/5255112007) |
 | Muon Space | Harness Design Intern (Summer 2027) | San Jose, CA | $40/hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/muonspace/jobs/5255108007) |
@@ -1455,9 +1395,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | ATC | Intern - Cyber Security Summer 2027 | Pewaukee, WI |  | 2026-10-01 | [Apply](https://atcllc.wd5.myworkdayjobs.com/atcllc/job/Pewaukee-WI/Intern---Cyber-Security-Summer-2027_R0003307) |
 | The Federal Reserve System | Summer 2027 Intern-Cybersecurity and Information Security | Chicago, IL |  | 2026-10-01 | [Apply](https://rb.wd5.myworkdayjobs.com/FRS/job/Chicago-IL/Summer-2027-Intern-Cybersecurity-and-Information-Security_R-0000033612-1) |
 | The Federal Reserve System | TS - Application Security Intern - 2027 | Cleveland, OH |  | 2026-10-01 | [Apply](https://rb.wd5.myworkdayjobs.com/FRS/job/Cleveland-OH/TS---Application-Security-Intern---2027_R-0000033625) |
-| Astranis | Automation & Controls Engineering Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718211006) |
 | Astranis | Automation & Controls Engineering Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718206006) |
-| Astranis | RF Hardware Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4707945006) |
 | Astranis | RF Hardware Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708436006) |
 | globalhr | Summer 2027 Cyber Intern - Onsite | US-MA-CAMBRIDGE-BBN05 ~ 10 & 50 Moulton St ~ MOULTON B5 |  | 2026-09-30 | [Apply](https://globalhr.wd5.myworkdayjobs.com/job/US-MA-CAMBRIDGE-BBN05--10--50-Moulton-St--MOULTON-B5/Summer-2027-Cyber-Intern---Onsite_01879253) |
 | allen-control-systems | Android Developer Intern, 2027 | Austin, TX |  | 2026-09-30 | [Apply](https://jobs.ashbyhq.com/allen-control-systems/1cd2b432-9a01-4ae0-8eb2-6ebd9c278b94) |
@@ -1485,7 +1423,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | RTX | Cyber Research Internship (Summer 2027) - Onsite | US-IA-CEDAR RAPIDS-166 ~ 855 35Th St NE ~ BLDG 166 |  | 2026-09-28 | [Apply](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-166--855-35Th-St-NE--BLDG-166/Cyber-Research-Internship--Summer-2027----Onsite_01872177) |
 | Upbound Group | Cybersecurity Intern | Plano, TX |  | 2026-09-28 | [Apply](https://upbound.wd501.myworkdayjobs.com/Upbound/job/Plano-TX/Cybersecurity-Intern_R-100776) |
 | disney | Intern, Global Security Operations, Southeast Asia - Jan to Jun 2027 | Singapore, Singapore |  | 2026-09-27 | [Apply](https://disney.wd5.myworkdayjobs.com/job/Singapore-Singapore/Intern--Global-Security-Operations--Southeast-Asia---Jan-to-Jun-2027_10161153-1) |
-| Astranis | RF Validation Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716826006) |
 | talentmanagementsolution | Cyber Security Intern | Remote - USA |  | 2026-09-25 | [Apply](https://talentmanagementsolution.wd3.myworkdayjobs.com/job/Remote---USA/Cyber-Security-Intern_R52980-2) |
 | amfam | Summer 2027 Intern - Cybersecurity | 2 Locations |  | 2026-09-25 | [Apply](https://amfam.wd1.myworkdayjobs.com/job/WI-Madison/Cybersecurity-Intern_R39591) |
 | barclays | 2027 Technology Cyber and Security Summer Internship Programme Knutsford | Knutsford, Radbroke Hall |  | 2026-09-25 | [Apply](https://barclays.wd3.myworkdayjobs.com/job/Knutsford-Radbroke-Hall/XMLNAME-2027-Technology-Cyber-and-Security-Summer-Internship-Programme-Knutsford_JR-0000129173) |
@@ -1500,18 +1437,13 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Veeam Software | Professional Services Intern- Summer 2027 | Alpharetta, GA, USA |  | 2026-09-25 | [Apply](https://job-boards.eu.greenhouse.io/veeamsoftware/jobs/4987734101) |
 | Rocket Lab Corporation | Test Engineering Intern Summer 2027 | Wallops Island, VA | $25.00 USD Hourly | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/rocketlab/jobs/8003529003) |
 | Astranis | Thermal Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704820006) |
-| Astranis | Thermal Associate Engineer (Summer 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704831006) |
 | Astranis | Harness Design Engineer Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704779006) |
 | Astranis | RF Validation Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716499006) |
-| Astranis | Software Developer, Network Software Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705615006) |
 | Astranis | Software Developer, Network Software Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705597006) |
-| Astranis | Electrical Integration Associate - RF (Summer 2027) | San Francisco, CA | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715793006) |
 | Astranis | Electrical Integration Intern - RF (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715788006) |
 | Astranis | Technical Project Management Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708369006) |
 | C.H. Robinson | Cyber Security Internship 2027 | Eden Prairie, MN United States of America |  | 2026-09-24 | [Apply](https://chrobinson.wd5.myworkdayjobs.com/CHRobinson/job/Eden-Prairie-MN-United-States-of-America/Security-Internship-2027_R49322) |
-| Astranis | FPGA Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704813006) |
 | Astranis | FPGA Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704805006) |
-| Astranis | Software Defined Radio Hardware Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715983006) |
 | Astranis | Software Defined Radio Hardware Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716088006) |
 | swbc | Application Security Intern | San Antonio, TX |  | 2026-09-23 | [Apply](https://swbc.wd1.myworkdayjobs.com/job/San-Antonio-TX/Application-Security-Intern_R0015572-2) |
 | gdit | GDIT Summer Internship Program – Summer 2027 Cybersecurity Associate Internship | USA LA Bossier City |  | 2026-09-23 | [Apply](https://gdit.wd5.myworkdayjobs.com/job/USA-LA-Bossier-City/GDIT-Summer-Internship-Program---Summer-2027-Cybersecurity-Associate-Internship_RQ228929-2) |
@@ -1520,28 +1452,22 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | lthc | College Intern - Summer 2027 - Cyber Risk Management | 6 Locations |  | 2026-09-23 | [Apply](https://lthc.wd1.myworkdayjobs.com/job/Rochester/College-Intern---Summer-2027---Cyber-Risk-Management_JR104028-3) |
 | lthc | College Intern - Summer 2027 - Cyber Security | 6 Locations |  | 2026-09-23 | [Apply](https://lthc.wd1.myworkdayjobs.com/job/Rochester/College-Intern---Summer-2027---Cyber-Security_JR104037-2) |
 | marvell | Security Verification/Validation Engineer Intern, BS - Summer 2027 | Chandler, AZ |  | 2026-09-23 | [Apply](https://marvell.wd1.myworkdayjobs.com/job/Chandler-AZ/Security-Verification-Validation-Engineer-Intern--BS---Summer-2027_2604148) |
-| Klaviyo Campus | AI Engineer I | Boston, MA | $104,000 - $156,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003259003) |
 | Klaviyo Campus | AI Engineer Intern (Summer 2027) | Boston, MA |  | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003260003) |
 | Muon Space | Junior Help Desk Intern (Summer 2027) | Mountain View, CA | $40/hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/muonspace/jobs/5247733007) |
 | Muon Space | Applied Science Intern (Summer 2027) | Woodbridge, VA | $45/hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/muonspace/jobs/5244641007) |
 | Astranis | Propulsion Engineer Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4713184006) |
 | Klaviyo Campus | Machine Learning Engineer Internship-Summer 2027 | Palo Alto, CA |  | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/7999274003) |
-| Astranis | Antenna Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704301006) |
 | Astranis | Antenna Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704274006) |
 | Astranis | Reliability Test Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705629006) |
 | Astranis | Electrical Reliability Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704784006) |
-| Astranis | Electrical Reliability Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704793006) |
 | Astranis | Power Electronics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706425006) |
 | Astranis | Avionics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706024006) |
-| Astranis | Avionics Associate Engineer (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4680324006) |
 | Astranis | Propulsion Test Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705640006) |
 | General Dynamics Information Technology | GDIT Summer Internship Program – Summer 2027 Cybersecurity Associate Internship | USA LA Bossier City |  | 2026-09-23 | [Apply](https://gdit.wd5.myworkdayjobs.com/gdit_earlytalent/job/USA-LA-Bossier-City/GDIT-Summer-Internship-Program---Summer-2027-Cybersecurity-Associate-Internship_RQ228929-2) |
 | Astranis | Flight Software Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704598006) |
-| Astranis | Flight Software Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704716006) |
-| Astranis | Guidance, Navigation, and Control Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704765006) |
 | Astranis | Guidance, Navigation, and Control Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4705172006) |
 
-### Hardware engineering (185)
+### Hardware engineering (170)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1588,18 +1514,11 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Atoms | Machine Learning Engineer Intern | San Francisco, CA | $70.00 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/atoms/jobs/8869105002) |
 | ATOMS Careers page | Electrical Engineering Intern | San Francisco, CA | $50.00 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/cssmerge/jobs/8869098002) |
 | Atoms | Electrical Engineering Intern | San Francisco, CA | $50.00 per hour | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/atoms/jobs/8869094002) |
-| West Monroe (Campus) | 2027 Utilities Consultant | Washington, D.C. |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6173013004) |
-| West Monroe (Campus) | 2027 Utilities Consultant | San Francisco |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6173012004) |
-| West Monroe (Campus) | 2027 Utilities Consultant | New York |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6173011004) |
-| West Monroe (Campus) | 2027 Utilities Consultant | Los Angeles |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6173009004) |
-| West Monroe (Campus) | 2027 Utilities Consultant | Dallas |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6173004004) |
-| West Monroe (Campus) | 2027 Utilities Consultant | Chicago |  | 2026-10-05 | [Apply](https://westmonroe.com/careers/job-details-students?gh_jid=6167617004) |
 | Arc Boat Company | Vehicle Controls Engineering Intern | Torrance, CA | $42 hourly | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/arcboatcompany/jobs/5442902008) |
 | Renesas Electronics | Analog Intern | San Jose, CA, Plano, TX, San Diego, CA | $37.25/hr | 2026-10-05 | [Apply](https://jobs.smartrecruiters.com/RenesasElectronics/744000153498869) |
 | Renesas Electronics | Analog Intern | San Jose, CA, Plano, TX, San Diego, CA |  | 2026-10-05 | [Apply](https://jobs.smartrecruiters.com/RenesasElectronics/744000153497087) |
 | Renesas Electronics | Analog Intern | San Jose, CA, Plano, TX, San Diego, CA | $37.25/hr | 2026-10-05 | [Apply](https://jobs.smartrecruiters.com/RenesasElectronics/744000153500409) |
 | Bosch Group | Internship Agentic AI for Automated Code Generation in Safety-Critical Embedded Software | Schwieberdingen, BW, de |  | 2026-10-05 | [Apply](https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000153500999) |
-| Airbus | Hardware Engineering Apprentice | Newport, UK |  | 2026-10-05 | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Newport/Hardware-Engineering---Electronics-Degree-Apprenticeship_JR10433054) |
 | Airbus | Software Engineer Intern Apprentice | Newport, UK |  | 2026-10-05 | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Newport/Software-Engineering-Degree-Apprenticeship_JR10433575) |
 | General Motors | ADAS Software Engineer Intern - Adpt | Milford, MI, Warren, MI |  | 2026-10-05 | [Apply](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern--ADAS-Software-Engineer--ADPT_JR-202621820) |
 | Hitachi Energy | Electrical Component Engineer Intern | Toronto, ON, Canada |  | 2026-10-05 | [Apply](https://hitachi.wd1.myworkdayjobs.com/hitachi/job/Toronto-Ontario-Canada/Electrical-Component-Engineering-Intern--Winter-2027--16months-_R0145359) |
@@ -1633,9 +1552,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Marvell | Firmware Engineer Intern - MS - Summer 2027 | Santa Clara, CA |  | 2026-10-01 | [Apply](https://marvell.wd1.myworkdayjobs.com/MarvellCareers2/job/Santa-Clara-CA/Firmware-Engineer-Intern--MS---Summer-2027_2604513-1) |
 | Philips | Systems Test Engineering Intern | New Kensington, PA |  | 2026-10-01 | [Apply](https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/New-Kensington-Pennsylvania-United-States/Intern---Systems-Test-Engineering---New-Kensington--PA---Summer-2027_591469) |
 | RTX | Software Engineer Intern | El Segundo, CA |  | 2026-10-01 | [Apply](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CA-EL-SEGUNDO-R01--2000-E-Imperial-Hwy--BLDG-R01/Software-Engineering-Intern--Summer-2027-_01878820) |
-| Astranis | Automation & Controls Engineering Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718211006) |
 | Astranis | Automation & Controls Engineering Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4718206006) |
-| Astranis | RF Hardware Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4707945006) |
 | Astranis | RF Hardware Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4708436006) |
 | base-power | Hardware Reliability & Test Engineering Intern | Austin, TX |  | 2026-09-30 | [Apply](https://jobs.ashbyhq.com/base-power/fbb553e1-5fb8-49a1-b5a5-9c7dde6b4406) |
 | bracco | Firmware Engineering Co-op | USA, Pleasanton, California, 94566 |  | 2026-09-30 | [Apply](https://bracco.wd103.myworkdayjobs.com/job/USA-Pleasanton-California-94566/Firmware-Engineering-Co-op_JR100319) |
@@ -1669,7 +1586,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | hyperlight | R&D Operations & Automation Engineer Intern |  | $28 - $34 per hour | 2026-09-28 | [Apply](https://apply.workable.com/j/4660E1BB17) |
 | Marvell | Architecture Intern | Burlington, VT |  | 2026-09-28 | [Apply](https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Burlington-VT/Architecture-Intern--MS---Summer-2027_2604613-1) |
 | Philips | Intern – Embedded Systems Test Automation Engineer – Bothell, WA – Summer 2027 | Bothell, Washington, United States |  | 2026-09-28 | [Apply](https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Bothell-Washington-United-States/Intern---Embedded-Systems-Test-Automation-Engineer---Bothell--WA---Summer-2027_592074) |
-| Astranis | RF Validation Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-26 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716826006) |
 | helion | Electrical Engineering Summer 2027 Intern | Everett, WA | $59 / hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/helion/045d97eb-5efd-4e35-90f5-65eebe3363f4) |
 | micron | DOW SkillsBridge Intern – Semiconductor Equipment Technician | 2 Locations |  | 2026-09-25 | [Apply](https://micron.wd1.myworkdayjobs.com/job/Boise-ID---ID1/DOW-SkillsBridge-Intern---Semiconductor-Equipment-Technician_JR108935) |
 | moog | Intern, Electrical Engineering | Buffalo, NY |  | 2026-09-25 | [Apply](https://moog.wd5.myworkdayjobs.com/job/Buffalo-NY/Intern--Electrical-Engineering_R-26-20268) |
@@ -1693,9 +1609,9 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Astranis | RF Validation Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716499006) |
 | Samsara | Firmware Engineer Co-Op | San Francisco - SF9 |  | 2026-09-24 | [Apply](https://www.samsara.com/company/careers/roles/8226602?gh_jid=8226602) |
 | reflect-orbital | Ground Software Engineering Intern | Hawthorne, CA | USD 27-31/hour | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952) |
-| Astranis | Electrical Integration Associate - RF (Summer 2027) | San Francisco, CA | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715793006) |
 | Astranis | Electrical Integration Intern - RF (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715788006) |
 | Mill | Electrical Engineering Intern, Summer 2027 | San Bruno, California | $35 to $45, | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/mill/jobs/4737766005) |
+| Astranis | Software Defined Radio Hardware Associate Intern | SF | $1,925 per week | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715983006) |
 | Ciena | Software Intern | Atlanta, GA |  | 2026-09-24 | [Apply](https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/WaveLogic-Software-Intern--Summer-2027-_R031695) |
 | Ciena | Software Intern - WaveLogic | Atlanta, GA |  | 2026-09-24 | [Apply](https://ciena.wd5.myworkdayjobs.com/Careers/job/Atlanta/WaveLogic-Software-Intern-Spring-2027_R031692) |
 | Marvell | Analog and Mixed Signal Layout Engineer Intern Co-op | Toronto, ON, Canada |  | 2026-09-24 | [Apply](https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Toronto-Canada/AMS-Layout-Engineer-Intern---BS---2027-Co-Op_2604790) |
@@ -1710,28 +1626,23 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Semtech | Firmware Intern | Ottawa, ON, Canada |  | 2026-09-24 | [Apply](https://semtech.wd1.myworkdayjobs.com/SemtechCareers/job/CAN---Ottawa-ON/Firmware-Design-Intern_REQ3617) |
 | Semtech | Validation Engineering Intern | Ottawa, ON, Canada |  | 2026-09-24 | [Apply](https://semtech.wd1.myworkdayjobs.com/SemtechCareers/job/CAN---Ottawa-ON/Validation-Engineering-Intern_REQ3618) |
 | Semtech | Validation Engineering Intern - Signal Integrity Products Group | Burlington, ON, Canada |  | 2026-09-24 | [Apply](https://semtech.wd1.myworkdayjobs.com/SemtechCareers/job/CAN---Burlington-ON/Validation-Engineering-Intern_REQ3628) |
-| Astranis | FPGA Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704813006) |
 | Astranis | FPGA Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704805006) |
-| Astranis | Software Defined Radio Hardware Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4715983006) |
 | Astranis | Software Defined Radio Hardware Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4716088006) |
 | Qualcomm | Firmware Development Intern - PAL | Markham, ON, Canada |  | 2026-09-23 | [Apply](https://qualcomm.eightfold.ai/careers/job/446721229661) |
 | hypertherm | Firmware Developer - Internship | Hanover, NH |  | 2026-09-23 | [Apply](https://hypertherm.wd503.myworkdayjobs.com/job/Hanover-NH/Intern_R4100) |
 | sonos | Electrical Engineering Co-Op | Boston, MA |  | 2026-09-23 | [Apply](https://sonos.wd1.myworkdayjobs.com/job/Boston-MA/Electrical-Engineering-Co-Op_R2824-2) |
 | saabusa | Electrical Engineering Co-Op (Summer 2027) | 2 Locations |  | 2026-09-23 | [Apply](https://saabusa.wd1.myworkdayjobs.com/job/East-Syracuse-NY-Aspen-Park/Electrical-Engineering-Co-Op--Summer-2027-_R-03293-1) |
-| Klaviyo Campus | AI Engineer I | Boston, MA | $104,000 - $156,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003259003) |
 | Klaviyo Campus | AI Engineer Intern (Summer 2027) | Boston, MA |  | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003260003) |
 | IMC | Hardware Machine Learning PhD Research Internship | Chicago, United States |  | 2026-09-23 | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4975945101) |
 | apex-technology-inc | Sensors Team Internship (Spring or Summer 2027) | Los Angeles | USD 45/hour | 2026-09-23 | [Apply](https://jobs.ashbyhq.com/apex-technology-inc/4ed1b2ad-2eed-4342-8720-d157c53d4804) |
 | Astranis | Power Electronics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706425006) |
 | Astranis | Avionics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4706024006) |
-| Astranis | Avionics Associate Engineer (Summer 2027) | San Francisco | $1,925 per week | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4680324006) |
 | Amazon | Quantum Applied Science Intern - Quantum Technologies team | Boston, MA, SF, Pasadena, CA, Santa Clara, CA | 135,660.00 USD Annually | 2026-09-23 | [Apply](https://amazon.jobs/en/jobs/10556930/2027-quantum-applied-science-internship-quantum-technologies-team) |
 | Saab | Electrical Engineering Co-op | East Syracuse, NY |  | 2026-09-23 | [Apply](https://saabusa.wd1.myworkdayjobs.com/saab_careers/job/East-Syracuse-NY-Aspen-Park/Electrical-Engineering-Co-Op--Summer-2027-_R-03293-1) |
 | acronaviation | Supply Chain Intern | Grand Rapids, MI |  | 2026-09-22 | [Apply](https://jobs.lever.co/acronaviation/a655f828-8c33-4624-ac3d-ba677af3de27) |
 | Astranis | Flight Software Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704598006) |
-| Astranis | Flight Software Associate (Summer 2027) | San Francisco | $1,925 per week | 2026-09-22 | [Apply](https://job-boards.greenhouse.io/astranis/jobs/4704716006) |
 
-### Fintech (214)
+### Fintech (205)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1739,16 +1650,13 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | mastercard | Associate Consultant Intern, Summer 2027 – Saudi Arabia | Riyadh, Saudi Arabia |  | 2026-10-06 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Riyadh-Saudi-Arabia/Associate-Consultant-Intern--Summer-2027---Saudi-Arabia_R-287594-1) |
 | mastercard | Global Markets Summer Internship 2027 - Product Management intern & Sales Analyst Intern - Dubai, UAE (UAE Nationals Preferred) | Dubai, United Arab Emirates |  | 2026-10-06 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Dubai-United-Arab-Emirates/Global-Markets-Summer-Internship-2027---Product-Management-intern---Sales-Analyst-Intern---Dubai--UAE--UAE-Nationals-Preferred-_R-287598-1) |
 | mastercard | Global Markets Summer Internship 2027- Product Management Intern & Sales Analyst Intern - Riyadh, Saudi Arabia | Riyadh, Saudi Arabia |  | 2026-10-06 | [Apply](https://mastercard.wd1.myworkdayjobs.com/job/Riyadh-Saudi-Arabia/Global-Markets-Summer-Internship-2027--Product-Management-Intern---Sales-Analyst-Intern---Riyadh--Saudi-Arabia_R-292933-1) |
-| rbc | Global Asset Management, GAM Risk, Student Analyst (4 months) | TORONTO, Ontario, Canada |  | 2026-10-06 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/Global-Asset-Management--GAM-Risk--Student-Analyst--4-months-_R-0000189095) |
 | rb | 2027 Intern - Credit, Risk and Reserves Management | Dallas, TX |  | 2026-10-06 | [Apply](https://rb.wd5.myworkdayjobs.com/job/Dallas-TX/XMLNAME-2027-Intern---Credit--Risk-and-Reserves-Management_R-0000033579) |
 | lthc | College Intern - Summer 2027 - Treasury | 6 Locations |  | 2026-10-06 | [Apply](https://lthc.wd1.myworkdayjobs.com/job/Rochester/College-Intern---Summer-2027---Treasury_JR104127-2) |
 | rbc | Client Advisor Intern | HAMILTON, Ontario, Canada |  | 2026-10-06 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/HAMILTON-Ontario-Canada/Client-Advisor-Intern_R-0000188434) |
-| baird | Institutional Equities Sales & Trading Shadow Week (May 2027) – New York City | NY-New York |  | 2026-10-06 | [Apply](https://baird.wd1.myworkdayjobs.com/job/NY-New-York/Institutional-Equities-Sales---Trading-Shadow-Week--May-2027----New-York-City_R20261061-1) |
 | commercebank | Intern - Commercial Banking, Springfield (Summer 2027) | MO - Springfield Area - Springfield - Springfield Battlefield (65804) |  | 2026-10-06 | [Apply](https://commercebank.wd1.myworkdayjobs.com/job/MO---Springfield-Area---Springfield---Springfield-Battlefield-65804/Intern---Commercial-Banking---Southwest--MO--Summer-2027-_38386) |
 | MEMX | Network Engineering Intern, Summer 2027 (Hybrid) | United States | $30/hourly | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/memx/jobs/5446002008) |
 | DV Trading | Database Engineer Intern - Summer 2027 | Chicago | $40.00 per hour | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/dvtrading/jobs/4741016005) |
 | MEMX | Information Security Intern, Summer 2027 (Hybrid) | United States | $30/hourly | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/memx/jobs/5445236008) |
-| Rothesay Graduates | 2027 Graduate Programme - Macro Risk | London |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8870454002) |
 | KKR | Summer Analyst Intern - Insurance Risk - Quantitative Asset Liability Management/Liquidity Risk | NYC |  | 2026-10-06 | [Apply](https://www.kkr.com/careers/student-careers/student-career-opportunities/post?gh_jid=6200868004) |
 | Anduril Industries | 2027 Systems Engineer Intern | Boston, Massachusetts, United States, Costa Mesa, California, United States, Fort Collins, Colorado, United States, Reston, Virginia, United States, Seattle, Washington, United States | $32 - $48 USD | 2026-10-06 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5257690007?gh_jid=5257690007) |
 | Anduril Industries | 2027 Reliability Engineer Intern | Costa Mesa, California, United States | $28 - $40 USD | 2026-10-06 | [Apply](https://boards.greenhouse.io/andurilindustries/jobs/5257682007?gh_jid=5257682007) |
@@ -1816,7 +1724,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Charles River Associates | Intern/Strategy Consulting (Life Sciences practice) - Summer 2027 | Cambridge, Cambridgeshire, England, United Kingdom, London, United Kingdom |  | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/charlesriverassociates/jobs/8199212) |
 | Bosch Group | Credit Controller Curricular Internship | Torino, Piemonte, it |  | 2026-10-02 | [Apply](https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000153137470) |
 | American Bankers Association | Quantitative Research Intern | Washington, DC |  | 2026-10-02 | [Apply](https://aba.wd1.myworkdayjobs.com/aba/job/US-DC-Main-Office/Intern--Quantitative-Research_R614) |
-| Houlihan Lokey | Financial Analyst - Corporate Valuation Advisory Services - Complex Securities | LA, NYC |  | 2026-10-02 | [Apply](https://hl.wd1.myworkdayjobs.com/Campus/job/New-York-NY-USA/XMLNAME-2027-Summer-Financial-Analyst--Class-of-2028---Corporate-Valuation-Advisory-Services--Complex-Securities---Multiple-Locations_R3632) |
 | Vanguard | College to Corporate Investment Systems Intern | Malvern, PA |  | 2026-10-02 | [Apply](https://vanguard.wd5.myworkdayjobs.com/en-US/vanguard_external/job/Malvern-PA/College-to-Corporate-IT-Internship-Investment-Systems--PA-_182782) |
 | Vanguard | College to Corporate IT Intern - Application Development | Malvern, PA |  | 2026-10-02 | [Apply](https://vanguard.wd5.myworkdayjobs.com/en-US/vanguard_external/job/Malvern-PA/College-to-Corporate-IT-Internship-Application-Development--PA-_182757) |
 | Vanguard | College to Corporate IT Internship-Risk & Security Engineer (PA) | Malvern, PA |  | 2026-10-02 | [Apply](https://vanguard.wd5.myworkdayjobs.com/vanguard_external/job/Malvern-PA/College-to-Corporate-IT-Internship-Risk---Security-Engineer--PA-_182784) |
@@ -1926,23 +1833,18 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | rbc | 2027 Corporate Treasury, Winter Risk Initiatives & Infrastructure, Intern (4 Months) | TORONTO, Ontario, Canada |  | 2026-09-25 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Corporate-Treasury--Winter-Risk-Initiatives---Infrastructure--Intern--4-Months-_R-0000188937) |
 | Charles Schwab | Model Risk Governance & Validation Intern | Southlake, TX | USD $40.70 - $40.70 / Hour | 2026-09-25 | [Apply](https://career-schwab.icims.com/jobs/126262/job?mobile=true&needsRedirect=false) |
 | rivianvw.tech | Embedded Systems Software Engineering Intern at UIUC Research Park (January- August 2027) | Champaign, Illinois | USD 35-40/hour | 2026-09-25 | [Apply](https://jobs.ashbyhq.com/rivianvw.tech/f421a524-72da-4dd6-a549-bbee9e98622e) |
-| cibc | Referred Student Portal | Chicago, IL |  | 2026-09-24 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Chicago-IL/Referred-Student-Portal_2504264) |
 | rbc | 2027 CFO Winter Process Re-Engineering Intern (4 Months) | TORONTO, Ontario, Canada |  | 2026-09-24 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-CFO-Winter-Process-Re-Engineering-Intern--4-Months-_R-0000188575) |
 | rbc | 2027 Winter Student Opportunities Technology & Operations - Quantum Technologies Intern, 8 Months | TORONTO, Ontario, Canada |  | 2026-09-24 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter-Student-Opportunities-Technology---Operations---Quantum-Computing-Specialist--8-Months_R-0000188860-1) |
 | Tradeweb | Quantitative Intern | NYC |  | 2026-09-24 | [Apply](https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301931) |
 | Samsara | Firmware Engineer Co-Op | San Francisco - SF9 |  | 2026-09-24 | [Apply](https://www.samsara.com/company/careers/roles/8226602?gh_jid=8226602) |
 | Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009) |
-| DV Trading | 2027 Quantitative Researcher Graduate (DV Equities) | Hong Kong |  | 2026-09-24 | [Apply](https://job-boards.greenhouse.io/dvtrading/jobs/4736954005) |
 | Brevan Howard | Systematic Trading Intern - Systematic Trading | London, UK |  | 2026-09-24 | [Apply](https://wd3.myworkdaysite.com/recruiting/brevanhoward/BH_ExternalCareers/job/London/XMLNAME-2027-Summer-Internship-Program---Systematic-Trading--London_JR101619) |
 | RF-SMART | Accounting Internship - Summer 2027 | Jacksonville, Florida, United States | $20/hour | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/rfsmart/jobs/5433156008) |
 | chevron | 2026-2027 Supply & Trading Intern | Houston, Texas, United States of America |  | 2026-09-23 | [Apply](https://chevron.wd5.myworkdayjobs.com/job/Houston-Texas-United-States-of-America/XMLNAME-2026-2027-Supply---Trading-Intern_R000073904) |
 | southstatebank | Summer 2027 Marketing and Communications Banking Intern (Remote) | Remote Opportunity - VA, NC, SC, GA, FL, AL, TX, & CO |  | 2026-09-23 | [Apply](https://southstatebank.wd5.myworkdayjobs.com/job/Remote-Opportunity---VA-NC-SC-GA--FL-AL-TX--CO/Summer-2027-Marketing-and-Communications-Banking-Intern--Remote-_R-06261) |
 | nb | Quantitative 2027 Summer Intern | New York, NY |  | 2026-09-23 | [Apply](https://nb.wd1.myworkdayjobs.com/job/New-York-NY/Quantitative-2027-Summer-Intern_R0012643) |
-| cibc | Payments, Alternate Solutions Group, Summer 2027 Analyst | Toronto, ON |  | 2026-09-23 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Payments--Alternate-Solutions-Group--Summer-2027-Analyst_2619544) |
-| cibc | Payments, Alternate Solutions Group, Summer 2027 Associate | Toronto, ON |  | 2026-09-23 | [Apply](https://cibc.wd3.myworkdayjobs.com/job/Toronto-ON/Payments--Alternate-Solutions-Group--Summer-2027-Associate_2619549) |
 | rbc | Summer 2027 US Wealth Management Technology Internship | Minneapolis, Minnesota, United States of America |  | 2026-09-23 | [Apply](https://rbc.wd3.myworkdayjobs.com/job/Minneapolis-Minnesota-United-States-of-America/Summer-2027-Wealth-Management-Technology-Internship_R-0000187852-1) |
 | pimco | 2027 MBA Summer Intern - Credit Research Analyst, EMEA | London, GBR |  | 2026-09-23 | [Apply](https://pimco.wd1.myworkdayjobs.com/job/London-GBR/XMLNAME-2027-Summer-Intern---Credit-Research-Analyst--EMEA_R106805) |
-| Klaviyo Campus | AI Engineer I | Boston, MA | $104,000 - $156,000 USD | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003259003) |
 | Klaviyo Campus | AI Engineer Intern (Summer 2027) | Boston, MA |  | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/klaviyocampus/jobs/8003260003) |
 | IMC | Hardware Machine Learning PhD Research Internship | Chicago, United States |  | 2026-09-23 | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4975945101) |
 | Viking Global Investors | Private Equity Investment Intern | New York, NY | $250,000 to $250,000 | 2026-09-23 | [Apply](https://job-boards.greenhouse.io/vikingglobalinvestors/jobs/6203684004) |
@@ -1952,14 +1854,12 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 
 ## Later terms
 
-### Software engineering (10)
+### Software engineering (8)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
 | Cloudflare | Software Engineer Intern (2027) | In-Office |  | 2026-10-06 | [Apply](https://boards.greenhouse.io/cloudflare/jobs/8245197?gh_jid=8245197) |
 | Cloudflare | Software Engineer Intern (2027) | In-Office |  | 2026-10-06 | [Apply](https://boards.greenhouse.io/cloudflare/jobs/8245211?gh_jid=8245211) |
-| Airbus | Digital and Technology Solutions Degree Engineer Apprentice | Bristol, UK |  | 2026-10-05 | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Bristol-Area/Digital-and-Technology-Solutions-Degree-Engineering-Apprenticeship_JR10430012) |
-| Thales | Software Engineer Apprentice | Templecombe, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Templecombe/XMLNAME-2027-Software-Engineering-Apprentice---Level-6-Digital-and-Technology-Solutions-Degree-Apprenticeship_R0337865) |
 | Stryker | Software Engineering Co-op | Belfast, UK |  | 2026-09-29 | [Apply](https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Belfast-United-Kingdom/Software-Engineering-Co-Op_R572094) |
 | Arconic | Software Developer Intern | Davenport, IA |  | 2026-09-24 | [Apply](https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114233) |
 | ramp | Software Engineering Intern, iOS | New York, NY (HQ) | USD 12500/month | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/b66be397-240b-41a6-9b05-493299b270a9) |
@@ -1967,30 +1867,25 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | ramp | Software Engineer Internship, Frontend | New York, NY (HQ) | $10/week | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/a13ae586-f4cb-4385-8822-c42b9b54ed74) |
 | SeatGeek | Software Engineer Intern | NYC |  | 2026-09-23 | [Apply](https://seatgeek.com/jobs/8227553?gh_jid=8227553) |
 
-### Data science (11)
+### Data science (7)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
 | Relay | Value Engineering Intern (Spring Semester 2027) | Raleigh, NC |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/relaypro/jobs/8245644) |
-| Airbus | Digital & Technology Solutions Plant Apprentice | Broughton, Chester, UK |  | 2026-10-05 | [Apply](https://ag.wd3.myworkdayjobs.com/Airbus/job/Broughton/Digital---Technology-Solutions-Plant-Degree-Apprenticeship_JR10427966) |
-| Thales | AI Engineer Apprentice | Glasgow, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Glasgow/XMLNAME-2027-AI-Engineer-Apprentice---AI-and-Data-Science-Graduate-Level-Apprenticeship_R0337760) |
 | Eulerity | Finance Internship | New York, NY | $17.00 – $20.00 / hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/eulerity/jobs/4718848006) |
 | NVIDIA | PhD Research Intern - Embodied and Agentic AI | California, Santa Clara, CA |  | 2026-10-02 | [Apply](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/PhD-Research-Intern--Embodied-and-Agentic-AI---2027_JR2025792) |
 | Regeneron Pharmaceuticals | Precision Medicine Operations Co-op | Armonk, NY |  | 2026-10-02 | [Apply](https://regeneron.wd1.myworkdayjobs.com/en-US/Careers/job/Armonk/XMLNAME-2027-Co-op-Precision-Medicine-Operations_R51082-1) |
 | Stripe | Data Analyst Intern | Toronto, ON, Canada | CAD 98800/year | 2026-10-01 | [Apply](https://stripe.com/jobs/search?gh_jid=8194287) |
 | Gas South | Spring Junior Analyst Co-Op | Atlanta, Georgia |  | 2026-10-01 | [Apply](https://job-boards.greenhouse.io/gassouth/jobs/8247655) |
-| IMC | AAR - 2027 - Graduate Trader | Aarhus, Central Denmark Region, Denmark |  | 2026-10-01 | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4966569101) |
-| sunlife | Student, Digital Analytics (Summer 2027-Summer 2028) | Toronto, Ontario |  | 2026-09-30 | [Apply](https://sunlife.wd3.myworkdayjobs.com/job/Toronto-Ontario/Student--Digital-Analytics--Summer-2027-Summer-2028--_JR00126578) |
 | State Farm | Data Science Intern - Magnet Program | Tempe, AZ |  | 2026-09-24 | [Apply](https://jobs.statefarm.com/jobs/46353?icims=1) |
 
-### Cyber security (2)
+### Cyber security (1)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
-| Rothesay Graduates | 2027 Graduate Programme - Macro Risk | London |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8870454002) |
 | Rothesay Graduates | 2027 Summer Internship Programme - Capital & Pricing Actuarial | London |  | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8811546002) |
 
-### Hardware engineering (16)
+### Hardware engineering (13)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1999,9 +1894,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Cirrus Logic | Product Test Engineer Intern | Austin, TX |  | 2026-10-05 | [Apply](https://jobs.eu.lever.co/cirrus/46a841b3-e3ce-4c78-b010-0e9cfe9e0f8e/apply) |
 | Cirrus Logic | Analog Design Engineer Intern | Austin, TX |  | 2026-10-05 | [Apply](https://jobs.eu.lever.co/cirrus/df033a94-155f-427f-a178-88bd18c3d5ec/apply) |
 | Cirrus Logic | Validation Engineer Intern | Austin, TX |  | 2026-10-05 | [Apply](https://jobs.eu.lever.co/cirrus/89813bb2-94fb-42f6-aec2-03154cfde027/apply) |
-| Thales | Electronics Engineer Apprentice - Level 6 Electrical and Electronic Engineering Degree Apprenticeship | Templecombe, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Templecombe/XMLNAME-2027-Electronics-Engineer-Apprentice---Level-6-Electrical-and-Electronic-Engineering-Degree-Apprenticeship_R0337882) |
-| Thales | Hardware Engineer Apprentice | Crawley, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Crawley/XMLNAME-2027-Hardware-Engineering-Apprentice_R0337712) |
-| Thales | Obsolescence Management Engineer Apprentice | Crawley, UK |  | 2026-10-05 | [Apply](https://thales.wd3.myworkdayjobs.com/en-US/Careers/job/Crawley/XMLNAME-2027-Obsolescence-Management-Engineer-Apprentice---Level-6-Applied-Professional-Engineering-Apprenticeship_R0337811-1) |
 | Arc Boat Company | Electrical Hardware Engineering Intern | Torrance, CA | $40 per hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/arcboatcompany/jobs/5442853008) |
 | Amca | Electrical Engineering Internship (Winter Spring 2027) | El Segundo, CA | $30 - $50 USD | 2026-10-01 | [Apply](https://job-boards.greenhouse.io/amca/jobs/4429132009) |
 | RTX | Display Systems Engineering Co-op | Cedar Rapids, IA |  | 2026-09-29 | [Apply](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-106--400-Collins-Rd-NE--BLDG-106/Display-Systems-Engineering-Co-Op--Summer-Fall-2027----Onsite_01868917) |
@@ -2011,16 +1903,14 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | ramp | Software Engineering Intern, Android | New York, NY (HQ) | USD 12500/month | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/fcf118cc-521a-4a62-9d13-945e5b6e3cb8) |
 | ramp | Software Engineer Internship, Frontend | New York, NY (HQ) | $10/week | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/a13ae586-f4cb-4385-8822-c42b9b54ed74) |
 
-### Fintech (10)
+### Fintech (8)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
 | Relay | Value Engineering Intern (Spring Semester 2027) | Raleigh, NC |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/relaypro/jobs/8245644) |
-| Rothesay Graduates | 2027 Graduate Programme - Macro Risk | London |  | 2026-10-06 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8870454002) |
 | Rothesay Graduates | 2027 Summer Internship Programme - Capital & Pricing Actuarial | London |  | 2026-10-05 | [Apply](https://job-boards.greenhouse.io/rothesaygraduates/jobs/8811546002) |
 | Eulerity | Finance Internship | New York, NY | $17.00 – $20.00 / hour | 2026-10-02 | [Apply](https://job-boards.greenhouse.io/eulerity/jobs/4718848006) |
 | Stripe | Data Analyst Intern | Toronto, ON, Canada | CAD 98800/year | 2026-10-01 | [Apply](https://stripe.com/jobs/search?gh_jid=8194287) |
-| IMC | AAR - 2027 - Graduate Trader | Aarhus, Central Denmark Region, Denmark |  | 2026-10-01 | [Apply](https://job-boards.eu.greenhouse.io/imc/jobs/4966569101) |
 | Charles River Associates | Analyst Intern (Labor & Employment practice) - Winter/Spring 2027 | College Station, TX, United States, Tallahassee, FL, United States |  | 2026-09-30 | [Apply](https://job-boards.greenhouse.io/charlesriverassociates/jobs/8243522) |
 | ramp | Software Engineering Intern, iOS | New York, NY (HQ) | USD 12500/month | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/b66be397-240b-41a6-9b05-493299b270a9) |
 | ramp | Software Engineering Intern, Android | New York, NY (HQ) | USD 12500/month | 2026-09-24 | [Apply](https://jobs.ashbyhq.com/ramp/fcf118cc-521a-4a62-9d13-945e5b6e3cb8) |
@@ -2032,18 +1922,18 @@ Nothing scrapes automatically. To refresh a source, open the **Actions** tab, ch
 
 | Source | Last scraped | Listings |
 | --- | --- | --- |
-| SimplifyJobs Summer 2027 | 2026-10-06 | 2303 |
+| SimplifyJobs Summer 2027 | 2026-10-06 | 2275 |
 | vanshb03 Summer 2027 | 2026-10-06 | 0 |
 | zshah101 internships | 2026-10-06 | 736 |
-| aprameyak tech jobs | 2026-10-06 | 1770 |
-| Ashby boards | 2026-10-06 | 287 |
-| Greenhouse boards | 2026-10-06 | 1095 |
-| Lever boards | 2026-10-06 | 143 |
+| aprameyak tech jobs | 2026-10-06 | 1733 |
+| Ashby boards | 2026-10-06 | 272 |
+| Greenhouse boards | 2026-10-06 | 906 |
+| Lever boards | 2026-10-06 | 136 |
 | SmartRecruiters boards | 2026-10-06 | 97 |
-| Workable boards | 2026-10-06 | 25 |
+| Workable boards | 2026-10-06 | 23 |
 | Pinpoint boards | 2026-10-06 | 0 |
 | Gem boards | 2026-10-06 | 0 |
-| Workday boards | 2026-10-06 | 795 |
+| Workday boards | 2026-10-06 | 776 |
 
 - Download [data/listings.csv](data/listings.csv) for every scraped listing, including older ones and ones with no posted date.
 

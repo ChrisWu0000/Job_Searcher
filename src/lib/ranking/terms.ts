@@ -17,11 +17,17 @@ const termPatterns: Record<JobTerm, RegExp> = {
     /\b(?:fall|autumn|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b|\b(?:winter|spring|summer|fall|autumn|january|february|march|april|may|june|july|august|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')(?:2[89]|3\d)\b/i,
 };
 
-const internshipTitle = /\b(?:intern(?:ship)?s?|co[ -]?op|student)\b/i;
+const internshipTitle = /\b(?:intern(?:ship)?s?|co[ -]?op|cooperative education)\b/i;
 const otherTermPattern =
   /\b(?:winter|spring|summer|fall|autumn|january|february|march|april|may|june|july|august|september|october|november|december)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')2[0-6]\b|\b(?:spring|february|march|april)\b[\s,/-]*(?:term\s*)?(?:of\s*)?(?:20|')27\b/i;
 
+export function isInternshipTitle(title: string): boolean {
+  return internshipTitle.test(title);
+}
+
 export function classifyJobTerms(job: Job): JobTerm[] {
+  if (!isInternshipTitle(job.title)) return [];
+
   const explicit = (job.terms ?? []).join("\n");
   const sources = explicit.length > 0 ? [explicit] : [job.title, job.workTerm ?? ""];
   const matches = jobTerms.filter((term) =>

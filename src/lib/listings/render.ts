@@ -1,5 +1,5 @@
 import { type JobCategory, jobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
-import { type JobTerm, jobTermLabels, jobTerms } from "@/lib/ranking/terms";
+import { isInternshipTitle, type JobTerm, jobTermLabels, jobTerms } from "@/lib/ranking/terms";
 import type { Listing, ListingSource } from "./collect";
 
 function cell(value: string): string {
@@ -38,7 +38,9 @@ function csvCell(value: string): string {
 export function renderCsv(listings: Listing[]): string {
   const rows: string[][] = [];
   const unique = new Map<string, Listing>();
-  for (const listing of listings) unique.set(listing.url, listing);
+  for (const listing of listings) {
+    if (isInternshipTitle(listing.title)) unique.set(listing.url, listing);
+  }
   const sorted = [...unique.values()].sort(
     (a, b) =>
       (b.postedAt ?? "").localeCompare(a.postedAt ?? "") || a.company.localeCompare(b.company),
@@ -80,7 +82,9 @@ export function renderListings(
   const cutoff = new Date(updated.getTime() - recentDays * 86_400_000).toISOString();
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
-    if (listing.postedAt && listing.postedAt >= cutoff) unique.set(listing.url, listing);
+    if (isInternshipTitle(listing.title) && listing.postedAt && listing.postedAt >= cutoff) {
+      unique.set(listing.url, listing);
+    }
   }
 
   const byTerm = new Map<JobTerm, Map<JobCategory, Listing[]>>();
@@ -113,7 +117,7 @@ export function renderListings(
 
   const header = [
     "# JobScope: 2027 Internship Listings",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
     "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)",
   ].join("\n\n");
