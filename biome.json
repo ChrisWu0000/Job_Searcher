@@ -9,6 +9,7 @@
       "!**/.wxt",
       "!**/dist",
       "!**/bun.lock",
+      "!data",
       "!test/fixtures/waterlooworks/*.html"
     ]
   },

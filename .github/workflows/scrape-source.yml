@@ -1,0 +1,43 @@
+name: Scrape source
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Source to scrape
+        required: true
+        type: choice
+        options:
+          - all
+          - ashby
+          - greenhouse
+          - lever
+          - smartrecruiters
+          - workable
+          - pinpoint
+          - gem
+          - workday
+          - simplify
+          - vanshb03
+          - zshah101
+          - aprameyak
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run listings ${{ inputs.source }}
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data
+          git diff --cached --quiet || git commit -m "Scrape ${{ inputs.source }}"
+          git push
