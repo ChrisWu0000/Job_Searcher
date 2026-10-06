@@ -24,15 +24,15 @@ const categoryPatterns: Record<JobCategory, RegExp> = {
   "data-science":
     /\b(?:data science|data scientist|data analyst|data engineer|analytics|business intelligence|statistician|machine learning|ml engineer|quantitative analyst|applied scientist|data & ml\/ai|ai\/ml\/data)\b/i,
   "cyber-security":
-    /\b(?:cyber[ -]?security|information security|infosec|security (?:engineer|analyst|researcher|specialist)|soc analyst|penetration tester|ethical hacker|threat intelligence|incident response|vulnerability management)\b/i,
+    /\b(?:cyber[ -]?security|cyber|information security|infosec|app(?:lication)? ?sec|security|soc analyst|penetration test(?:er|ing)|pentest(?:er)?|red team|blue team|ethical hacker|threat (?:intelligence|detection|research)|incident response|vulnerability|malware|cryptograph(?:y|ic)|identity (?:and|&) access|iam|devsecops|grc|zero trust|appsec)\b/i,
   "hardware-engineering":
     /\b(?:hardware engineer|embedded (?:software|systems?)?|firmware|electrical engineer(?:ing)?|electronics engineer|fpga|asic|pcb|cad (?:designer|engineer|technician)|vlsi|semiconductor|board[ -]?level design|mechanical engineer)\b/i,
   fintech:
-    /\b(?:fintech|financial technology|payments? platform|payment processing|digital banking|online banking|banking technology|financial services software|trading platform|investment technology|insurtech|crypto(?:currency)? exchange|blockchain)\b/i,
+    /\b(?:fintech|financial technology|payments?|payment processing|digital banking|banking|bank|financial services|trading|trader|quant(?:itative)?|investment technology|capital markets|wealth|lending|credit|insurtech|insurance technology|crypto(?:currency)?|blockchain|defi|brokerage|fraud|risk engineer|treasury|ledger)\b/i,
 };
 
 const fintechCompanies =
-  /\b(?:stripe|plaid|block|affirm|ramp|coinbase|robinhood|chime|brex|wise|revolut|klarna|adyen|paypal|wealthsimple|nuvei|sofi|monzo)\b/i;
+  /\b(?:stripe|plaid|block|affirm|ramp|coinbase|robinhood|chime|brex|wise|revolut|klarna|adyen|paypal|wealthsimple|nuvei|sofi|monzo|mastercard|visa|capital one|jane street|citadel|two sigma|hudson river|jump trading|optiver|imc|drw|susquehanna|squarespace|toast|marqeta|bill\.com|mercury|carta|gusto|rippling|intuit|fiserv|fis|td|rbc|bmo|scotiabank|cibc|goldman sachs|morgan stanley|jpmorgan|bloomberg|stripe|square|cash app|upstart|dave|payoneer|checkout\.com|ripple|kraken|gemini|binance|circle|fidelity|schwab|vanguard|blackrock|point72|virtu|akuna|tower research)\b/i;
 
 export function classifyJobCategories(job: Job): JobCategory[] {
   const title = job.title.replace(/\bCAD\s*\$?\s*\d[\d.,]*|\d[\d.,]*\s*CAD\b/gi, "");
