@@ -230,6 +230,14 @@ function urlFor(boardInfo: PublicBoard, row: Record<string, unknown>): string | 
     value = `https://jobs.smartrecruiters.com/${boardInfo.label}/${text(row.id)}`;
   }
   if (!value) return undefined;
+  if (
+    boardInfo.provider === "workday" &&
+    boardInfo.site &&
+    value.startsWith("/") &&
+    /^\/(?:job|details)\//i.test(value)
+  ) {
+    value = `/${encodeURIComponent(boardInfo.site)}${value}`;
+  }
   const absolute = value.startsWith("/") ? `https://${boardInfo.host}${value}` : value;
   return canonicalJobUrl(absolute);
 }

@@ -128,4 +128,19 @@ describe("public ATS board discovery", () => {
       url: "https://acme.wd5.myworkdayjobs.com/en-US/Acme/job/Toronto/Role_456",
     });
   });
+
+  it("inserts the Workday career site into root-relative job paths", () => {
+    const board = publicBoardFromJobUrl(
+      "https://aba.wd1.myworkdayjobs.com/aba/job/US-DC-Main-Office/Intern_R614",
+    );
+    if (!board) throw new Error("expected Workday board");
+    expect(
+      normalizeBoardJob(board, {
+        title: "Intern",
+        externalPath: "/job/US-DC-Main-Office/Intern_R614",
+      }),
+    ).toMatchObject({
+      url: "https://aba.wd1.myworkdayjobs.com/aba/job/US-DC-Main-Office/Intern_R614",
+    });
+  });
 });
