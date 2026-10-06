@@ -1,6 +1,5 @@
 import type { FetchLike } from "@/lib/ai/openrouter";
 import { classifyJobCategories, type JobCategory } from "@/lib/ranking/categories";
-import { parseHourlyPay } from "@/lib/ranking/pay";
 import { payTextForJob } from "@/lib/ranking/prefilter";
 import { classifyJobTerms, type JobTerm } from "@/lib/ranking/terms";
 import {
@@ -10,6 +9,7 @@ import {
 } from "@/lib/sources/boards";
 import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/publicFeeds";
 import type { Job } from "@/types/job";
+import { payFromHtml, payFromText } from "./pay";
 
 export interface Listing {
   id: string;
@@ -50,7 +50,7 @@ export function toListing(job: Job): Listing | undefined {
   const categories = classifyJobCategories(job);
   const terms = classifyJobTerms(job);
   if (categories.length === 0 || terms.length === 0) return undefined;
-  const pay = job.compensation?.trim() || parseHourlyPay(payTextForJob(job))?.original;
+  const pay = job.compensation?.trim() || payFromText(payTextForJob(job));
   return {
     id: job.id,
     company: job.company,
@@ -79,6 +79,35 @@ async function fetchFeedJobs(
   }
 }
 
+const payLookbackDays = 14;
+const maxPageBytes = 1_500_000;
+
+export async function enrichPay(
+  listings: Listing[],
+  fetchImpl: FetchLike,
+  concurrency = 8,
+  now: Date = new Date(),
+): Promise<void> {
+  const cutoff = new Date(now.getTime() - payLookbackDays * 86_400_000).toISOString();
+  const queue = listings.filter(
+    (listing) => !listing.pay && listing.postedAt !== undefined && listing.postedAt >= cutoff,
+  );
+  const worker = async (): Promise<void> => {
+    for (let listing = queue.shift(); listing; listing = queue.shift()) {
+      try {
+        const response = await fetchImpl(listing.url, {
+          headers: { Accept: "text/html,application/xhtml+xml" },
+          signal: AbortSignal.timeout(15_000),
+        });
+        if (!response.ok) continue;
+        const pay = payFromHtml((await response.text()).slice(0, maxPageBytes));
+        if (pay) listing.pay = pay;
+      } catch {}
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, concurrency) }, () => worker()));
+}
+
 export interface ScrapeResult {
   listings: Listing[];
   failures: string[];
@@ -101,7 +130,9 @@ export async function scrapeSource(
       const listing = toListing(job);
       if (listing) listings.set(listing.id, listing);
     }
-    return { listings: [...listings.values()], failures };
+    const found = [...listings.values()];
+    await enrichPay(found, fetchImpl);
+    return { listings: found, failures };
   }
 
   const seeds: Job[] = [];
@@ -123,5 +154,7 @@ export async function scrapeSource(
     }
   };
   await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => worker()));
-  return { listings: [...listings.values()], failures };
+  const found = [...listings.values()];
+  await enrichPay(found, fetchImpl);
+  return { listings: found, failures };
 }
