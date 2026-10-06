@@ -32,10 +32,6 @@ export function DatabaseCounts() {
     () => (profileVersion === undefined ? 0 : countScoresForVersion(profileVersion)),
     [profileVersion],
   );
-  const queuedCount = useLiveQuery(
-    () => db.applications.where("status").equals("queued").count(),
-    [],
-  );
   const closingSoonCount = useLiveQuery(
     async () => (await jobsClosingWithin(closingSoonHours)).length,
     [],
@@ -45,7 +41,6 @@ export function DatabaseCounts() {
     <div className="flex items-center gap-2">
       <CountChip label="jobs" value={jobCount} />
       <CountChip label="scored" value={scoredCount} />
-      <CountChip label="queued" value={queuedCount} />
       {closingSoonCount !== undefined && closingSoonCount > 0 ? (
         <CountChip
           label="closing soon"

@@ -19,7 +19,7 @@ export const defaultProfile: Profile = {
   id: "me",
   resumeText: "",
   reach:
-    "Software engineering internships at companies that pay well and where the work is interesting. Full stack, backend, frontend, infra, ML, and data engineering are all fine. In Canada, prioritize strong pay, a recognized employer (including banks), or broadly transferable SWE experience. Only consider CS/software roles, never embedded, firmware, hardware, or CAD. Pay must be explicitly stated and meet the hourly minimum, regardless of company reputation.",
+    "Internships in software engineering, data science, cyber security, hardware engineering, or fintech. In Canada, prioritize strong pay, a recognized employer such as a bank, or broadly transferable technical experience. Pay must be explicitly stated and meet the hourly minimum, regardless of company reputation.",
   constraints: [
     {
       id: "ca-pay",
@@ -37,19 +37,13 @@ export const defaultProfile: Profile = {
       id: "software",
       kind: "hard",
       weight: 5,
-      text: "Role must be software engineering: full stack, backend, frontend, infra, ML, data engineering, or similar",
+      text: "Role must be in software engineering, data science, cyber security, hardware engineering, or fintech",
     },
     {
       id: "pay-disclosure",
       kind: "hard",
       weight: 5,
       text: "Pay must state a numeric minimum, a time basis, and an identifiable currency. Reject missing pay, vague or competitive pay, university norms, and upper-bound-only offers. Do not infer salary from company reputation, university averages, benefits, or unrelated numbers.",
-    },
-    {
-      id: "no-hw",
-      kind: "hard",
-      weight: 5,
-      text: "No hardware, mechatronics, embedded, firmware, CAD, mechanical, or electrical roles. Judge the actual work, not incidental mentions of hardware or a CAD currency code.",
     },
     {
       id: "no-nonswe",
@@ -62,7 +56,7 @@ export const defaultProfile: Profile = {
       id: "ca-value",
       kind: "hard",
       weight: 5,
-      text: "A role in Canada must offer at least one of: strong pay meeting the CAD floor (or the USD floor when paid in USD), a recognized employer such as a bank, or broadly transferable software engineering experience. This does not waive the pay minimum or software-only requirements.",
+      text: "A role in Canada must offer at least one of: strong pay meeting the CAD floor (or the USD floor when paid in USD), a recognized employer, or broadly transferable experience in a target field. This does not waive the pay minimum or target-field requirements.",
     },
     {
       id: "interest",

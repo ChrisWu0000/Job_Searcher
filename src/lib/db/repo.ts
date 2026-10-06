@@ -265,47 +265,6 @@ export async function appendApplicationLog(
   });
 }
 
-export async function listApplicationsByStatus(status: ApplicationStatus): Promise<Application[]> {
-  return db.applications.where("status").equals(status).toArray();
-}
-
-export function byQueueOrder(left: Application, right: Application): number {
-  const leftOrder = left.order ?? Number.MAX_SAFE_INTEGER;
-  const rightOrder = right.order ?? Number.MAX_SAFE_INTEGER;
-  if (leftOrder !== rightOrder) return leftOrder - rightOrder;
-  return left.jobId.localeCompare(right.jobId);
-}
-
-export async function nextQueueOrder(): Promise<number> {
-  const applications = await db.applications.toArray();
-  const highest = applications.reduce(
-    (max, application) => Math.max(max, application.order ?? 0),
-    0,
-  );
-  return highest + 1;
-}
-
-export async function listQueuedApplications(): Promise<Application[]> {
-  const queued = await listApplicationsByStatus("queued");
-  return queued.sort(byQueueOrder);
-}
-
-export async function moveQueuedApplication(jobId: string, direction: -1 | 1): Promise<void> {
-  await db.transaction("rw", db.applications, async () => {
-    const queued = (await db.applications.where("status").equals("queued").toArray()).sort(
-      byQueueOrder,
-    );
-    const index = queued.findIndex((application) => application.jobId === jobId);
-    const target = index + direction;
-    if (index < 0 || target < 0 || target >= queued.length) return;
-    const moved = queued[index];
-    const displaced = queued[target];
-    if (!moved || !displaced) return;
-    await db.applications.put({ ...moved, order: displaced.order ?? target + 1 });
-    await db.applications.put({ ...displaced, order: moved.order ?? index + 1 });
-  });
-}
-
 export async function getSavedAnswer(questionHash: string): Promise<SavedAnswer | undefined> {
   return db.savedAnswers.get(questionHash);
 }

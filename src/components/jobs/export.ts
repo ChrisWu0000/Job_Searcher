@@ -1,4 +1,5 @@
 import { downloadJson, downloadText, timestampedFileName } from "@/components/shared/download";
+import { type JobTerm, jobTermLabels } from "@/lib/ranking/terms";
 import type { Job } from "@/types/job";
 import type { JobScore, ScoreVerdict } from "@/types/scoring";
 import { type JobRow, jobDeadline } from "./jobRows";
@@ -11,6 +12,7 @@ interface CsvSource {
   job: Job;
   score: JobScore | undefined;
   verdict: ScoreVerdict | undefined;
+  terms: JobTerm[];
 }
 
 const csvColumns: { header: string; value: (source: CsvSource) => CsvValue }[] = [
@@ -29,6 +31,7 @@ const csvColumns: { header: string; value: (source: CsvSource) => CsvValue }[] =
   { header: "arrangement", value: ({ job }) => job.arrangement },
   { header: "duration months", value: ({ job }) => job.durationMonths },
   { header: "work term", value: ({ job }) => job.workTerm },
+  { header: "term", value: ({ terms }) => terms.map((term) => jobTermLabels[term]).join("; ") },
   { header: "job type", value: ({ job }) => job.jobType },
   { header: "level", value: ({ job }) => job.level },
   { header: "division", value: ({ job }) => job.division },
@@ -36,11 +39,6 @@ const csvColumns: { header: string; value: (source: CsvSource) => CsvValue }[] =
   { header: "applications", value: ({ job }) => job.applicationCount },
   { header: "deadline", value: ({ job }) => jobDeadline(job) },
   { header: "compensation", value: ({ job }) => job.compensation },
-  { header: "resume", value: ({ job }) => job.application.resume },
-  { header: "cover letter", value: ({ job }) => job.application.coverLetter },
-  { header: "grade report", value: ({ job }) => job.application.gradeReport },
-  { header: "other documents", value: ({ job }) => job.application.otherDocuments.join("; ") },
-  { header: "prescreen questions", value: ({ job }) => job.application.hasPrescreenQuestions },
   { header: "targeted programs", value: ({ job }) => job.targetedPrograms?.join("; ") },
   { header: "tags", value: ({ job }) => job.tags?.join("; ") },
   { header: "first seen", value: ({ job }) => job.firstSeenAt },
@@ -60,7 +58,12 @@ export function csvCell(value: CsvValue): string {
 export function jobsToCsv(rows: JobRow[]): string {
   const lines = [csvColumns.map((column) => csvCell(column.header)).join(",")];
   for (const row of rows) {
-    const source: CsvSource = { job: row.job, score: row.score, verdict: row.verdict };
+    const source: CsvSource = {
+      job: row.job,
+      score: row.score,
+      verdict: row.verdict,
+      terms: row.terms,
+    };
     lines.push(csvColumns.map((column) => csvCell(column.value(source))).join(","));
   }
   return `${lines.join("\r\n")}\r\n`;
@@ -80,7 +83,7 @@ export function jobsToJson(rows: JobRow[]): string {
 
 export type RawJob = Omit<Job, "status" | "score" | "notes" | "firstSeenAt">;
 
-/** Drops the fields WW++ adds on top of the posting: status, score, notes, first-seen time. */
+/** Drops the fields JobScope adds on top of the original posting. */
 export function toRawJob(job: Job): RawJob {
   const { status: _status, score: _score, notes: _notes, firstSeenAt: _firstSeenAt, ...raw } = job;
   return raw;

@@ -226,11 +226,10 @@ describe("prefilterJob", () => {
     "Mechanical Engineer",
     "Electrical Engineering Intern",
     "FPGA Developer",
-  ])("filters %s before ranking", (title) => {
-    expect(prefilterJob(makeJob({ title, compensation: "$100 CAD/hour" }), profile)).toMatchObject({
-      excluded: true,
-      hardViolations: ["no-hw"],
-    });
+  ])("accepts the requested hardware engineering category for %s", (title) => {
+    expect(prefilterJob(makeJob({ title, compensation: "$100 CAD/hour" }), profile).excluded).toBe(
+      false,
+    );
   });
 
   it.each([
@@ -275,7 +274,7 @@ describe("prefilterJob", () => {
     ).toBe(false);
   });
 
-  it("reads duties for generic titles and does not mistake business services for software", () => {
+  it("reads duties for generic titles and classifies hardware duties", () => {
     expect(
       prefilterJob(
         makeJob({
@@ -303,8 +302,8 @@ describe("prefilterJob", () => {
           compensation: "$60/hour",
         }),
         profile,
-      ).hardViolations,
-    ).toEqual(["no-hw"]);
+      ).excluded,
+    ).toBe(false);
   });
 
   it.each([

@@ -29,7 +29,7 @@ export function DataSection() {
           onClick={() => {
             void exportAllAsJson()
               .then((json) => {
-                downloadJson(timestampedFileName("wwpp-backup"), json);
+                downloadJson(timestampedFileName("jobscope-backup"), json);
                 toast.success("Exported every table as JSON");
               })
               .catch((cause: unknown) => {

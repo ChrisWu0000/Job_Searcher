@@ -1,8 +1,6 @@
-import { FileTextIcon, GraduationCapIcon, MessageSquareIcon, PaperclipIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import type { Job, JobStatus } from "@/types/job";
+import type { JobStatus } from "@/types/job";
 import type { ScoreVerdict } from "@/types/scoring";
 
 const verdictClasses: Record<ScoreVerdict, string> = {
@@ -18,6 +16,15 @@ const statusClasses: Record<JobStatus, string> = {
   queued: "bg-amber-500/15 text-amber-700 dark:text-amber-300",
   applied: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300",
   error: "bg-destructive/15 text-destructive",
+};
+
+const statusLabels: Record<JobStatus, string> = {
+  new: "new",
+  skipped: "skipped",
+  interested: "interested",
+  queued: "queued (legacy)",
+  applied: "applied",
+  error: "error",
 };
 
 export function VerdictBadge({ verdict }: { verdict: ScoreVerdict | undefined }) {
@@ -37,7 +44,9 @@ export function NewBadge() {
 
 export function StatusBadge({ status }: { status: JobStatus }) {
   return (
-    <Badge className={cn("border-transparent capitalize", statusClasses[status])}>{status}</Badge>
+    <Badge className={cn("border-transparent capitalize", statusClasses[status])}>
+      {statusLabels[status]}
+    </Badge>
   );
 }
 
@@ -51,41 +60,5 @@ export function ScoreBadge({ score }: { score: number | undefined }) {
   if (score === undefined) return <span className="text-muted-foreground">—</span>;
   return (
     <span className={cn("font-medium tabular-nums", scoreClass(score))}>{Math.round(score)}</span>
-  );
-}
-
-const documentIcons = [
-  { key: "resume", label: "Resume required", Icon: FileTextIcon },
-  { key: "coverLetter", label: "Cover letter required", Icon: PaperclipIcon },
-  { key: "gradeReport", label: "Grade report required", Icon: GraduationCapIcon },
-  { key: "prescreen", label: "Prescreen questions", Icon: MessageSquareIcon },
-] as const;
-
-export function DocumentIcons({ job }: { job: Job }) {
-  const required: Record<(typeof documentIcons)[number]["key"], boolean> = {
-    resume: job.application.resume,
-    coverLetter: job.application.coverLetter,
-    gradeReport: job.application.gradeReport,
-    prescreen: job.application.hasPrescreenQuestions,
-  };
-
-  return (
-    <span className="flex items-center gap-1">
-      {documentIcons.map(({ key, label, Icon }) => (
-        <Tooltip key={key}>
-          <TooltipTrigger asChild>
-            <span>
-              <Icon
-                className={cn(
-                  "size-3.5",
-                  required[key] ? "text-foreground" : "text-muted-foreground/25",
-                )}
-              />
-            </span>
-          </TooltipTrigger>
-          <TooltipContent>{required[key] ? label : `No ${label.toLowerCase()}`}</TooltipContent>
-        </Tooltip>
-      ))}
-    </span>
   );
 }

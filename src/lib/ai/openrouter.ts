@@ -5,8 +5,8 @@ import type { ConnectionTestResult, ModelPricing, OpenRouterUsage } from "./cont
 export const openRouterBaseUrl = "https://openrouter.ai/api/v1";
 export const chatCompletionsUrl = `${openRouterBaseUrl}/chat/completions`;
 export const modelsUrl = `${openRouterBaseUrl}/models`;
-export const appRefererUrl = "https://github.com/ww-plus-plus";
-export const appTitle = "WW++";
+export const appRefererUrl = "https://github.com/ChrisWu0000/WW_agent";
+export const appTitle = "JobScope";
 export const pricingStorageKey = "openrouter:pricing";
 export const pricingMaxAgeMs = 24 * 60 * 60 * 1000;
 

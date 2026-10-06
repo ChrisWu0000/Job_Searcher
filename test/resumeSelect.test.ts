@@ -9,7 +9,7 @@ import {
 } from "@/lib/resume/select";
 import type { ExperienceEntry, ResumeSettings } from "@/types/resume";
 import { defaultResumeSettings } from "@/types/resume";
-import { makeJob } from "./helpers/fakeWw";
+import { makeJob } from "./helpers/jobs";
 
 function makeEntry(id: string, overrides: Partial<ExperienceEntry> = {}): ExperienceEntry {
   return {

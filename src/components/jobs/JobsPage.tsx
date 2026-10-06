@@ -1,12 +1,6 @@
 import type { RowSelectionState, SortingState } from "@tanstack/react-table";
 import { useLiveQuery } from "dexie-react-hooks";
-import {
-  ChevronDownIcon,
-  DownloadIcon,
-  FileTextIcon,
-  ListPlusIcon,
-  SparklesIcon,
-} from "lucide-react";
+import { ChevronDownIcon, DownloadIcon, FileTextIcon, SparklesIcon } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import {
@@ -33,14 +27,13 @@ import { db } from "@/lib/db/db";
 import { latestSyncRunStartedAt, listLatestScores, setJobStatuses } from "@/lib/db/repo";
 import { useUiStore } from "@/stores/ui";
 import type { JobStatus } from "@/types/job";
-import { queueJobs } from "./actions";
 import { type ExportFormat, exportJobs, exportRawJobs } from "./export";
 import JobDetail from "./JobDetail";
 import JobFiltersBar from "./JobFilters";
 import JobTable from "./JobTable";
 import { buildJobRows, distinctCountries, filterJobRows, type JobRow } from "./jobRows";
 
-const bulkStatuses: JobStatus[] = ["new", "interested", "skipped", "queued", "applied"];
+const bulkStatuses: JobStatus[] = ["new", "interested", "skipped", "applied"];
 
 interface ScoringPlan {
   count: number;
@@ -262,24 +255,6 @@ export default function JobsPage() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => {
-              void queueJobs(selectedIds)
-                .then(() => {
-                  toast.success(`Queued ${selectedIds.length} jobs`);
-                  clearSelection();
-                })
-                .catch((cause: unknown) => {
-                  toast.error(errorMessage(cause));
-                });
-            }}
-          >
-            <ListPlusIcon className="size-4" />
-            Queue selected
-          </Button>
 
           <Button
             size="sm"

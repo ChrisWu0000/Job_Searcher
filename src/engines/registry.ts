@@ -1,6 +1,6 @@
 import type { ObservableEngine } from "./Engine";
 
-export type EngineKind = "sync" | "score" | "apply" | "resume";
+export type EngineKind = "sync" | "score" | "resume";
 
 export type RegisteredEngine = ObservableEngine<never>;
 

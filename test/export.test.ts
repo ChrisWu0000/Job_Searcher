@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { csvCell, jobsToCsv, jobsToJson, rawJobsToJson } from "@/components/jobs/export";
 import { buildJobRows } from "@/components/jobs/jobRows";
 import type { JobScore } from "@/types/scoring";
-import { makeJob } from "./helpers/fakeWw";
+import { makeJob } from "./helpers/jobs";
 
 const score: JobScore = {
   id: "1:v1",

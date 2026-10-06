@@ -33,9 +33,7 @@ export function TailoredTab() {
   const resumes = useLiveQuery(() => listTailoredResumes(), []);
   const entries = useLiveQuery(() => listExperiences(), []);
 
-  const pendingIds = (jobs ?? [])
-    .filter((job) => job.status === "queued" || job.status === "interested")
-    .map((job) => job.id);
+  const pendingIds = (jobs ?? []).filter((job) => job.status === "interested").map((job) => job.id);
   const bankEmpty = entries !== undefined && entries.length === 0;
 
   return (
@@ -49,7 +47,7 @@ export function TailoredTab() {
         lastError={lastError}
         completed={progress?.done}
         total={progress?.total}
-        startLabel={`Tailor queued jobs (${pendingIds.length})`}
+        startLabel={`Tailor interested jobs (${pendingIds.length})`}
         startDisabled={pendingIds.length === 0 || bankEmpty}
         onStart={() => {
           startTailoring(pendingIds, source);

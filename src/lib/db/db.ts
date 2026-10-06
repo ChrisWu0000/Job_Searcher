@@ -10,7 +10,7 @@ import type { JobScore } from "@/types/scoring";
 
 export const databaseName = "wwpp";
 
-export const schemaVersion = 4;
+export const schemaVersion = 5;
 
 export const tableNames = [
   "jobs",
@@ -25,6 +25,9 @@ export const tableNames = [
   "resumeSettings",
   "tailoredResumes",
 ] as const;
+
+const legacySoftwareOnlyReach =
+  "Software engineering internships at companies that pay well and where the work is interesting. Full stack, backend, frontend, infra, ML, and data engineering are all fine. In Canada, prioritize strong pay, a recognized employer (including banks), or broadly transferable SWE experience. Only consider CS/software roles, never embedded, firmware, hardware, or CAD. Pay must be explicitly stated and meet the hourly minimum, regardless of company reputation.";
 
 export type TableName = (typeof tableNames)[number];
 
@@ -101,6 +104,23 @@ export class WwppDatabase extends Dexie {
                 unknownPay: "reject",
               }),
             );
+          });
+      });
+    this.version(5)
+      .stores({})
+      .upgrade(async (transaction) => {
+        await transaction
+          .table<Profile, string>("preferences")
+          .toCollection()
+          .modify((profile) => {
+            const updatedIds = new Set(["software", "no-hw", "ca-value"]);
+            const constraints = [
+              ...profile.constraints.filter((constraint) => !updatedIds.has(constraint.id)),
+              ...defaultProfile.constraints.filter((constraint) => updatedIds.has(constraint.id)),
+            ];
+            const reach =
+              profile.reach === legacySoftwareOnlyReach ? defaultProfile.reach : profile.reach;
+            Object.assign(profile, withCurrentVersion({ ...profile, reach, constraints }));
           });
       });
   }

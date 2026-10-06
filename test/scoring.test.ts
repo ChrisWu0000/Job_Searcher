@@ -102,12 +102,12 @@ afterEach(async () => {
 });
 
 describe("ScoringEngine", () => {
-  it("skips irrelevant and vague-pay postings without an API key or network request", async () => {
+  it("skips non-target and vague-pay postings without an API key or network request", async () => {
     await clearApiKey();
     await upsertJobs([
       makeJob({
         id: "hardware",
-        title: "Embedded Software Engineer",
+        title: "Marketing Intern",
         compensation: "$80 CAD/hour",
       }),
       makeJob({ id: "vague", compensation: "In accordance with university norms" }),
@@ -132,7 +132,7 @@ describe("ScoringEngine", () => {
 
   it("rechecks automatic filters before reusing a previous model score", async () => {
     await seedThreeJobs();
-    await db.jobs.update("cached", { title: "Firmware Engineer" });
+    await db.jobs.update("cached", { title: "Marketing Intern" });
     const { impl, calls } = routedFetch([]);
     setFetch(impl);
     const engine = new ScoringEngine({ jobIds: ["cached"] });

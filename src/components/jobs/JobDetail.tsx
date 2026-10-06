@@ -4,7 +4,6 @@ import {
   ChevronDownIcon,
   ExternalLinkIcon,
   FileTextIcon,
-  ListPlusIcon,
   SparklesIcon,
   XIcon,
 } from "lucide-react";
@@ -51,14 +50,15 @@ import {
   setJobNotes,
   setJobStatus,
 } from "@/lib/db/repo";
+import { classifyJobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
 import { prefilterJob } from "@/lib/ranking/prefilter";
+import { canonicalJobUrl } from "@/lib/sources/publicFeeds";
 import { cn } from "@/lib/utils";
 import { useUiStore } from "@/stores/ui";
 import type { Job } from "@/types/job";
 import type { JobScore } from "@/types/scoring";
-import { openJobInWaterlooWorks, queueJob } from "./actions";
 import InterestedButton from "./InterestedButton";
-import { DocumentIcons, ScoreBadge, StatusBadge, VerdictBadge } from "./JobBadges";
+import { ScoreBadge, StatusBadge, VerdictBadge } from "./JobBadges";
 import { effectiveVerdict, jobDeadline } from "./jobRows";
 
 const notesDebounceMs = 500;
@@ -310,21 +310,6 @@ export function JobDetail() {
                 Skip
               </Button>
               <InterestedButton job={job} />
-              <Button
-                size="sm"
-                onClick={() => {
-                  void queueJob(job.id)
-                    .then(() => {
-                      toast.success(`Queued ${job.title}`);
-                    })
-                    .catch((cause: unknown) => {
-                      toast.error(errorMessage(cause));
-                    });
-                }}
-              >
-                <ListPlusIcon className="size-4" />
-                Queue
-              </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button size="sm" variant="outline">
@@ -359,19 +344,14 @@ export function JobDetail() {
                   Open tailored resume
                 </Button>
               ) : null}
-              <Button
-                size="sm"
-                variant="outline"
-                className="ml-auto"
-                onClick={() => {
-                  void openJobInWaterlooWorks(job.id).catch((cause: unknown) => {
-                    toast.error(errorMessage(cause));
-                  });
-                }}
-              >
-                <ExternalLinkIcon className="size-4" />
-                Open in WaterlooWorks
-              </Button>
+              {job.url && canonicalJobUrl(job.url) ? (
+                <Button asChild size="sm" variant="outline" className="ml-auto">
+                  <a href={canonicalJobUrl(job.url)} target="_blank" rel="noreferrer">
+                    <ExternalLinkIcon className="size-4" />
+                    Open original posting
+                  </a>
+                </Button>
+              ) : null}
             </div>
 
             <div className="min-h-0 flex-1 overflow-auto px-4 pb-6">
@@ -390,6 +370,15 @@ export function JobDetail() {
 
                 <TabsContent value="overview" className="space-y-4">
                   <div className="rounded-md border px-3 py-2">
+                    <FactRow label="Source" value={job.source ?? "—"} />
+                    <FactRow
+                      label="Categories"
+                      value={
+                        classifyJobCategories(job)
+                          .map((category) => jobCategoryLabels[category])
+                          .join(", ") || "—"
+                      }
+                    />
                     <FactRow label="Arrangement" value={job.arrangement ?? "—"} />
                     <FactRow label="Duration" value={formatDuration(job.durationMonths)} />
                     <FactRow label="Pay" value={job.compensation ?? "—"} />
@@ -401,10 +390,6 @@ export function JobDetail() {
                       >
                         {formatDeadline(deadline)} ({formatDateTime(deadline)})
                       </span>
-                    </div>
-                    <div className="flex justify-between gap-4 py-1 text-sm">
-                      <span className="text-muted-foreground">Documents</span>
-                      <DocumentIcons job={job} />
                     </div>
                     <FactRow label="Detail scraped" value={formatDateTime(job.detailScrapedAt)} />
                   </div>
@@ -421,25 +406,6 @@ export function JobDetail() {
                       </p>
                     </section>
                   ) : null}
-
-                  <section className="space-y-1">
-                    <h3 className="font-medium text-sm">Application requirements</h3>
-                    <ul className="list-disc space-y-0.5 pl-5 text-muted-foreground text-sm">
-                      <li>Resume: {job.application.resume ? "required" : "not required"}</li>
-                      <li>
-                        Cover letter: {job.application.coverLetter ? "required" : "not required"}
-                      </li>
-                      <li>
-                        Grade report: {job.application.gradeReport ? "required" : "not required"}
-                      </li>
-                      <li>
-                        Prescreen questions: {job.application.hasPrescreenQuestions ? "yes" : "no"}
-                      </li>
-                      {job.application.otherDocuments.map((document) => (
-                        <li key={document}>Other: {document}</li>
-                      ))}
-                    </ul>
-                  </section>
 
                   <section className="space-y-1">
                     <h3 className="font-medium text-sm">Notes</h3>

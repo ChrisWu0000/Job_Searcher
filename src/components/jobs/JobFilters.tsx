@@ -10,16 +10,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import {
-  type DocumentRequirement,
-  documentRequirementLabels,
-  documentRequirements,
-  useUiStore,
-} from "@/stores/ui";
+import { jobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
+import { jobTermLabels, jobTerms } from "@/lib/ranking/terms";
+import { useUiStore } from "@/stores/ui";
 import type { JobStatus, WorkArrangement } from "@/types/job";
 import type { ScoreVerdict } from "@/types/scoring";
 
-const statuses: JobStatus[] = ["new", "skipped", "interested", "queued", "applied", "error"];
+const statuses: JobStatus[] = ["new", "skipped", "interested", "applied", "error"];
 const verdicts: ScoreVerdict[] = ["apply", "maybe", "skip"];
 const arrangements: WorkArrangement[] = ["remote", "hybrid", "in-person"];
 
@@ -164,6 +161,24 @@ export function JobFiltersBar({
         }}
       />
       <MultiSelect
+        label="Term"
+        options={[...jobTerms]}
+        selected={filters.terms}
+        optionLabel={(value) => jobTermLabels[value]}
+        onToggle={(next) => {
+          setFilter("terms", next);
+        }}
+      />
+      <MultiSelect
+        label="Job category"
+        options={[...jobCategories]}
+        selected={filters.categories}
+        optionLabel={(value) => jobCategoryLabels[value]}
+        onToggle={(next) => {
+          setFilter("categories", next);
+        }}
+      />
+      <MultiSelect
         label="Arrangement"
         options={arrangements}
         selected={filters.arrangements}
@@ -171,16 +186,6 @@ export function JobFiltersBar({
           setFilter("arrangements", next);
         }}
       />
-      <MultiSelect<DocumentRequirement>
-        label="Docs"
-        options={documentRequirements}
-        selected={filters.requiredDocuments}
-        optionLabel={(value) => documentRequirementLabels[value]}
-        onToggle={(next) => {
-          setFilter("requiredDocuments", next);
-        }}
-      />
-
       <NumberFilter
         label="Months"
         value={filters.durationMonths}
@@ -226,19 +231,6 @@ export function JobFiltersBar({
         />
         <Label className="text-xs" htmlFor="filter-new">
           New only
-        </Label>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <Switch
-          id="filter-no-waterloo"
-          checked={filters.excludeWaterloo}
-          onCheckedChange={(checked) => {
-            setFilter("excludeWaterloo", checked);
-          }}
-        />
-        <Label className="text-xs" htmlFor="filter-no-waterloo">
-          No Waterloo
         </Label>
       </div>
 

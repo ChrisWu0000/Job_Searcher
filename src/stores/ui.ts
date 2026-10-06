@@ -1,48 +1,34 @@
 import { create } from "zustand";
 import type { EngineState } from "@/engines/Engine";
 import type { TableName } from "@/lib/db/db";
-import type { JobStatus, PageKind, WorkArrangement } from "@/types/job";
+import type { JobCategory } from "@/lib/ranking/categories";
+import type { JobTerm } from "@/lib/ranking/terms";
+import type { JobStatus, WorkArrangement } from "@/types/job";
 import type { EngineName, LogLevel } from "@/types/run";
 import type { ScoreVerdict } from "@/types/scoring";
 
-export type NavTab = "jobs" | "queue" | "resume" | "sync" | "inspector" | "settings";
+export type NavTab = "jobs" | "resume" | "sync" | "inspector" | "settings";
 
-export const navTabs: NavTab[] = ["jobs", "queue", "resume", "sync", "inspector", "settings"];
+export const navTabs: NavTab[] = ["jobs", "resume", "sync", "inspector", "settings"];
 
 export type ResumeView = "saved" | "bank" | "template" | "tailored";
-
-export type DocumentRequirement = "resume" | "coverLetter" | "gradeReport" | "prescreen";
-
-export const documentRequirements: DocumentRequirement[] = [
-  "resume",
-  "coverLetter",
-  "gradeReport",
-  "prescreen",
-];
-
-export const documentRequirementLabels: Record<DocumentRequirement, string> = {
-  resume: "Resume",
-  coverLetter: "Cover letter",
-  gradeReport: "Grade report",
-  prescreen: "Prescreen questions",
-};
 
 export interface JobFilters {
   search: string;
   statuses: JobStatus[];
   verdicts: ScoreVerdict[];
   countries: string[];
+  categories: JobCategory[];
+  terms: JobTerm[];
   arrangements: WorkArrangement[];
   minScore?: number;
   minLikelihood?: number;
   durationMonths?: number;
   deadlineWithinHours?: number;
-  requiredDocuments: DocumentRequirement[];
   onlyUnscored: boolean;
   onlyNew: boolean;
   showSkipVerdicts: boolean;
   onlyAutoFiltered: boolean;
-  excludeWaterloo: boolean;
 }
 
 export const emptyJobFilters: JobFilters = {
@@ -50,13 +36,13 @@ export const emptyJobFilters: JobFilters = {
   statuses: [],
   verdicts: [],
   countries: [],
+  categories: [],
+  terms: [],
   arrangements: [],
-  requiredDocuments: [],
   onlyUnscored: false,
   onlyNew: false,
   showSkipVerdicts: false,
   onlyAutoFiltered: false,
-  excludeWaterloo: false,
 };
 
 export interface EngineUiState {
@@ -78,27 +64,11 @@ export interface EventLogFilters {
   search: string;
 }
 
-export type InspectorView = "tables" | "events" | "captured";
-
-export interface WaterlooWorksPage {
-  kind: PageKind;
-  jobId?: string;
-  url?: string;
-  at: string;
-}
+export type InspectorView = "tables" | "events";
 
 export interface InspectorTarget {
   table: TableName;
   id: string;
-}
-
-export interface SyncOptions {
-  forceRefresh: boolean;
-  maxPages?: number;
-}
-
-export interface ApplyOptions {
-  stopOnFailure: boolean;
 }
 
 export interface UiStore {
@@ -137,15 +107,6 @@ export interface UiStore {
   selectExperience: (id: string | undefined) => void;
   selectedTailoredResumeId?: string;
   openTailoredResume: (id: string | undefined) => void;
-
-  syncOptions: SyncOptions;
-  setSyncOption: <TKey extends keyof SyncOptions>(key: TKey, value: SyncOptions[TKey]) => void;
-
-  applyOptions: ApplyOptions;
-  setApplyOption: <TKey extends keyof ApplyOptions>(key: TKey, value: ApplyOptions[TKey]) => void;
-
-  waterlooWorksPage?: WaterlooWorksPage;
-  setWaterlooWorksPage: (page: WaterlooWorksPage) => void;
 }
 
 export const useUiStore = create<UiStore>((set) => ({
@@ -221,19 +182,5 @@ export const useUiStore = create<UiStore>((set) => ({
       selectedTailoredResumeId: id,
       ...(id === undefined ? {} : { activeTab: "resume", resumeView: "tailored" }),
     });
-  },
-
-  syncOptions: { forceRefresh: false },
-  setSyncOption: (key, value) => {
-    set((current) => ({ syncOptions: { ...current.syncOptions, [key]: value } }));
-  },
-
-  applyOptions: { stopOnFailure: false },
-  setApplyOption: (key, value) => {
-    set((current) => ({ applyOptions: { ...current.applyOptions, [key]: value } }));
-  },
-
-  setWaterlooWorksPage: (page) => {
-    set({ waterlooWorksPage: page });
   },
 }));

@@ -1,6 +1,8 @@
+import { classifyJobCategories, type JobCategory } from "@/lib/ranking/categories";
 import { prefilterJob } from "@/lib/ranking/prefilter";
+import { classifyJobTerms, type JobTerm } from "@/lib/ranking/terms";
 import { hoursUntil } from "@/lib/time";
-import type { DocumentRequirement, JobFilters } from "@/stores/ui";
+import type { JobFilters } from "@/stores/ui";
 import type { Job } from "@/types/job";
 import type { Profile } from "@/types/preferences";
 import type { JobScore, ScoreVerdict } from "@/types/scoring";
@@ -10,6 +12,8 @@ export interface JobRow {
   score?: JobScore;
   verdict?: ScoreVerdict;
   isNew: boolean;
+  categories: JobCategory[];
+  terms: JobTerm[];
   autoFilterReason?: string;
 }
 
@@ -20,14 +24,6 @@ export function effectiveVerdict(
 ): ScoreVerdict | undefined {
   if (job.status === "skipped" || autoFilterReason) return "skip";
   return score?.model === "prefilter" ? undefined : score?.verdict;
-}
-
-export const waterlooPattern = /\bwaterloo\b/i;
-
-export function isInWaterloo(job: Job): boolean {
-  return [job.city, job.location].some(
-    (part) => typeof part === "string" && waterlooPattern.test(part),
-  );
 }
 
 export function isNewSince(job: Job, newSince: string | undefined): boolean {
@@ -50,28 +46,18 @@ export function buildJobRows(
       storedScore?.model === "prefilter" && !prefilter?.excluded ? undefined : storedScore;
     const autoFilterReason = prefilter?.excluded ? prefilter.reason : undefined;
     const isNew = isNewSince(job, newSince);
+    const categories = classifyJobCategories(job);
     const verdict = effectiveVerdict(job, score, autoFilterReason);
     return {
       job,
       ...(score ? { score } : {}),
       ...(verdict ? { verdict } : {}),
       isNew,
+      categories,
+      terms: classifyJobTerms(job),
       ...(autoFilterReason ? { autoFilterReason } : {}),
     };
   });
-}
-
-export function requiresDocument(job: Job, requirement: DocumentRequirement): boolean {
-  switch (requirement) {
-    case "resume":
-      return job.application.resume;
-    case "coverLetter":
-      return job.application.coverLetter;
-    case "gradeReport":
-      return job.application.gradeReport;
-    case "prescreen":
-      return job.application.hasPrescreenQuestions;
-  }
 }
 
 function searchableText(row: JobRow): string {
@@ -81,6 +67,8 @@ function searchableText(row: JobRow): string {
     job.company,
     job.title,
     job.location,
+    job.source,
+    job.url,
     job.city,
     job.region,
     job.country,
@@ -111,8 +99,15 @@ export function filterJobRows(
     if (filters.onlyAutoFiltered && !row.autoFilterReason) return false;
     if (needle.length > 0 && !searchableText(row).includes(needle)) return false;
     if (filters.statuses.length > 0 && !filters.statuses.includes(job.status)) return false;
+    if (
+      filters.categories.length > 0 &&
+      !filters.categories.some((category) => row.categories.includes(category))
+    )
+      return false;
+    if (filters.terms.length > 0 && !filters.terms.some((term) => row.terms.includes(term))) {
+      return false;
+    }
     if (filters.onlyNew && !row.isNew) return false;
-    if (filters.excludeWaterloo && isInWaterloo(job)) return false;
     if (filters.verdicts.length > 0) {
       if (!verdict || !filters.verdicts.includes(verdict)) return false;
     } else if (
@@ -137,12 +132,6 @@ export function filterJobRows(
       return false;
     }
     if (filters.onlyUnscored && score !== undefined) return false;
-    if (filters.requiredDocuments.length > 0) {
-      const satisfied = filters.requiredDocuments.every((requirement) =>
-        requiresDocument(job, requirement),
-      );
-      if (!satisfied) return false;
-    }
     if (filters.deadlineWithinHours !== undefined) {
       const deadline = jobDeadline(job);
       if (!deadline) return false;

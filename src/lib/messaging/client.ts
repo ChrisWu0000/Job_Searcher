@@ -1,7 +1,5 @@
 import {
   type BackgroundMessageType,
-  type ContentMessageType,
-  type DashboardMessageType,
   isMessageType,
   type MessageError,
   type MessageErrorCode,
@@ -63,45 +61,13 @@ function unwrap<TType extends MessageType>(type: TType, raw: unknown): ResponseF
   return parsed.data;
 }
 
-async function dispatchToRuntime<TType extends MessageType>(
+export async function sendToBackground<TType extends BackgroundMessageType>(
   message: Request<TType>,
 ): Promise<ResponseFor<TType>> {
   const { type } = message;
   let raw: unknown;
   try {
     raw = await chrome.runtime.sendMessage(message);
-  } catch (cause) {
-    throw new MessagingError(toMessageError(type, cause, "transport"), "transport");
-  }
-  return unwrap(type, raw);
-}
-
-export async function sendToContent<TType extends ContentMessageType>(
-  message: Request<TType>,
-): Promise<ResponseFor<TType>> {
-  return dispatchToRuntime(message);
-}
-
-export async function sendToBackground<TType extends BackgroundMessageType>(
-  message: Request<TType>,
-): Promise<ResponseFor<TType>> {
-  return dispatchToRuntime(message);
-}
-
-export async function sendToDashboard<TType extends DashboardMessageType>(
-  message: Request<TType>,
-): Promise<ResponseFor<TType>> {
-  return dispatchToRuntime(message);
-}
-
-export async function sendToTab<TType extends ContentMessageType>(
-  tabId: number,
-  message: Request<TType>,
-): Promise<ResponseFor<TType>> {
-  const { type } = message;
-  let raw: unknown;
-  try {
-    raw = await chrome.tabs.sendMessage(tabId, message);
   } catch (cause) {
     throw new MessagingError(toMessageError(type, cause, "transport"), "transport");
   }
@@ -160,8 +126,4 @@ export function onMessage(handlers: MessageHandlers): () => void {
   return () => {
     chrome.runtime.onMessage.removeListener(listener);
   };
-}
-
-export function notImplemented(step: string): never {
-  throw new MessagingError({ step, message: `${step} is not implemented yet` });
 }

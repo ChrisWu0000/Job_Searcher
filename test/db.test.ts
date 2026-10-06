@@ -13,9 +13,6 @@ import {
   getProfile,
   latestScoreForJob,
   listCapturedHtml,
-  listQueuedApplications,
-  moveQueuedApplication,
-  nextQueueOrder,
   putSavedAnswer,
   saveApplication,
   saveCapturedHtml,
@@ -25,28 +22,9 @@ import {
   upsertJobs,
   upsertScore,
 } from "@/lib/db/repo";
-import type { Job } from "@/types/job";
 import { defaultProfile } from "@/types/preferences";
 import type { JobScore } from "@/types/scoring";
-
-function makeJob(id: string): Job {
-  return {
-    id,
-    company: "Datadog",
-    title: "Software Engineer Intern",
-    location: "New York, NY",
-    scrapedAt: "2026-09-06T14:02:00.000Z",
-    application: {
-      resume: true,
-      gradeReport: false,
-      coverLetter: false,
-      otherDocuments: [],
-      hasPrescreenQuestions: false,
-    },
-    rawText: "raw posting text",
-    status: "new",
-  };
-}
+import { makeJob } from "./helpers/jobs";
 
 function makeScore(
   jobId: string,
@@ -209,7 +187,7 @@ describe("export and import", () => {
       kind: "posting",
       source: "manual",
       html: "<main>posting</main>",
-      url: "https://waterlooworks.uwaterloo.ca/posting",
+      url: "https://jobs.example.test/posting",
     });
 
     const exported = await exportAll();
@@ -236,23 +214,6 @@ describe("export and import", () => {
     const legacyCounts = await importAll(legacy);
     expect(legacyCounts.jobs).toBe(1);
     expect(legacyCounts.capturedHtml).toBe(0);
-  });
-});
-
-describe("queue ordering", () => {
-  it("orders queued applications and swaps neighbours", async () => {
-    await saveApplication({ jobId: "a", status: "queued", answers: {}, log: [], order: 1 });
-    await saveApplication({ jobId: "b", status: "queued", answers: {}, log: [], order: 2 });
-    await saveApplication({ jobId: "c", status: "queued", answers: {}, log: [], order: 3 });
-
-    expect((await listQueuedApplications()).map((entry) => entry.jobId)).toEqual(["a", "b", "c"]);
-    expect(await nextQueueOrder()).toBe(4);
-
-    await moveQueuedApplication("c", -1);
-    expect((await listQueuedApplications()).map((entry) => entry.jobId)).toEqual(["a", "c", "b"]);
-
-    await moveQueuedApplication("a", -1);
-    expect((await listQueuedApplications()).map((entry) => entry.jobId)).toEqual(["a", "c", "b"]);
   });
 });
 
@@ -304,7 +265,7 @@ describe("version 1 upgrade", () => {
     });
     expect(profile?.version).not.toBe("old-version");
     expect(profile?.constraints.map((constraint) => constraint.id)).toEqual(
-      expect.arrayContaining(["personal", "software", "no-hw", "pay-disclosure", "ca-value"]),
+      expect.arrayContaining(["personal", "software", "pay-disclosure", "ca-value"]),
     );
     const migrated = await upgraded.applications.get("legacy-1");
     expect(migrated?.order).toBe(1);

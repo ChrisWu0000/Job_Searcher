@@ -22,6 +22,7 @@ import RecordView, { type RecordValue } from "./RecordView";
 
 const columnSampleSize = 50;
 const rowHeight = 34;
+const inspectorTableNames = tableNames.filter((name) => name !== "capturedHtml");
 
 function deriveColumns(rows: RecordValue[]): string[] {
   const keys: string[] = [];
@@ -93,7 +94,7 @@ export function TableBrowser() {
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            {tableNames.map((name) => (
+            {inspectorTableNames.map((name) => (
               <SelectItem key={name} value={name}>
                 {name}
               </SelectItem>

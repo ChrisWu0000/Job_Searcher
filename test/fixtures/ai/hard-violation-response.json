@@ -9,7 +9,7 @@
       "finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "{\"score\":71,\"likelihood\":55,\"verdict\":\"maybe\",\"hardViolations\":[\"no-hw\",\"made-up-id\"],\"softNotes\":[{\"constraintId\":\"interest\",\"satisfied\":true,\"note\":\"PCB bring-up is interesting but not software.\"},{\"constraintId\":\"ghost\",\"satisfied\":false,\"note\":\"Unknown constraint the model invented.\"}],\"strengths\":[\"Embedded C exposure\"],\"gaps\":[\"Not a software engineering role\"],\"summary\":\"Hardware bring-up role at a robotics company. It violates the no-hardware constraint. This third sentence should be trimmed.\"}"
+        "content": "{\"score\":71,\"likelihood\":55,\"verdict\":\"maybe\",\"hardViolations\":[\"software\",\"made-up-id\"],\"softNotes\":[{\"constraintId\":\"interest\",\"satisfied\":true,\"note\":\"Relevant technical work.\"},{\"constraintId\":\"ghost\",\"satisfied\":false,\"note\":\"Unknown constraint the model invented.\"}],\"strengths\":[\"Relevant technical experience\"],\"gaps\":[\"Outside the requested fields\"],\"summary\":\"The role is outside the requested fields. It violates the target-field constraint. This third sentence should be trimmed.\"}"
       }
     }
   ],

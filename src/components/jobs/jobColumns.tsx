@@ -8,9 +8,10 @@ import {
 } from "@tanstack/react-table";
 import { deadlineTone, deadlineToneClasses, formatDeadline } from "@/components/shared/format";
 import { Checkbox } from "@/components/ui/checkbox";
+import { jobTermLabels } from "@/lib/ranking/terms";
 import { cn } from "@/lib/utils";
 import InterestedButton from "./InterestedButton";
-import { DocumentIcons, NewBadge, ScoreBadge, StatusBadge, VerdictBadge } from "./JobBadges";
+import { NewBadge, ScoreBadge, StatusBadge, VerdictBadge } from "./JobBadges";
 import { type JobRow, jobDeadline } from "./jobRows";
 
 export const jobTableFeatures = tableFeatures({
@@ -104,6 +105,12 @@ export const jobColumns = helper.columns([
       </span>
     ),
   }),
+  helper.accessor((row) => row.terms.map((term) => jobTermLabels[term]).join(", "), {
+    id: "term",
+    header: "Term",
+    size: 150,
+    cell: (info) => <span className="truncate">{info.getValue() || "—"}</span>,
+  }),
   helper.accessor((row) => row.job.location, {
     id: "location",
     header: "Location",
@@ -147,12 +154,6 @@ export const jobColumns = helper.columns([
         </span>
       );
     },
-  }),
-  helper.display({
-    id: "documents",
-    header: "Docs",
-    size: 96,
-    cell: ({ row }) => <DocumentIcons job={row.original.job} />,
   }),
   helper.accessor((row) => row.job.status, {
     id: "status",

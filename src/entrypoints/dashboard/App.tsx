@@ -2,7 +2,6 @@ import {
   BriefcaseIcon,
   DatabaseIcon,
   FileTextIcon,
-  ListChecksIcon,
   MoonIcon,
   RefreshCwIcon,
   SettingsIcon,
@@ -11,13 +10,11 @@ import {
 import { type ComponentType, useEffect } from "react";
 import InspectorPage from "@/components/inspector/InspectorPage";
 import JobsPage from "@/components/jobs/JobsPage";
-import QueuePage from "@/components/queue/QueuePage";
 import ResumePage from "@/components/resume/ResumePage";
 import SettingsPage from "@/components/settings/SettingsPage";
 import DatabaseCounts from "@/components/shared/DatabaseCounts";
 import { useColorScheme } from "@/components/shared/useColorScheme";
-import { useContentMessages } from "@/components/shared/useContentMessages";
-import SyncPage from "@/components/sync/SyncPage";
+import SourceSyncPage from "@/components/sync/SourceSyncPage";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/sonner";
@@ -27,7 +24,6 @@ import { type NavTab, navTabs, useUiStore } from "@/stores/ui";
 
 const navLabels: Record<NavTab, string> = {
   jobs: "Jobs",
-  queue: "Queue",
   resume: "Resume",
   sync: "Sync",
   inspector: "Inspector",
@@ -36,7 +32,6 @@ const navLabels: Record<NavTab, string> = {
 
 const navIcons: Record<NavTab, ComponentType<{ className?: string }>> = {
   jobs: BriefcaseIcon,
-  queue: ListChecksIcon,
   resume: FileTextIcon,
   sync: RefreshCwIcon,
   inspector: DatabaseIcon,
@@ -45,9 +40,8 @@ const navIcons: Record<NavTab, ComponentType<{ className?: string }>> = {
 
 const navPages: Record<NavTab, ComponentType> = {
   jobs: JobsPage,
-  queue: QueuePage,
   resume: ResumePage,
-  sync: SyncPage,
+  sync: SourceSyncPage,
   inspector: InspectorPage,
   settings: SettingsPage,
 };
@@ -61,8 +55,6 @@ export default function App() {
   const activeTab = useUiStore((store) => store.activeTab);
   const setActiveTab = useUiStore((store) => store.setActiveTab);
   const { resolved, setScheme } = useColorScheme();
-  useContentMessages();
-
   useEffect(() => {
     const applyHash = () => {
       const tab = tabFromHash(window.location.hash);
@@ -90,7 +82,7 @@ export default function App() {
     <TooltipProvider>
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="sticky top-0 z-30 flex flex-wrap items-center gap-4 border-b bg-background/95 px-6 py-3 backdrop-blur">
-          <span className="font-semibold text-lg tracking-tight">WW++</span>
+          <span className="font-semibold text-lg tracking-tight">JobScope</span>
           <Separator orientation="vertical" className="h-6" />
           <nav className="flex items-center gap-1">
             {navTabs.map((tab) => {

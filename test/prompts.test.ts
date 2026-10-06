@@ -67,9 +67,9 @@ describe("buildSystemPrompt", () => {
     const prompt = buildSystemPrompt(profile);
     expect(prompt).toContain("You are a job-matching analyst");
     expect(prompt).toContain("Waterloo CS 2A.");
-    expect(prompt).toContain("Software engineering internships at companies that pay well");
+    expect(prompt).toContain("Internships in software engineering, data science, cyber security");
     expect(prompt).toContain("## Hard constraints");
-    expect(prompt).toContain("[no-hw] No hardware, mechatronics");
+    expect(prompt).toContain("[software] Role must be in software engineering, data science");
     expect(prompt).toContain("## Soft constraints");
     expect(prompt).toContain("[company] (weight 3) Prefer well-known");
     expect(prompt).toContain("- CAD: 60 per hour");
@@ -240,7 +240,7 @@ describe("normalizeVerdict", () => {
     expect(normalized.verdict).toBe("skip");
     expect(normalized.score).toBe(0);
     expect(normalized.likelihood).toBe(0);
-    expect(normalized.hardViolations).toEqual(["no-hw"]);
+    expect(normalized.hardViolations).toEqual(["software"]);
     expect(normalized.softNotes.map((note) => note.constraintId)).toEqual(["interest"]);
     expect(normalized.summary.split(". ")).toHaveLength(2);
   });

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { buildJobRows, filterJobRows, isNewSince } from "@/components/jobs/jobRows";
 import { emptyJobFilters } from "@/stores/ui";
 import { defaultProfile } from "@/types/preferences";
-import { makeJob } from "./helpers/fakeWw";
+import { makeJob } from "./helpers/jobs";
 
 const scrapedEarlier = makeJob("old", { firstSeenAt: "2026-09-06T00:00:00.000Z" });
 const scrapedNow = makeJob("fresh", { firstSeenAt: "2026-09-07T04:00:00.000Z" });
@@ -28,7 +28,7 @@ const skipVerdict = {
 const undated = makeJob("undated");
 
 describe("job rows", () => {
-  it("hides automatic exclusions immediately, including previously high-scored jobs", () => {
+  it("classifies hardware roles and keeps the category filter available", () => {
     const hardware = makeJob("old", {
       title: "Embedded Software Engineer",
       compensation: "$80 CAD/hour",
@@ -36,16 +36,14 @@ describe("job rows", () => {
     const good = makeJob("good", { title: "Backend Developer", compensation: "$60 CAD/hour" });
     const oldScore = { ...skipVerdict, jobId: "old", score: 95, verdict: "apply" as const };
     const rows = buildJobRows([hardware, good], [oldScore], undefined, defaultProfile);
-    expect(rows[0]).toMatchObject({ verdict: "skip", score: { score: 95 } });
-    expect(rows[0]?.autoFilterReason).toContain("embedded");
-    expect(filterJobRows(rows, emptyJobFilters).map((row) => row.job.id)).toEqual(["good"]);
+    expect(rows[0]?.categories).toContain("hardware-engineering");
+    expect(rows[0]).toMatchObject({ score: { score: 95 } });
+    expect(filterJobRows(rows, emptyJobFilters).map((row) => row.job.id)).toEqual(["old", "good"]);
     expect(
-      filterJobRows(rows, { ...emptyJobFilters, onlyAutoFiltered: true }).map((row) => row.job.id),
+      filterJobRows(rows, { ...emptyJobFilters, categories: ["hardware-engineering"] }).map(
+        (row) => row.job.id,
+      ),
     ).toEqual(["old"]);
-    expect(filterJobRows(rows, { ...emptyJobFilters, showSkipVerdicts: true })).toHaveLength(2);
-    expect(
-      filterJobRows(rows, { ...emptyJobFilters, onlyAutoFiltered: true, search: "embedded" }),
-    ).toHaveLength(1);
   });
 
   it("shows saved interests in the Interested view even when ranking would hide them", () => {
@@ -133,24 +131,41 @@ describe("job rows", () => {
     ).toEqual([]);
   });
 
-  it("can hide jobs located in Waterloo", () => {
-    const inWaterloo = makeJob("kw", { location: "Waterloo, ON" });
-    const byCity = makeJob("city", { location: "Kitchener - Waterloo", city: "Waterloo" });
-    const university = makeJob("uw", {
-      company: "University of Waterloo",
-      location: "Toronto, ON",
-    });
-    const rows = buildJobRows([inWaterloo, byCity, university, scrapedEarlier], []);
-    expect(
-      filterJobRows(rows, { ...emptyJobFilters, excludeWaterloo: true }).map((row) => row.job.id),
-    ).toEqual(["uw", "old"]);
-    expect(filterJobRows(rows, emptyJobFilters)).toHaveLength(4);
-  });
-
   it("can narrow the table to new jobs only", () => {
     const rows = buildJobRows([scrapedEarlier, scrapedNow], [], "2026-09-07T03:30:00.000Z");
     expect(
       filterJobRows(rows, { ...emptyJobFilters, onlyNew: true }).map((row) => row.job.id),
     ).toEqual(["fresh"]);
+  });
+
+  it("matches selected job categories across all source text", () => {
+    const rows = buildJobRows(
+      [
+        makeJob("security", { title: "Security Analyst" }),
+        makeJob("payments", {
+          title: "Backend Engineer",
+          company: "PayCo",
+          summary: "Build our payment processing platform.",
+        }),
+        makeJob("other", { title: "Marketing Intern" }),
+      ],
+      [],
+    );
+    expect(
+      filterJobRows(rows, { ...emptyJobFilters, categories: ["cyber-security", "fintech"] }).map(
+        (row) => row.job.id,
+      ),
+    ).toEqual(["security", "payments"]);
+  });
+
+  it.each([
+    ["Software Engineer Intern", "software-engineering"],
+    ["Data Scientist", "data-science"],
+    ["Cyber Security Analyst", "cyber-security"],
+    ["Hardware Engineer", "hardware-engineering"],
+    ["Fintech Platform Engineer", "fintech"],
+  ] as const)("recognizes %s as %s", (title, category) => {
+    const rows = buildJobRows([makeJob("classified", { title })], []);
+    expect(rows[0]?.categories).toContain(category);
   });
 });

@@ -9,7 +9,7 @@ if (container) {
     <StrictMode>
       <main className="mx-auto min-h-screen max-w-[1500px] bg-background px-5 py-8 text-foreground sm:px-8">
         <p className="mb-6 font-semibold tracking-tight">
-          WW++ <span className="font-normal text-muted-foreground">/ Saved resumes</span>
+          JobScope <span className="font-normal text-muted-foreground">/ Saved resumes</span>
         </p>
         <SavedResumeLibrary />
       </main>
