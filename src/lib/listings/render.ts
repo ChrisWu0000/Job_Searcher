@@ -9,18 +9,57 @@ function cell(value: string): string {
 function row(job: Listing): string {
   const location = job.location === "Not specified" ? "" : job.location.split("; ").join(", ");
   const link = `[Apply](${job.url})`;
-  return `| ${cell(job.company)} | ${cell(job.title)} | ${cell(location)} | ${link} |`;
+  const posted = job.postedAt ? job.postedAt.slice(0, 10) : "";
+  return `| ${cell(job.company)} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
 }
 
 function table(jobs: Listing[]): string {
   const sorted = [...jobs].sort(
-    (a, b) => a.company.localeCompare(b.company) || a.title.localeCompare(b.title),
+    (a, b) =>
+      (b.postedAt ?? "").localeCompare(a.postedAt ?? "") ||
+      a.company.localeCompare(b.company) ||
+      a.title.localeCompare(b.title),
   );
   return [
-    "| Company | Role | Location | Link |",
-    "| --- | --- | --- | --- |",
+    "| Company | Role | Location | Pay | Posted | Link |",
+    "| --- | --- | --- | --- | --- | --- |",
     ...sorted.map(row),
   ].join("\n");
+}
+
+export const recentDays = 14;
+
+const csvHeaders = ["Term", "Category", "Company", "Role", "Location", "Pay", "Posted", "Link"];
+
+function csvCell(value: string): string {
+  return /[",\n\r]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
+}
+
+export function renderCsv(listings: Listing[]): string {
+  const rows: string[][] = [];
+  const unique = new Map<string, Listing>();
+  for (const listing of listings) unique.set(listing.url, listing);
+  const sorted = [...unique.values()].sort(
+    (a, b) =>
+      (b.postedAt ?? "").localeCompare(a.postedAt ?? "") || a.company.localeCompare(b.company),
+  );
+  for (const listing of sorted) {
+    for (const term of listing.terms) {
+      for (const category of listing.categories) {
+        rows.push([
+          jobTermLabels[term],
+          jobCategoryLabels[category],
+          listing.company,
+          listing.title,
+          listing.location === "Not specified" ? "" : listing.location,
+          listing.pay ?? "",
+          listing.postedAt?.slice(0, 10) ?? "",
+          listing.url,
+        ]);
+      }
+    }
+  }
+  return `${[csvHeaders, ...rows].map((row) => row.map(csvCell).join(",")).join("\n")}\n`;
 }
 
 export interface ListingCounts {
@@ -38,8 +77,11 @@ export function renderListings(
   statuses: SourceStatus[],
   updated: Date,
 ): { markdown: string; counts: ListingCounts } {
+  const cutoff = new Date(updated.getTime() - recentDays * 86_400_000).toISOString();
   const unique = new Map<string, Listing>();
-  for (const listing of listings) unique.set(listing.url, listing);
+  for (const listing of listings) {
+    if (listing.postedAt && listing.postedAt >= cutoff) unique.set(listing.url, listing);
+  }
 
   const byTerm = new Map<JobTerm, Map<JobCategory, Listing[]>>();
   for (const term of jobTerms) byTerm.set(term, new Map());
@@ -71,7 +113,7 @@ export function renderListings(
 
   const header = [
     "# JobScope: 2027 Internship Listings",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027**, gathered from public community lists and company job boards. Each source is scraped manually, one at a time.",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027**, gathered from public community lists and company job boards. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]}`,
     "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Sources](#sources)",
   ].join("\n\n");
@@ -84,6 +126,9 @@ export function renderListings(
     "## Sources",
     "Nothing scrapes automatically. To refresh a source, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).",
     ["| Source | Last scraped | Listings |", "| --- | --- | --- |", ...sourceRows].join("\n"),
+    "- Download [data/listings.csv](data/listings.csv) for every scraped listing, including older ones and ones with no posted date.",
+    "- **Posted** is the date the employer or job board published the listing, not the date it was scraped. It is blank when the source does not provide one.",
+    "- **Pay** is shown only when the source or posting text states it.",
     "- A listing can appear under several categories or in both terms.",
     "- Categories and terms are inferred from titles, tags, and descriptions, so check the posting before applying.",
     "- Job boards (Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, Workday) are discovered from the community lists, so scrape those first. The optional Chrome extension is described in [docs/EXTENSION.md](docs/EXTENSION.md).",

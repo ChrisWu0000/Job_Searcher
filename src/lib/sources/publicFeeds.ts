@@ -1,6 +1,6 @@
 import { classifyJobCategories } from "@/lib/ranking/categories";
 import { classifyJobTerms } from "@/lib/ranking/terms";
-import { nowIso } from "@/lib/time";
+import { nowIso, postedAtIso } from "@/lib/time";
 import type { Job } from "@/types/job";
 
 export interface PublicJobFeed {
@@ -116,6 +116,9 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
 
   const category = fieldText(record, "category", "type");
   const termList = termValues(record);
+  const postedAt = postedAtIso(
+    record.date_posted ?? record.datePosted ?? record.posted_at ?? record.postedAt ?? record.date,
+  );
   const description = fieldText(record, "descriptionPlain", "description", "content", "summary");
   const location = fieldText(record, "locations", "location") ?? "Not specified";
   const scrapedAt = nowIso();
@@ -131,6 +134,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     firstSeenAt: scrapedAt,
     ...(tags ? { tags } : {}),
     ...(termList.length > 0 ? { terms: termList } : {}),
+    ...(postedAt ? { postedAt } : {}),
     ...(description ? { summary: description } : {}),
     rawText: description ?? `${title} at ${company}`,
     application: {

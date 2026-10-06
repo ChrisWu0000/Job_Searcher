@@ -36,3 +36,24 @@ export function hoursUntil(isoTimestamp: string, from: Date = new Date()): numbe
   if (Number.isNaN(target)) return undefined;
   return (target - from.getTime()) / (60 * 60 * 1000);
 }
+
+export function postedAtIso(value: unknown, now: Date = new Date()): string | undefined {
+  let date: Date | undefined;
+  if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    date = new Date(value < 1e11 ? value * 1000 : value);
+  } else if (typeof value === "string" && value.trim() !== "") {
+    const relative = value.match(/(\d+)\+?\s*days?\s+ago/i);
+    if (relative?.[1]) {
+      date = new Date(now.getTime() - Number(relative[1]) * 86_400_000);
+    } else if (/today|just posted/i.test(value)) {
+      date = now;
+    } else if (/yesterday/i.test(value)) {
+      date = new Date(now.getTime() - 86_400_000);
+    } else if (/^\d{9,13}$/.test(value.trim())) {
+      return postedAtIso(Number(value.trim()), now);
+    } else {
+      date = new Date(value);
+    }
+  }
+  return date && !Number.isNaN(date.getTime()) ? date.toISOString() : undefined;
+}

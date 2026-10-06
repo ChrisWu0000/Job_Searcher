@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { type Listing, listingSources, scrapeSource } from "../src/lib/listings/collect";
-import { renderListings, type SourceStatus } from "../src/lib/listings/render";
+import { renderCsv, renderListings, type SourceStatus } from "../src/lib/listings/render";
 
 interface StoredSource {
   scrapedAt: string;
@@ -50,6 +50,8 @@ for (const source of listingSources) {
 }
 const { markdown, counts } = renderListings(all, statuses, new Date());
 writeFileSync(readmeUrl, markdown);
+mkdirSync(dataDir, { recursive: true });
+writeFileSync(new URL("listings.csv", dataDir), renderCsv(all));
 console.log(
   `README.md updated: ${counts.byTerm["winter-2027"]} winter, ${counts.byTerm["summer-2027"]} summer`,
 );

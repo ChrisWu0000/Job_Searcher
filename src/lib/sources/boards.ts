@@ -1,5 +1,5 @@
 import type { FetchLike } from "@/lib/ai/openrouter";
-import { nowIso } from "@/lib/time";
+import { nowIso, postedAtIso } from "@/lib/time";
 import type { Job } from "@/types/job";
 import { canonicalJobUrl } from "./publicFeeds";
 
@@ -257,6 +257,20 @@ export function normalizeBoardJob(
     text(row.compensationTierSummary) ??
     text(row.salaryText);
 
+  const postedAt = postedAtIso(
+    row.publishedAt ??
+      row.first_published ??
+      row.first_published_at ??
+      row.createdAt ??
+      row.releasedDate ??
+      row.published ??
+      row.published_at ??
+      row.postedOn ??
+      row.postedDate ??
+      row.created_at,
+    new Date(now),
+  );
+
   return {
     id: `url:${url}`,
     company,
@@ -267,6 +281,7 @@ export function normalizeBoardJob(
     scrapedAt: now,
     firstSeenAt: now,
     ...(compensation ? { compensation } : {}),
+    ...(postedAt ? { postedAt } : {}),
     ...(description ? { summary: description } : {}),
     rawText: description ?? `${title} at ${company}`,
     application: {

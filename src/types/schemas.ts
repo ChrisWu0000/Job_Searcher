@@ -54,6 +54,7 @@ export const jobSchema = jobStubSchema.extend({
   isNew: z.boolean().optional(),
   workTerm: z.string().optional(),
   terms: z.array(z.string()).optional(),
+  postedAt: z.string().optional(),
   jobType: z.string().optional(),
   address: z.string().optional(),
   postalCode: z.string().optional(),

@@ -1,5 +1,7 @@
 import type { FetchLike } from "@/lib/ai/openrouter";
 import { classifyJobCategories, type JobCategory } from "@/lib/ranking/categories";
+import { parseHourlyPay } from "@/lib/ranking/pay";
+import { payTextForJob } from "@/lib/ranking/prefilter";
 import { classifyJobTerms, type JobTerm } from "@/lib/ranking/terms";
 import {
   discoverPublicBoards,
@@ -17,6 +19,8 @@ export interface Listing {
   url: string;
   categories: JobCategory[];
   terms: JobTerm[];
+  pay?: string;
+  postedAt?: string;
 }
 
 export interface ListingSource {
@@ -46,6 +50,7 @@ export function toListing(job: Job): Listing | undefined {
   const categories = classifyJobCategories(job);
   const terms = classifyJobTerms(job);
   if (categories.length === 0 || terms.length === 0) return undefined;
+  const pay = job.compensation?.trim() || parseHourlyPay(payTextForJob(job))?.original;
   return {
     id: job.id,
     company: job.company,
@@ -54,6 +59,8 @@ export function toListing(job: Job): Listing | undefined {
     url: job.url,
     categories,
     terms,
+    ...(pay ? { pay } : {}),
+    ...(job.postedAt ? { postedAt: job.postedAt } : {}),
   };
 }
 
