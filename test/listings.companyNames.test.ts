@@ -34,6 +34,9 @@ describe("company name display", () => {
   it("uses display capitalization in both generated outputs", () => {
     const { markdown } = renderListings([listing], [], new Date("2026-10-06T00:00:00.000Z"));
     expect(markdown).toContain("| Acme Robotics |");
+    expect(markdown).toContain(
+      '<a href="https://example.com/intern" target="_blank" rel="noopener noreferrer">Apply</a>',
+    );
     expect(renderCsv([listing])).toContain("Acme Robotics");
   });
 });

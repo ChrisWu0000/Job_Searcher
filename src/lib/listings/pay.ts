@@ -15,10 +15,23 @@ function stripHtml(html: string): string {
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;|&#160;/gi, " ")
     .replace(/&amp;/gi, "&")
-    .replace(/&#36;|&dollar;/gi, "$")
+    .replace(/&dollar;/gi, "$")
     .replace(/&ndash;|&#8211;/gi, "-")
+    .replace(/&#(x[\da-f]+|\d+);/gi, (_, code: string) => {
+      const codePoint =
+        code[0]?.toLowerCase() === "x" ? Number.parseInt(code.slice(1), 16) : Number(code);
+      return Number.isInteger(codePoint) && codePoint >= 0 && codePoint <= 0x10ffff
+        ? String.fromCodePoint(codePoint)
+        : " ";
+    })
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function scriptText(html: string): string {
+  return [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)]
+    .map((match) => match[1] ?? "")
+    .join("\n");
 }
 
 function jsonLdPay(html: string): string | undefined {
@@ -92,5 +105,7 @@ export function payFromText(text: string): string | undefined {
 }
 
 export function payFromHtml(html: string): string | undefined {
-  return jsonLdPay(html) ?? payFromText(stripHtml(html));
+  return (
+    jsonLdPay(html) ?? payFromText(stripHtml(html)) ?? payFromText(stripHtml(scriptText(html)))
+  );
 }

@@ -81,17 +81,27 @@ async function fetchFeedJobs(
 }
 
 const payLookbackDays = 14;
-const maxPageBytes = 1_500_000;
 
 export async function enrichPay(
   listings: Listing[],
   fetchImpl: FetchLike,
   concurrency = 8,
   now: Date = new Date(),
-): Promise<void> {
+): Promise<string[]> {
   const cutoff = new Date(now.getTime() - payLookbackDays * 86_400_000).toISOString();
+  const failures = new Map<string, { count: number; sample: string }>();
+  const recordFailure = (reason: string, listing: Listing): void => {
+    const current = failures.get(reason);
+    failures.set(reason, {
+      count: (current?.count ?? 0) + 1,
+      sample: current?.sample ?? `${listing.company}: ${listing.title}`,
+    });
+  };
   const queue = listings.filter(
-    (listing) => !listing.pay && listing.postedAt !== undefined && listing.postedAt >= cutoff,
+    (listing) =>
+      !listing.pay &&
+      (new URL(listing.url).hostname.endsWith(".myworkdayjobs.com") ||
+        (listing.postedAt !== undefined && listing.postedAt >= cutoff)),
   );
   const worker = async (): Promise<void> => {
     for (let listing = queue.shift(); listing; listing = queue.shift()) {
@@ -100,13 +110,22 @@ export async function enrichPay(
           headers: { Accept: "text/html,application/xhtml+xml" },
           signal: AbortSignal.timeout(15_000),
         });
-        if (!response.ok) continue;
-        const pay = payFromHtml((await response.text()).slice(0, maxPageBytes));
+        if (!response.ok) {
+          recordFailure(`HTTP ${response.status}`, listing);
+          continue;
+        }
+        const pay = payFromHtml(await response.text());
         if (pay) listing.pay = pay;
-      } catch {}
+      } catch (cause) {
+        recordFailure(cause instanceof Error ? cause.message : String(cause), listing);
+      }
     }
   };
   await Promise.all(Array.from({ length: Math.max(1, concurrency) }, () => worker()));
+  return [...failures].map(
+    ([reason, { count, sample }]) =>
+      `salary page ${reason} for ${count} listing${count === 1 ? "" : "s"} (e.g. ${sample})`,
+  );
 }
 
 export interface ScrapeResult {
@@ -132,7 +151,7 @@ export async function scrapeSource(
       if (listing) listings.set(listing.id, listing);
     }
     const found = [...listings.values()];
-    await enrichPay(found, fetchImpl);
+    failures.push(...(await enrichPay(found, fetchImpl)));
     return { listings: found, failures };
   }
 
@@ -156,6 +175,6 @@ export async function scrapeSource(
   };
   await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => worker()));
   const found = [...listings.values()];
-  await enrichPay(found, fetchImpl);
+  failures.push(...(await enrichPay(found, fetchImpl)));
   return { listings: found, failures };
 }

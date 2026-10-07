@@ -7,9 +7,17 @@ function cell(value: string): string {
   return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 }
 
+function htmlAttribute(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 function row(job: Listing): string {
   const location = job.location === "Not specified" ? "" : job.location.split("; ").join(", ");
-  const link = `[Apply](${job.url})`;
+  const link = `<a href="${htmlAttribute(job.url)}" target="_blank" rel="noopener noreferrer">Apply</a>`;
   const posted = job.postedAt ? job.postedAt.slice(0, 10) : "";
   return `| ${cell(displayCompanyName(job.company))} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
 }
