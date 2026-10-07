@@ -1,8 +1,13 @@
 # JobScope: 2027 Internship Listings
 
-Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.
+Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.
 
-Last updated: 2026-10-07 | Winter 2027: 499 | Summer 2027: 1028 | Later terms: 34
+### Requirement icons
+
+- 🛂 Does not offer sponsorship
+- 🇺🇸 Requires U.S. citizenship
+
+Last updated: 2026-10-07 | Winter 2027: 499 | Summer 2027: 1026 | Later terms: 34
 
 Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)
 
@@ -1007,7 +1012,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Apex Technology Inc | Sensors Team Internship (Spring or Summer 2027) | Los Angeles | USD 45/hour | 2026-09-23 | <a href="https://jobs.ashbyhq.com/apex-technology-inc/4ed1b2ad-2eed-4342-8720-d157c53d4804" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Ralliant | Research and Development Co-op | Fairport, NY |  | 2026-09-23 | <a href="https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/10637" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Data science (294)
+### Data science (292)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1303,8 +1308,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Klaviyo Campus | Machine Learning Engineer Internship-Summer 2027 | Palo Alto, CA |  | 2026-09-23 | <a href="https://job-boards.greenhouse.io/klaviyocampus/jobs/7999274003" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Zipline | Autonomy Intern | South SF |  | 2026-09-23 | <a href="https://www.zipline.com/open-roles/8002829003?gh_jid=8002829003" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Western Digital | Intern - Data Analytics | Biñan City, LAGUNA, ph |  | 2026-09-23 | <a href="https://api.smartrecruiters.com/v1/companies/WesternDigital/postings/744000151235109" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Waymo | Machine Learning Engineer Intern - MS/PhD - Simulator Realism Evaluation | SF | $70—$70 USD | 2026-09-23 | <a href="https://careers.withwaymo.com/jobs?gh_jid=8214350" target="_blank" rel="noopener noreferrer">Apply</a> |
-| AQR Capital Management | Machine Learning Research Associate Intern | Greenwich, CT |  | 2026-09-23 | <a href="https://careers.aqr.com/jobs?gh_jid=8224708&amp;gh_jid=8224708" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 ### Cyber security (148)
 
@@ -1654,7 +1657,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Astranis | Power Electronics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | <a href="https://job-boards.greenhouse.io/astranis/jobs/4706425006" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astranis | Avionics Intern (Summer 2027) | San Francisco | $29.00 per hour | 2026-09-23 | <a href="https://job-boards.greenhouse.io/astranis/jobs/4706024006" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Fintech (205)
+### Fintech (204)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1862,7 +1865,6 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Imc | Hardware Machine Learning PhD Research Internship | Chicago, United States |  | 2026-09-23 | <a href="https://job-boards.eu.greenhouse.io/imc/jobs/4975945101" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Viking Global Investors | Private Equity Investment Intern | New York, NY | $250,000 to $250,000 | 2026-09-23 | <a href="https://job-boards.greenhouse.io/vikingglobalinvestors/jobs/6203684004" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Klaviyo Campus | Machine Learning Engineer Internship-Summer 2027 | Palo Alto, CA |  | 2026-09-23 | <a href="https://job-boards.greenhouse.io/klaviyocampus/jobs/7999274003" target="_blank" rel="noopener noreferrer">Apply</a> |
-| AQR Capital Management | Machine Learning Research Associate Intern | Greenwich, CT |  | 2026-09-23 | <a href="https://careers.aqr.com/jobs?gh_jid=8224708&amp;gh_jid=8224708" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 ## Later terms
 
@@ -1938,7 +1940,7 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 
 ## Sources
 
-Nothing scrapes automatically. To refresh a source, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).
+To refresh all sources, push a commit to `main`. To refresh one source manually, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).
 
 | Source | Last scraped | Listings |
 | --- | --- | --- |

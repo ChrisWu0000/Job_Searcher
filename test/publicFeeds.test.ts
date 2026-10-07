@@ -34,6 +34,7 @@ describe("public job feeds", () => {
         title: "Hardware Engineer Intern",
         locations: ["Toronto, ON", "Remote"],
         category: "Hardware",
+        sponsorship: "U.S. Citizenship is Required",
         url: "https://jobs.example.com/role?utm_source=feed",
         active: true,
       },
@@ -47,6 +48,7 @@ describe("public job feeds", () => {
       source: "test",
       url: "https://jobs.example.com/role",
       tags: ["Hardware"],
+      fields: { sponsorship: "U.S. Citizenship is Required" },
     });
     expect(job && classifyJobCategories(job)).toContain("hardware-engineering");
   });

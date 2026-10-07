@@ -11,6 +11,7 @@ import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/p
 import type { Job } from "@/types/job";
 import { displayCompanyName } from "./companyNames";
 import { payFromHtml, payFromText } from "./pay";
+import { classifyEmploymentRequirements } from "./requirements";
 
 export interface Listing {
   id: string;
@@ -20,6 +21,8 @@ export interface Listing {
   url: string;
   categories: JobCategory[];
   terms: JobTerm[];
+  requiresUSCitizenship?: boolean;
+  noSponsorship?: boolean;
   pay?: string;
   postedAt?: string;
 }
@@ -52,6 +55,7 @@ export function toListing(job: Job): Listing | undefined {
   const terms = classifyJobTerms(job);
   if (categories.length === 0 || terms.length === 0) return undefined;
   const pay = job.compensation?.trim() || payFromText(payTextForJob(job));
+  const requirements = classifyEmploymentRequirements(job);
   return {
     id: job.id,
     company: displayCompanyName(job.company),
@@ -60,6 +64,8 @@ export function toListing(job: Job): Listing | undefined {
     url: job.url,
     categories,
     terms,
+    ...(requirements.requiresUSCitizenship ? { requiresUSCitizenship: true } : {}),
+    ...(requirements.noSponsorship ? { noSponsorship: true } : {}),
     ...(pay ? { pay } : {}),
     ...(job.postedAt ? { postedAt: job.postedAt } : {}),
   };

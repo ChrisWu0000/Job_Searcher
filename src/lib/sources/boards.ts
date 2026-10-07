@@ -254,6 +254,7 @@ export function normalizeBoardJob(
   if (!title || !url) return undefined;
 
   const description = descriptionFor(row);
+  const sponsorship = text(row.sponsorship) ?? text(row.sponsorshipRequirement);
   const company =
     text(row.company_name) ??
     nestedText(row.company, "name") ??
@@ -291,6 +292,7 @@ export function normalizeBoardJob(
     ...(compensation ? { compensation } : {}),
     ...(postedAt ? { postedAt } : {}),
     ...(description ? { summary: description } : {}),
+    ...(sponsorship ? { fields: { sponsorship } } : {}),
     rawText: description ?? `${title} at ${company}`,
     application: {
       resume: false,

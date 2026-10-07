@@ -15,11 +15,16 @@ function htmlAttribute(value: string): string {
     .replace(/>/g, "&gt;");
 }
 
+function companyLabel(job: Listing): string {
+  const requirements = `${job.noSponsorship ? " 🛂" : ""}${job.requiresUSCitizenship ? " 🇺🇸" : ""}`;
+  return `${displayCompanyName(job.company)}${requirements}`;
+}
+
 function row(job: Listing): string {
   const location = job.location === "Not specified" ? "" : job.location.split("; ").join(", ");
   const link = `<a href="${htmlAttribute(job.url)}" target="_blank" rel="noopener noreferrer">Apply</a>`;
   const posted = job.postedAt ? job.postedAt.slice(0, 10) : "";
-  return `| ${cell(displayCompanyName(job.company))} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
+  return `| ${cell(companyLabel(job))} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
 }
 
 function table(jobs: Listing[]): string {
@@ -66,7 +71,7 @@ export function renderCsv(listings: Listing[]): string {
         rows.push([
           jobTermLabels[term],
           jobCategoryLabels[category],
-          displayCompanyName(listing.company),
+          companyLabel(listing),
           listing.title,
           listing.location === "Not specified" ? "" : listing.location,
           listing.pay ?? "",
@@ -138,7 +143,8 @@ export function renderListings(
 
   const header = [
     "# JobScope: 2027 Internship Listings",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). Each source is scraped manually, one at a time.",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
+    "### Requirement icons\n\n- 🛂 Does not offer sponsorship\n- 🇺🇸 Requires U.S. citizenship",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
     "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)",
   ].join("\n\n");
@@ -149,7 +155,7 @@ export function renderListings(
   );
   const footer = [
     "## Sources",
-    "Nothing scrapes automatically. To refresh a source, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).",
+    "To refresh all sources, push a commit to `main`. To refresh one source manually, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).",
     ["| Source | Last scraped | Listings |", "| --- | --- | --- |", ...sourceRows].join("\n"),
     "- Download [data/listings.csv](data/listings.csv) for every scraped listing, including older ones and ones with no posted date.",
     "- **Posted** is the date the employer or job board published the listing, not the date it was scraped. It is blank when the source does not provide one.",

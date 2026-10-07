@@ -39,4 +39,19 @@ describe("company name display", () => {
     );
     expect(renderCsv([listing])).toContain("Acme Robotics");
   });
+
+  it("renders only the requested eligibility indicators beside the company", () => {
+    const flaggedListing: Listing = {
+      ...listing,
+      requiresUSCitizenship: true,
+      noSponsorship: true,
+    };
+    const { markdown } = renderListings([flaggedListing], [], new Date("2026-10-06T00:00:00.000Z"));
+    const csv = renderCsv([flaggedListing]);
+
+    expect(markdown).toContain("| Acme Robotics 🛂 🇺🇸 |");
+    expect(markdown).toContain("- 🛂 Does not offer sponsorship");
+    expect(markdown).toContain("- 🇺🇸 Requires U.S. citizenship");
+    expect(csv).toContain("Acme Robotics 🛂 🇺🇸");
+  });
 });

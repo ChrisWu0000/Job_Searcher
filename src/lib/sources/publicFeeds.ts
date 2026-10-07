@@ -114,6 +114,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     record.date_posted ?? record.datePosted ?? record.posted_at ?? record.postedAt ?? record.date,
   );
   const description = fieldText(record, "descriptionPlain", "description", "content", "summary");
+  const sponsorship = fieldText(record, "sponsorship");
   const location = fieldText(record, "locations", "location") ?? "Not specified";
   const scrapedAt = nowIso();
   const tags = category ? [category] : undefined;
@@ -130,6 +131,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     ...(termList.length > 0 ? { terms: termList } : {}),
     ...(postedAt ? { postedAt } : {}),
     ...(description ? { summary: description } : {}),
+    ...(sponsorship ? { fields: { sponsorship } } : {}),
     rawText: description ?? `${title} at ${company}`,
     application: {
       resume: false,
