@@ -9,6 +9,7 @@ import {
 } from "@/lib/sources/boards";
 import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/publicFeeds";
 import type { Job } from "@/types/job";
+import { displayCompanyName } from "./companyNames";
 import { payFromHtml, payFromText } from "./pay";
 
 export interface Listing {
@@ -53,7 +54,7 @@ export function toListing(job: Job): Listing | undefined {
   const pay = job.compensation?.trim() || payFromText(payTextForJob(job));
   return {
     id: job.id,
-    company: job.company,
+    company: displayCompanyName(job.company),
     title: job.title,
     location: job.location,
     url: job.url,

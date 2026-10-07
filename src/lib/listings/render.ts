@@ -1,6 +1,7 @@
 import { type JobCategory, jobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
 import { isInternshipTitle, type JobTerm, jobTermLabels, jobTerms } from "@/lib/ranking/terms";
 import type { Listing, ListingSource } from "./collect";
+import { displayCompanyName, preferredCompanyName } from "./companyNames";
 
 function cell(value: string): string {
   return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
@@ -10,14 +11,14 @@ function row(job: Listing): string {
   const location = job.location === "Not specified" ? "" : job.location.split("; ").join(", ");
   const link = `[Apply](${job.url})`;
   const posted = job.postedAt ? job.postedAt.slice(0, 10) : "";
-  return `| ${cell(job.company)} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
+  return `| ${cell(displayCompanyName(job.company))} | ${cell(job.title)} | ${cell(location)} | ${cell(job.pay ?? "")} | ${posted} | ${link} |`;
 }
 
 function table(jobs: Listing[]): string {
   const sorted = [...jobs].sort(
     (a, b) =>
       (b.postedAt ?? "").localeCompare(a.postedAt ?? "") ||
-      a.company.localeCompare(b.company) ||
+      displayCompanyName(a.company).localeCompare(displayCompanyName(b.company)) ||
       a.title.localeCompare(b.title),
   );
   return [
@@ -39,11 +40,17 @@ export function renderCsv(listings: Listing[]): string {
   const rows: string[][] = [];
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
-    if (isInternshipTitle(listing.title)) unique.set(listing.url, listing);
+    if (!isInternshipTitle(listing.title)) continue;
+    const existing = unique.get(listing.url);
+    unique.set(listing.url, {
+      ...listing,
+      company: existing ? preferredCompanyName(existing.company, listing.company) : listing.company,
+    });
   }
   const sorted = [...unique.values()].sort(
     (a, b) =>
-      (b.postedAt ?? "").localeCompare(a.postedAt ?? "") || a.company.localeCompare(b.company),
+      (b.postedAt ?? "").localeCompare(a.postedAt ?? "") ||
+      displayCompanyName(a.company).localeCompare(displayCompanyName(b.company)),
   );
   for (const listing of sorted) {
     for (const term of listing.terms) {
@@ -51,7 +58,7 @@ export function renderCsv(listings: Listing[]): string {
         rows.push([
           jobTermLabels[term],
           jobCategoryLabels[category],
-          listing.company,
+          displayCompanyName(listing.company),
           listing.title,
           listing.location === "Not specified" ? "" : listing.location,
           listing.pay ?? "",
@@ -83,7 +90,13 @@ export function renderListings(
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
     if (isInternshipTitle(listing.title) && listing.postedAt && listing.postedAt >= cutoff) {
-      unique.set(listing.url, listing);
+      const existing = unique.get(listing.url);
+      unique.set(listing.url, {
+        ...listing,
+        company: existing
+          ? preferredCompanyName(existing.company, listing.company)
+          : listing.company,
+      });
     }
   }
 

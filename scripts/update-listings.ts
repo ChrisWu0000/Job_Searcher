@@ -1,5 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { type Listing, listingSources, scrapeSource } from "../src/lib/listings/collect";
+import { displayCompanyName, preferredCompanyName } from "../src/lib/listings/companyNames";
 import { renderCsv, renderListings, type SourceStatus } from "../src/lib/listings/render";
 import { isInternshipTitle } from "../src/lib/ranking/terms";
 
@@ -45,10 +46,34 @@ if (target && target !== "render") {
 
 const statuses: SourceStatus[] = [];
 const all: Listing[] = [];
+const workdayCompanyNames = new Map<string, string>();
+for (const source of listingSources.filter((candidate) => candidate.kind === "feed")) {
+  const stored = load(source.id);
+  for (const listing of stored?.listings ?? []) {
+    const url = new URL(listing.url);
+    if (!url.hostname.endsWith(".myworkdayjobs.com")) continue;
+    const company = displayCompanyName(listing.company);
+    const existing = workdayCompanyNames.get(url.hostname);
+    workdayCompanyNames.set(
+      url.hostname,
+      existing ? preferredCompanyName(existing, company) : company,
+    );
+  }
+}
+
 for (const source of listingSources) {
   const stored = load(source.id);
-  const listings = (stored?.listings ?? []).filter((listing) => isInternshipTitle(listing.title));
-  if (stored && listings.length !== stored.listings.length) {
+  const listings = (stored?.listings ?? [])
+    .filter((listing) => isInternshipTitle(listing.title))
+    .map((listing) => {
+      const host = new URL(listing.url).hostname;
+      const company =
+        source.id === "workday"
+          ? (workdayCompanyNames.get(host) ?? displayCompanyName(listing.company))
+          : displayCompanyName(listing.company);
+      return { ...listing, company };
+    });
+  if (stored && JSON.stringify(listings) !== JSON.stringify(stored.listings)) {
     writeFileSync(fileFor(source.id), `${JSON.stringify({ ...stored, listings })}\n`);
   }
   all.push(...listings);
