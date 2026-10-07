@@ -111,6 +111,21 @@ describe("public ATS board discovery", () => {
     ]);
   });
 
+  it("combines description, qualifications, and requirements from ATS data", () => {
+    const board = publicBoardFromJobUrl("https://jobs.ashbyhq.com/acme/123");
+    if (!board) throw new Error("expected Ashby board");
+    const job = normalizeBoardJob(board, {
+      title: "Software Engineer Intern",
+      description_html: "<p>U.S. citizenship is required.</p>",
+      qualifications: "Must not require future visa sponsorship.",
+      jobUrl: "https://jobs.ashbyhq.com/acme/intern",
+    });
+
+    expect(job?.summary).toContain("U.S. citizenship is required.");
+    expect(job?.summary).toContain("Must not require future visa sponsorship.");
+    expect(job?.summary).not.toContain("<p>");
+  });
+
   it("normalizes Workday external paths against the tenant origin", () => {
     const board = publicBoardFromJobUrl(
       "https://acme.wd5.myworkdayjobs.com/en-US/Acme/job/Toronto/Role_123",

@@ -8,14 +8,19 @@ const usCitizenshipRequiredPatterns = [
 
 const noSponsorshipPatterns = [
   /\bdoes not offer (?:visa )?sponsorship\b/i,
+  /\bdoesn't offer (?:visa )?sponsorship\b/i,
   /\bdoes not provide (?:visa |employment |immigration )?sponsorship\b/i,
   /\bdo not offer (?:visa )?sponsorship\b/i,
   /\bdo not provide (?:visa |employment |immigration )?sponsorship\b/i,
+  /\b(?:unable|not able) to (?:offer|provide) (?:visa )?sponsorship\b/i,
   /\bwill not sponsor\b/i,
+  /\bwill not offer (?:visa )?sponsorship\b/i,
   /\bdoes not sponsor\b/i,
+  /\bdo not sponsor\b/i,
   /\bunable to sponsor\b/i,
   /\bsponsorship is not (?:available|offered|provided)\b/i,
   /\b(?:visa|employment|immigration) sponsorship is not (?:available|offered|provided)\b/i,
+  /\bsponsorship will not be (?:available|offered|provided)\b/i,
   /\bno (?:visa |employment |immigration )?sponsorship (?:is )?(?:available|offered|provided)\b/i,
   /\bwithout (?:the need for )?(?:visa )?sponsorship(?: now or in the future)?\b/i,
   /\bwithout requiring (?:visa )?sponsorship(?: now or in the future)?\b/i,
@@ -24,6 +29,13 @@ const noSponsorshipPatterns = [
 export interface EmploymentRequirements {
   requiresUSCitizenship: boolean;
   noSponsorship: boolean;
+}
+
+export function classifyEmploymentRequirementText(text: string): EmploymentRequirements {
+  return {
+    requiresUSCitizenship: usCitizenshipRequiredPatterns.some((pattern) => pattern.test(text)),
+    noSponsorship: noSponsorshipPatterns.some((pattern) => pattern.test(text)),
+  };
 }
 
 export function classifyEmploymentRequirements(job: Job): EmploymentRequirements {
@@ -38,9 +50,5 @@ export function classifyEmploymentRequirements(job: Job): EmploymentRequirements
   ]
     .filter((value): value is string => typeof value === "string")
     .join("\n");
-
-  return {
-    requiresUSCitizenship: usCitizenshipRequiredPatterns.some((pattern) => pattern.test(text)),
-    noSponsorship: noSponsorshipPatterns.some((pattern) => pattern.test(text)),
-  };
+  return classifyEmploymentRequirementText(text);
 }

@@ -54,4 +54,17 @@ describe("company name display", () => {
     expect(markdown).toContain("- 🇺🇸 Requires U.S. citizenship");
     expect(csv).toContain("Acme Robotics 🛂 🇺🇸");
   });
+
+  it("preserves eligibility indicators when sources share a listing URL", () => {
+    const citizenshipListing: Listing = { ...listing, requiresUSCitizenship: true };
+    const sponsorshipListing: Listing = { ...listing, id: "same-url", noSponsorship: true };
+    const { markdown } = renderListings(
+      [citizenshipListing, sponsorshipListing],
+      [],
+      new Date("2026-10-06T00:00:00.000Z"),
+    );
+
+    expect(markdown).toContain("| Acme Robotics 🛂 🇺🇸 |");
+    expect(renderCsv([citizenshipListing, sponsorshipListing])).toContain("Acme Robotics 🛂 🇺🇸");
+  });
 });

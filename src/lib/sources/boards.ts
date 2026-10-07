@@ -205,17 +205,34 @@ function locationFor(provider: PublicBoardProvider, row: Record<string, unknown>
 }
 
 function descriptionFor(row: Record<string, unknown>): string | undefined {
-  const raw =
+  const parts = [
     text(row.descriptionPlain) ??
-    text(row.description) ??
-    text(row.descriptionHtml) ??
-    text(row.jobDescription) ??
-    text(row.content);
-  return raw
-    ?.replace(/<[^>]*>/g, " ")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+      text(row.description_plain) ??
+      text(row.description) ??
+      text(row.descriptionHtml) ??
+      text(row.description_html) ??
+      text(row.jobDescription) ??
+      text(row.job_description) ??
+      text(row.content),
+    text(row.responsibilities) ?? text(row.responsibility),
+    text(row.qualifications) ?? text(row.qualification),
+    text(row.requirements),
+  ]
+    .filter((value): value is string => Boolean(value))
+    .map((value) =>
+      value
+        .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, " ")
+        .replace(/<[^>]*>/g, " ")
+        .replace(/&nbsp;|&#160;/gi, " ")
+        .replace(/&amp;/gi, "&")
+        .replace(/&quot;/gi, '"')
+        .replace(/&apos;|&#39;/gi, "'")
+        .replace(/\s+/g, " ")
+        .trim(),
+    )
+    .filter(Boolean)
+    .filter((value, index, values) => values.indexOf(value) === index);
+  return parts.length > 0 ? parts.join("\n") : undefined;
 }
 
 function urlFor(boardInfo: PublicBoard, row: Record<string, unknown>): string | undefined {
@@ -255,6 +272,7 @@ export function normalizeBoardJob(
 
   const description = descriptionFor(row);
   const sponsorship = text(row.sponsorship) ?? text(row.sponsorshipRequirement);
+  const summary = [description, text(row.summary)].filter(Boolean).join("\n");
   const company =
     text(row.company_name) ??
     nestedText(row.company, "name") ??
@@ -291,9 +309,9 @@ export function normalizeBoardJob(
     firstSeenAt: now,
     ...(compensation ? { compensation } : {}),
     ...(postedAt ? { postedAt } : {}),
-    ...(description ? { summary: description } : {}),
+    ...(summary ? { summary } : {}),
     ...(sponsorship ? { fields: { sponsorship } } : {}),
-    rawText: description ?? `${title} at ${company}`,
+    rawText: summary || `${title} at ${company}`,
     application: {
       resume: false,
       gradeReport: false,

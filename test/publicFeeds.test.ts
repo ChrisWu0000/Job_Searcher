@@ -94,4 +94,21 @@ describe("public job feeds", () => {
     );
     expect(job && classifyJobCategories(job)).toContain("data-science");
   });
+
+  it("combines structured eligibility text and strips markup from feed descriptions", () => {
+    const job = normalizeFeedEntry(
+      {
+        company: "Acme",
+        title: "Software Engineer Intern Summer 2027",
+        url: "https://jobs.example.com/intern",
+        description_html: "<p>U.S. citizenship is required.</p>",
+        qualifications: ["We do not offer visa sponsorship."],
+      },
+      feed,
+    );
+
+    expect(job?.summary).toContain("U.S. citizenship is required.");
+    expect(job?.summary).toContain("We do not offer visa sponsorship.");
+    expect(job?.summary).not.toContain("<p>");
+  });
 });

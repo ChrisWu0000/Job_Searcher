@@ -16,6 +16,10 @@ function stripHtml(html: string): string {
     .replace(/&nbsp;|&#160;/gi, " ")
     .replace(/&amp;/gi, "&")
     .replace(/&dollar;/gi, "$")
+    .replace(/&quot;/gi, '"')
+    .replace(/&apos;|&#39;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
     .replace(/&ndash;|&#8211;/gi, "-")
     .replace(/&#(x[\da-f]+|\d+);/gi, (_, code: string) => {
       const codePoint =
@@ -32,6 +36,10 @@ function scriptText(html: string): string {
   return [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)]
     .map((match) => match[1] ?? "")
     .join("\n");
+}
+
+export function textFromHtml(html: string): string {
+  return `${stripHtml(html)}\n${stripHtml(scriptText(html))}`;
 }
 
 function jsonLdPay(html: string): string | undefined {

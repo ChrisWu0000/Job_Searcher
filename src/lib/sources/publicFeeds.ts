@@ -66,6 +66,18 @@ function fieldText(record: Record<string, unknown>, ...keys: string[]): string |
   return undefined;
 }
 
+function plainDescription(value: string): string {
+  return value
+    .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&apos;|&#39;/gi, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function canonicalJobUrl(value: string): string | undefined {
   try {
     const url = new URL(value);
@@ -113,7 +125,32 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
   const postedAt = postedAtIso(
     record.date_posted ?? record.datePosted ?? record.posted_at ?? record.postedAt ?? record.date,
   );
-  const description = fieldText(record, "descriptionPlain", "description", "content", "summary");
+  const detailedDescriptionParts = [
+    fieldText(
+      record,
+      "descriptionPlain",
+      "description_plain",
+      "description",
+      "descriptionHtml",
+      "description_html",
+      "jobDescription",
+      "job_description",
+      "content",
+    ),
+    fieldText(record, "responsibilities", "responsibility"),
+    fieldText(record, "qualifications", "qualification"),
+    fieldText(record, "requirements"),
+  ]
+    .filter((value): value is string => Boolean(value))
+    .map(plainDescription)
+    .filter(Boolean)
+    .filter((value, index, values) => values.indexOf(value) === index);
+  const summary = fieldText(record, "summary");
+  const descriptionParts = [...detailedDescriptionParts, ...(summary ? [summary] : [])]
+    .map(plainDescription)
+    .filter(Boolean)
+    .filter((value, index, values) => values.indexOf(value) === index);
+  const description = descriptionParts.length > 0 ? descriptionParts.join("\n") : undefined;
   const sponsorship = fieldText(record, "sponsorship");
   const location = fieldText(record, "locations", "location") ?? "Not specified";
   const scrapedAt = nowIso();
@@ -132,6 +169,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     ...(postedAt ? { postedAt } : {}),
     ...(description ? { summary: description } : {}),
     ...(sponsorship ? { fields: { sponsorship } } : {}),
+    ...(detailedDescriptionParts.length > 0 ? { detailScrapedAt: scrapedAt } : {}),
     rawText: description ?? `${title} at ${company}`,
     application: {
       resume: false,

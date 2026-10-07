@@ -2,6 +2,7 @@ node_modules
 .output
 .wxt
 dist
+_site/
 *.log
 .env*
 stats.html

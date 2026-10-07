@@ -1,7 +1,12 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { type Listing, listingSources, scrapeSource } from "../src/lib/listings/collect";
 import { displayCompanyName, preferredCompanyName } from "../src/lib/listings/companyNames";
-import { renderCsv, renderListings, type SourceStatus } from "../src/lib/listings/render";
+import {
+  renderCsv,
+  renderListings,
+  renderListingsPage,
+  type SourceStatus,
+} from "../src/lib/listings/render";
 import { isInternshipTitle } from "../src/lib/ranking/terms";
 
 interface StoredSource {
@@ -11,6 +16,7 @@ interface StoredSource {
 
 const dataDir = new URL("../data/", import.meta.url);
 const readmeUrl = new URL("../README.md", import.meta.url);
+const siteDir = new URL("../site/", import.meta.url);
 const target = process.argv[2];
 
 function fileFor(id: string): URL {
@@ -87,6 +93,8 @@ const { markdown, counts } = renderListings(all, statuses, new Date());
 writeFileSync(readmeUrl, markdown);
 mkdirSync(dataDir, { recursive: true });
 writeFileSync(new URL("listings.csv", dataDir), renderCsv(all));
+mkdirSync(siteDir, { recursive: true });
+writeFileSync(new URL("index.html", siteDir), renderListingsPage());
 console.log(
   `README.md updated: ${counts.byTerm["winter-2027"]} winter, ${counts.byTerm["summer-2027"]} summer, ${counts.byTerm.later} later`,
 );

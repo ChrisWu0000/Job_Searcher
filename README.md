@@ -1,6 +1,6 @@
-# JobScope: 2027 Internship Listings
+# Chris Wu's Job Board
 
-Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.
+Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.
 
 ### Requirement icons
 
@@ -1965,5 +1965,7 @@ To refresh all sources, push a commit to `main`. To refresh one source manually,
 - A listing can appear under several categories or in both terms.
 
 - Categories and terms are inferred from titles, tags, and descriptions, so check the posting before applying.
+
+- Citizenship and sponsorship indicators are inferred from source descriptions or explicit eligibility fields; listings without accessible descriptions may not show an indicator.
 
 - Job boards (Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, Workday) are discovered from the community lists, so scrape those first. The optional Chrome extension is described in [docs/EXTENSION.md](docs/EXTENSION.md).
