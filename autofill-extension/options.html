@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quick Autofill profile</title>
+    <style>
+      body { font: 14px system-ui, sans-serif; max-width: 560px; margin: 24px auto; }
+      label { display: block; margin: 10px 0 2px; font-weight: 600; }
+      input, select { width: 100%; padding: 6px; box-sizing: border-box; }
+      button { margin-top: 16px; padding: 8px 16px; }
+      #status { margin-left: 12px; color: #0a7; }
+    </style>
+  </head>
+  <body>
+    <h1>Your profile</h1>
+    <p>Stored only in this browser (chrome.storage.local). Nothing is sent anywhere.</p>
+    <form id="form"></form>
+    <button id="save">Save</button><span id="status"></span>
+    <script src="options.js"></script>
+  </body>
+</html>

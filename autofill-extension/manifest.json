@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Autofill (Greenhouse, Lever, Ashby)",
+  "description": "Autofills job applications on Greenhouse, Lever and Ashby from a profile stored locally in your browser.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "action": { "default_title": "Quick Autofill", "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.greenhouse.io/*",
+        "https://jobs.lever.co/*",
+        "https://jobs.eu.lever.co/*",
+        "https://jobs.ashbyhq.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle",
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
