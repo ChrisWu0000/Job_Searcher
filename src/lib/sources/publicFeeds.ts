@@ -152,6 +152,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     .filter((value, index, values) => values.indexOf(value) === index);
   const description = descriptionParts.length > 0 ? descriptionParts.join("\n") : undefined;
   const sponsorship = fieldText(record, "sponsorship");
+  const compensation = fieldText(record, "compensation");
   const location = fieldText(record, "locations", "location") ?? "Not specified";
   const scrapedAt = nowIso();
   const tags = category ? [category] : undefined;
@@ -167,6 +168,7 @@ export function normalizeFeedEntry(value: unknown, feed: PublicJobFeed): Job | u
     ...(tags ? { tags } : {}),
     ...(termList.length > 0 ? { terms: termList } : {}),
     ...(postedAt ? { postedAt } : {}),
+    ...(compensation ? { compensation } : {}),
     ...(description ? { summary: description } : {}),
     ...(sponsorship ? { fields: { sponsorship } } : {}),
     ...(detailedDescriptionParts.length > 0 ? { detailScrapedAt: scrapedAt } : {}),

@@ -7,6 +7,7 @@ import {
   fetchPublicBoardJobs,
   type PublicBoardProvider,
 } from "@/lib/sources/boards";
+import { fetchInternListJobs, internListFeed } from "@/lib/sources/internList";
 import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/publicFeeds";
 import type { Job } from "@/types/job";
 import { displayCompanyName } from "./companyNames";
@@ -46,6 +47,7 @@ const providers: { id: PublicBoardProvider; label: string }[] = [
 
 export const listingSources: ListingSource[] = [
   ...publicJobFeeds.map((feed) => ({ id: feed.id, label: feed.label, kind: "feed" as const })),
+  { id: internListFeed.id, label: internListFeed.label, kind: "feed" as const },
   ...providers.map((provider) => ({ ...provider, kind: "board" as const })),
 ];
 
@@ -190,6 +192,18 @@ export async function scrapeSource(
   if (!source) throw new Error(`Unknown source: ${sourceId}`);
   const failures: string[] = [];
   const listings = new Map<string, Listing>();
+
+  if (source.id === internListFeed.id) {
+    try {
+      for (const job of await fetchInternListJobs(fetchImpl)) {
+        const listing = toListing(job);
+        if (listing) listings.set(listing.id, listing);
+      }
+    } catch (cause) {
+      failures.push(`${source.label}: ${cause instanceof Error ? cause.message : String(cause)}`);
+    }
+    return { listings: [...listings.values()], failures };
+  }
 
   if (source.kind === "feed") {
     const feed = publicJobFeeds.find((candidate) => candidate.id === source.id);

@@ -34,7 +34,9 @@ for (const [key, label] of YES_NO) {
     `<label for="${key}">${label}</label><select id="${key}"><option value="">Skip</option><option value="yes">Yes</option><option value="no">No</option></select>`,
   );
 }
-add('<label for="resume">Resume (PDF)</label><input id="resume" type="file" accept="application/pdf" /><div id="resumeName"></div>');
+add(
+  '<label for="resume">Resume (PDF)</label><input id="resume" type="file" accept="application/pdf" /><div id="resumeName"></div>',
+);
 
 const toBase64 = (file) =>
   new Promise((resolve, reject) => {
@@ -52,7 +54,8 @@ document.getElementById("resume").addEventListener("change", async (event) => {
 });
 
 chrome.storage.local.get("profile", ({ profile = {} }) => {
-  for (const [key] of [...FIELDS, ...YES_NO]) document.getElementById(key).value = profile[key] || "";
+  for (const [key] of [...FIELDS, ...YES_NO])
+    document.getElementById(key).value = profile[key] || "";
   resume = { resumeData: profile.resumeData, resumeName: profile.resumeName };
   document.getElementById("resumeName").textContent = profile.resumeName || "";
 });
@@ -60,7 +63,8 @@ chrome.storage.local.get("profile", ({ profile = {} }) => {
 document.getElementById("save").addEventListener("click", () => {
   chrome.storage.local.get("profile", ({ profile: old = {} }) => {
     const profile = { ...resume, aiBackground: old.aiBackground };
-    for (const [key] of [...FIELDS, ...YES_NO]) profile[key] = document.getElementById(key).value.trim();
+    for (const [key] of [...FIELDS, ...YES_NO])
+      profile[key] = document.getElementById(key).value.trim();
     chrome.storage.local.set({ profile }, () => {
       status.textContent = "Saved";
       setTimeout(() => (status.textContent = ""), 1500);

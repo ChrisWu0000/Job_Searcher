@@ -2,6 +2,7 @@ import { type JobCategory, jobCategories, jobCategoryLabels } from "@/lib/rankin
 import { isInternshipTitle, type JobTerm, jobTermLabels, jobTerms } from "@/lib/ranking/terms";
 import type { Listing, ListingSource } from "./collect";
 import { displayCompanyName, preferredCompanyName } from "./companyNames";
+import { filterAllowedLocations } from "./location";
 
 function cell(value: string): string {
   return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
@@ -71,7 +72,7 @@ export function renderListingsPage(): string {
 <body>
   <main>
     <h1>Chris Wu's Job Board</h1>
-    <p class="intro">Software engineering, data science, cyber security, hardware engineering, and fintech internships. Apply links open in a new tab.</p>
+    <p class="intro">Software engineering, data science, cyber security, hardware engineering, and fintech internships in Canada, the United States, EU member countries, and the United Kingdom, plus remote roles worldwide. Apply links open in a new tab.</p>
     <p class="legend">🛂 Does not offer sponsorship · 🇺🇸 Requires U.S. citizenship</p>
     <div class="toolbar">
       <label>Search
@@ -115,10 +116,14 @@ export function renderCsv(listings: Listing[]): string {
   const rows: string[][] = [];
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
-    if (!isInternshipTitle(listing.title) || isRestricted(listing)) continue;
+    const location = filterAllowedLocations(listing.location);
+    if (!isInternshipTitle(listing.title) || isRestricted(listing) || !location) continue;
     const existing = unique.get(listing.url);
     unique.set(listing.url, {
       ...listing,
+      location: [
+        ...new Set([...(existing?.location.split("; ") ?? []), ...location.split("; ")]),
+      ].join("; "),
       company: existing ? preferredCompanyName(existing.company, listing.company) : listing.company,
       ...(existing?.requiresUSCitizenship || listing.requiresUSCitizenship
         ? { requiresUSCitizenship: true }
@@ -168,15 +173,20 @@ export function renderListings(
   const cutoff = new Date(updated.getTime() - recentDays * 86_400_000).toISOString();
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
+    const location = filterAllowedLocations(listing.location);
     if (
       isInternshipTitle(listing.title) &&
       !isRestricted(listing) &&
+      location &&
       listing.postedAt &&
       listing.postedAt >= cutoff
     ) {
       const existing = unique.get(listing.url);
       unique.set(listing.url, {
         ...listing,
+        location: [
+          ...new Set([...(existing?.location.split("; ") ?? []), ...location.split("; ")]),
+        ].join("; "),
         company: existing
           ? preferredCompanyName(existing.company, listing.company)
           : listing.company,
@@ -218,7 +228,7 @@ export function renderListings(
 
   const header = [
     "# Chris Wu's Job Board",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops in Canada, the United States, EU member countries, the United Kingdom, or remote worldwide are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
     "### Requirement icons\n\n- 🛂 Does not offer sponsorship\n- 🇺🇸 Requires U.S. citizenship",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
     "Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)",

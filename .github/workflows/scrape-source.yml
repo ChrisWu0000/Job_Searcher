@@ -23,6 +23,7 @@ on:
           - simplify
           - zshah101
           - aprameyak
+          - internlist
 
 permissions:
   contents: write

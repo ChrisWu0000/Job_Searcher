@@ -3,7 +3,9 @@
   right: 16px;
   bottom: 16px;
   z-index: 2147483647;
-  font: 14px/1.4 system-ui, sans-serif;
+  font:
+    14px / 1.4 system-ui,
+    sans-serif;
   background: #fff;
   color: #111;
   border: 1px solid #d0d7de;
@@ -53,7 +55,9 @@
   border-radius: 6px;
   background: #fff;
   color: #0b8aa8;
-  font: 600 12px system-ui, sans-serif;
+  font:
+    600 12px system-ui,
+    sans-serif;
   cursor: pointer;
 }
 .qaf-ai-btn:disabled {

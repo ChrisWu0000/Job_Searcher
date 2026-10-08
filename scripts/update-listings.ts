@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { type Listing, listingSources, scrapeSource } from "../src/lib/listings/collect";
 import { displayCompanyName, preferredCompanyName } from "../src/lib/listings/companyNames";
+import { filterInternListDuplicates } from "../src/lib/listings/dedupe";
 import {
   renderCsv,
   renderListings,
@@ -8,6 +9,7 @@ import {
   type SourceStatus,
 } from "../src/lib/listings/render";
 import { isInternshipTitle } from "../src/lib/ranking/terms";
+import { internListFeed } from "../src/lib/sources/internList";
 
 interface StoredSource {
   scrapedAt: string;
@@ -53,6 +55,11 @@ if (target && target !== "render") {
 const statuses: SourceStatus[] = [];
 const all: Listing[] = [];
 const workdayCompanyNames = new Map<string, string>();
+const employerListings = listingSources
+  .filter((source) => source.id !== internListFeed.id)
+  .flatMap((source) =>
+    (load(source.id)?.listings ?? []).filter((listing) => isInternshipTitle(listing.title)),
+  );
 for (const source of listingSources.filter((candidate) => candidate.kind === "feed")) {
   const stored = load(source.id);
   for (const listing of stored?.listings ?? []) {
@@ -69,7 +76,7 @@ for (const source of listingSources.filter((candidate) => candidate.kind === "fe
 
 for (const source of listingSources) {
   const stored = load(source.id);
-  const listings = (stored?.listings ?? [])
+  let listings = (stored?.listings ?? [])
     .filter((listing) => isInternshipTitle(listing.title))
     .map((listing) => {
       const host = new URL(listing.url).hostname;
@@ -79,7 +86,18 @@ for (const source of listingSources) {
           : displayCompanyName(listing.company);
       return { ...listing, company };
     });
-  if (stored && JSON.stringify(listings) !== JSON.stringify(stored.listings)) {
+  if (source.id === internListFeed.id) {
+    const previousCount = listings.length;
+    listings = filterInternListDuplicates(listings, employerListings);
+    const removed = previousCount - listings.length;
+    if (removed > 0) console.log(`${source.id}: omitted ${removed} duplicate listings`);
+  }
+  if (
+    target !== "render" &&
+    source.id !== internListFeed.id &&
+    stored &&
+    JSON.stringify(listings) !== JSON.stringify(stored.listings)
+  ) {
     writeFileSync(fileFor(source.id), `${JSON.stringify({ ...stored, listings })}\n`);
   }
   all.push(...listings);

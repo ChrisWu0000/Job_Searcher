@@ -1,4 +1,6 @@
-document.getElementById("options").addEventListener("click", () => chrome.runtime.openOptionsPage());
+document
+  .getElementById("options")
+  .addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 document.getElementById("fill").addEventListener("click", async () => {
   const status = document.getElementById("status");

@@ -21,7 +21,10 @@
   ];
 
   const YES_NO_RULES = [
-    ["authorized", /authori[sz]ed to work|legally (authori[sz]ed|eligible)|eligible to work|work authori[sz]ation|right to work/i],
+    [
+      "authorized",
+      /authori[sz]ed to work|legally (authori[sz]ed|eligible)|eligible to work|work authori[sz]ation|right to work/i,
+    ],
     ["sponsorship", /sponsor/i],
   ];
 
@@ -41,7 +44,9 @@
     }
     parts.push(el.getAttribute("aria-label") || "");
     if (!parts.join("").trim()) {
-      const wrap = el.closest("label, .field, .application-field, [class*='field'], [class*='Field'], li, fieldset");
+      const wrap = el.closest(
+        "label, .field, .application-field, [class*='field'], [class*='Field'], li, fieldset",
+      );
       if (wrap) {
         const lab = wrap.querySelector("label, legend, .application-label");
         parts.push(textOf(lab) || textOf(wrap).slice(0, 120));
@@ -63,13 +68,15 @@
   const SENSITIVE = /password|passcode|ssn|social security|card number|cvv|security code/i;
   const MAX_ANSWERS = 500;
   const MAX_VALUE_LENGTH = 3000;
-  const GROUP_SELECTOR = "fieldset, [role='group'], [data-field-path], [class*='field'], [class*='Field'], [class*='question']";
+  const GROUP_SELECTOR =
+    "fieldset, [role='group'], [data-field-path], [class*='field'], [class*='Field'], [class*='question']";
 
   const questionText = (el) => {
     const parts = [];
     if (el.labels) for (const l of el.labels) parts.push(textOf(l));
     const labelledBy = el.getAttribute?.("aria-labelledby");
-    if (labelledBy) for (const id of labelledBy.split(/\s+/)) parts.push(textOf(document.getElementById(id)));
+    if (labelledBy)
+      for (const id of labelledBy.split(/\s+/)) parts.push(textOf(document.getElementById(id)));
     parts.push(el.getAttribute?.("aria-label") || "");
     if (!parts.join("").trim()) {
       const group = el.closest(GROUP_SELECTOR);
@@ -88,7 +95,9 @@
     const options = [...container.querySelectorAll("input[type='radio'], button[data-option]")];
     const isOption = (node) => options.some((o) => node.contains(o) || o.contains(node));
     return textOf(
-      [...container.querySelectorAll("legend, label, [class*='label']")].find((node) => !isOption(node) && textOf(node)),
+      [...container.querySelectorAll("legend, label, [class*='label']")].find(
+        (node) => !isOption(node) && textOf(node),
+      ),
     );
   };
 
@@ -96,7 +105,9 @@
     if (!container) return "";
     const options = [...container.querySelectorAll("input[type='radio'], button[data-option]")];
     const optionTexts = options
-      .map((o) => (o instanceof HTMLButtonElement ? textOf(o) : textOf(o.closest("label")) || o.value))
+      .map((o) =>
+        o instanceof HTMLButtonElement ? textOf(o) : textOf(o.closest("label")) || o.value,
+      )
       .filter(Boolean)
       .sort()
       .join("/");
@@ -113,7 +124,12 @@
     if (!key) return;
     saveChain = saveChain.then(async () => {
       const answers = await loadAnswers();
-      if (value) answers[key] = { value: String(value).slice(0, MAX_VALUE_LENGTH), label: label.slice(0, 100), at: Date.now() };
+      if (value)
+        answers[key] = {
+          value: String(value).slice(0, MAX_VALUE_LENGTH),
+          label: label.slice(0, 100),
+          at: Date.now(),
+        };
       else delete answers[key];
       const keys = Object.keys(answers);
       if (keys.length > MAX_ANSWERS) {
@@ -135,7 +151,14 @@
       if (key) saveAnswer(key, textOf(el), groupLabel(field));
       return;
     }
-    if (!(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLSelectElement)) return;
+    if (
+      !(
+        el instanceof HTMLInputElement ||
+        el instanceof HTMLTextAreaElement ||
+        el instanceof HTMLSelectElement
+      )
+    )
+      return;
     const type = (el.type || "").toLowerCase();
     if (["password", "file", "hidden", "checkbox", "submit", "button"].includes(type)) return;
     if (type === "radio") {
@@ -157,13 +180,21 @@
 
   document.addEventListener("change", recordInput, true);
   document.addEventListener("focusout", recordInput, true);
-  document.addEventListener("click", (event) => {
-    const button = event.target instanceof Element ? event.target.closest("button[data-option]") : null;
-    if (button) recordInput({ isTrusted: event.isTrusted, target: button, type: "click" });
-  }, true);
+  document.addEventListener(
+    "click",
+    (event) => {
+      const button =
+        event.target instanceof Element ? event.target.closest("button[data-option]") : null;
+      if (button) recordInput({ isTrusted: event.isTrusted, target: button, type: "click" });
+    },
+    true,
+  );
 
   const setValue = (el, value, blur = true) => {
-    const proto = el instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+    const proto =
+      el instanceof HTMLTextAreaElement
+        ? HTMLTextAreaElement.prototype
+        : HTMLInputElement.prototype;
     const setter = Object.getOwnPropertyDescriptor(proto, "value").set;
     el.focus();
     setter.call(el, value);
@@ -200,13 +231,17 @@
     setValue(input, wanted);
     await sleep(500);
     const root = input.closest("[class*='select'], [class*='Select']") || document;
-    const option = root.querySelector("[role='option']") || document.querySelector("[role='listbox'] [role='option']");
+    const option =
+      root.querySelector("[role='option']") ||
+      document.querySelector("[role='listbox'] [role='option']");
     if (option) {
       option.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
       option.click();
       return;
     }
-    input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", code: "Enter", keyCode: 13, bubbles: true }));
+    input.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Enter", code: "Enter", keyCode: 13, bubbles: true }),
+    );
   };
 
   const fillYesNoGroups = (profile, answers) => {
@@ -220,7 +255,9 @@
     }
     for (const radios of groups.values()) {
       if (radios.some((r) => r.checked)) continue;
-      const container = radios[0].closest("fieldset, [role='group'], [class*='field'], [class*='Field'], [class*='question']");
+      const container = radios[0].closest(
+        "fieldset, [role='group'], [class*='field'], [class*='Field'], [class*='question']",
+      );
       const question = groupLabel(container);
       const learned = answers[groupKey(container)]?.value?.toLowerCase();
       const optionText = (r) => (textOf(r.closest("label")) || r.value).toLowerCase();
@@ -243,7 +280,8 @@
     let count = 0;
     for (const field of document.querySelectorAll("[data-field-path]")) {
       const buttons = [...field.querySelectorAll("button[data-option]")];
-      if (!buttons.length || buttons.some((b) => b.getAttribute("aria-pressed") === "true")) continue;
+      if (!buttons.length || buttons.some((b) => b.getAttribute("aria-pressed") === "true"))
+        continue;
       const learned = answers[groupKey(field)]?.value?.toLowerCase();
       let target = learned && buttons.find((b) => textOf(b).toLowerCase() === learned);
       if (!target) {
@@ -323,7 +361,8 @@
     return filled;
   };
 
-  const isLongText = (el) => el.tagName === "TEXTAREA" && el.offsetParent !== null && !SENSITIVE.test(questionText(el));
+  const isLongText = (el) =>
+    el.tagName === "TEXTAREA" && el.offsetParent !== null && !SENSITIVE.test(questionText(el));
 
   const generateAnswer = async (el) => {
     const profile = await loadProfile();
@@ -403,7 +442,8 @@
     }
   });
 
-  const hasApplicationForm = () => document.querySelector("form input, form textarea, [data-field-path] input");
+  const hasApplicationForm = () =>
+    document.querySelector("form input, form textarea, [data-field-path] input");
   if (window.top === window || hasApplicationForm()) {
     if (hasApplicationForm()) mountPanel();
     else {

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -15,15 +15,15 @@
     <h1>Your profile</h1>
     <p>Stored only in this browser (chrome.storage.local). Nothing is sent anywhere.</p>
     <form id="form"></form>
-    <button id="save">Save</button><span id="status"></span>
+    <button type="button" id="save">Save</button><span id="status"></span>
     <h2>AI for long answers</h2>
     <p>Uses Claude Haiku 5.5 through your local GitHub Copilot LiteLLM proxy automatically. The question, your profile, contact-redacted resume text, About me text, and a job-page excerpt are sent to Copilot through the proxy at <code>http://127.0.0.1:4000</code>. Make sure the proxy is running before generating an answer.</p>
-    <div id="aiForm"></div><button id="saveAi">Save About me</button><span id="aiStatus" style="margin-left:12px;color:#0a7"></span>
+    <div id="aiForm"></div><button type="button" id="saveAi">Save About me</button><span id="aiStatus" style="margin-left:12px;color:#0a7"></span>
     <p>To steer AI-written answers, edit <code>instructions.md</code> in the extension folder, then reload the extension at <code>chrome://extensions</code> and refresh the application page.</p>
     <h2>Saved answers</h2>
     <p>Answers you type on application pages are remembered here and reused (most recent wins).</p>
     <div id="answerCount"></div>
-    <button id="clearAnswers">Clear saved answers</button>
+    <button type="button" id="clearAnswers">Clear saved answers</button>
     <script src="options.js"></script>
   </body>
 </html>

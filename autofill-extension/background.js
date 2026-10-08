@@ -22,7 +22,9 @@ const getResumeText = async () => {
 chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
   if (msg?.type !== "ai") return;
   (async () => {
-    const messages = (Array.isArray(msg.messages) ? msg.messages : []).filter((item) => item?.role !== "system");
+    const messages = (Array.isArray(msg.messages) ? msg.messages : []).filter(
+      (item) => item?.role !== "system",
+    );
     const [instructions, resumeText] = await Promise.all([getInstructions(), getResumeText()]);
     messages.unshift({
       role: "system",
@@ -33,7 +35,8 @@ chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ model: MODEL, messages, temperature: 0.7 }),
     });
-    if (!response.ok) throw new Error(`LLM error ${response.status}: ${(await response.text()).slice(0, 200)}`);
+    if (!response.ok)
+      throw new Error(`LLM error ${response.status}: ${(await response.text()).slice(0, 200)}`);
     const data = await response.json();
     const text = data.choices?.[0]?.message?.content?.trim();
     if (!text) throw new Error("Empty response from the model.");

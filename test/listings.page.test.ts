@@ -13,6 +13,8 @@ describe("interactive listings page", () => {
   it("renders the data-driven site shell and downloadable CSV link", () => {
     const html = renderListingsPage();
     expect(html).toContain('<a class="download" href="./listings.csv" download>Download CSV</a>');
+    expect(html).toContain("EU member countries");
+    expect(html).toContain("remote roles worldwide");
     expect(html).toContain('id="term-filter"');
     expect(html).toContain('id="category-filter"');
     expect(html).toContain('<script src="./app.js" defer></script>');
