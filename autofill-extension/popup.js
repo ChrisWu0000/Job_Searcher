@@ -7,7 +7,7 @@ document.getElementById("fill").addEventListener("click", async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   chrome.tabs.sendMessage(tab.id, "autofill", (count) => {
     status.textContent = chrome.runtime.lastError
-      ? "Open a Greenhouse, Lever or Ashby application first."
+      ? "Open a supported Greenhouse, Lever, Ashby or Workday application first."
       : `Filled ${count || 0} fields.`;
   });
 });

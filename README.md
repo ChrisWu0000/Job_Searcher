@@ -7,13 +7,19 @@ Software engineering, data science, cyber security, hardware engineering, and fi
 - 🛂 Does not offer sponsorship
 - 🇺🇸 Requires U.S. citizenship
 
-Last updated: 2026-10-08 | Winter 2027: 659 | Summer 2027: 1129 | Later terms: 63
+Last updated: 2026-10-08 | Winter 2027: 656 | Summer 2027: 1124 | Later terms: 62
 
-Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later terms](#later-terms) | [Sources](#sources)
+Jump to:
+- [Winter 2027](#winter-2027): [Software engineering](#winter-2027-software-engineering) | [Data science](#winter-2027-data-science) | [Cyber security](#winter-2027-cyber-security) | [Hardware engineering](#winter-2027-hardware-engineering) | [Fintech](#winter-2027-fintech)
+- [Summer 2027](#summer-2027): [Software engineering](#summer-2027-software-engineering) | [Data science](#summer-2027-data-science) | [Cyber security](#summer-2027-cyber-security) | [Hardware engineering](#summer-2027-hardware-engineering) | [Fintech](#summer-2027-fintech)
+- [Later terms](#later-terms): [Software engineering](#later-software-engineering) | [Data science](#later-data-science) | [Cyber security](#later-cyber-security) | [Hardware engineering](#later-hardware-engineering) | [Fintech](#later-fintech)
+- [Sources](#sources)
 
 ## Winter 2027
 
-### Software engineering (410)
+<a id="winter-2027-software-engineering"></a>
+
+### Software engineering (408)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -425,10 +431,10 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | York Space Systems | Flight Software Engineering Intern | Greenwood Village, CO, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a9986488a8b765bc55f376f" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Reflect Orbital | Mission Operations Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/7ec00657-344f-4a53-b1b2-b6623a8b95bc" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Notion | Software Engineer Intern, Mobile (Winter 2027) | San Francisco, California | $57/hr | 2026-09-24 | <a href="https://jobs.ashbyhq.com/notion/2b587e66-deac-421a-a824-9415ba78b5a7" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Reflect Orbital | Ground Software Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952" target="_blank" rel="noopener noreferrer">Apply</a> |
-| EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Data science (129)
+<a id="winter-2027-data-science"></a>
+
+### Data science (127)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -559,8 +565,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Montgomery Investment Technology, Inc. | Computer Programming Internship Winter 2027 | Cinnaminson, NJ, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6d6c63a2ec87116e24311" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Southern Glazer's Wine & Spirits | 2027 Summer Internship QA (OneTech)- Miramar, FL Job Details \| Southern Glazer’s Wine and Spirits, LLC | Miramar, FL, United States | $25-$25 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab718a562bb1fbd451dd1d6" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Southern Glazer's Wine & Spirits | 2027 Summer Internship Tech Operations/ IT Resilience- Miramar, FL Job Details \| Southern Glazer’s Wine and Spirits, LLC | Miramar, FL, United States | $25-$25 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab718a281e327c4bf2026a9" target="_blank" rel="noopener noreferrer">Apply</a> |
-| EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009" target="_blank" rel="noopener noreferrer">Apply</a> |
+
+<a id="winter-2027-cyber-security"></a>
 
 ### Cyber security (53)
 
@@ -620,7 +626,9 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Mlc | Operational Technology (OT) Infrastructure Engineering Co-Op | Sainte Genevieve, MO, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a8e025425fc4e7ae3dbf390" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Textron | 2027 Intern - Software Engineer (Electronic Systems) - Hunt Valley, MD | Hunt Valley, MD, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6207f634ec6aa7c0d2274" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Hardware engineering (169)
+<a id="winter-2027-hardware-engineering"></a>
+
+### Hardware engineering (168)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -792,9 +800,10 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Rivian and Volkswagen Group Technologies | Embedded Systems Software Engineering Intern at UIUC Research Park (January - August 2027) | Champaign, IL, United States | $35-$40 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6cff3ba1c25652c61014a" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Terranova | Embedded Systems Intern | Berkeley, CA, United States | $25-$35 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a583d8972fe7a7b98dcd858" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Reflect Orbital | Mission Operations Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/7ec00657-344f-4a53-b1b2-b6623a8b95bc" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Reflect Orbital | Ground Software Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Fintech (95)
+<a id="winter-2027-fintech"></a>
+
+### Fintech (94)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -892,11 +901,12 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Royal Bank of Canada | 2027 CFO Winter Process Re-Engineering Intern (4 Months) | TORONTO, Ontario, Canada |  | 2026-09-25 | <a href="https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-CFO-Winter-Process-Re-Engineering-Intern--4-Months-_R-0000188575" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Royal Bank of Canada | 2027 Winter Student Opportunities Technology & Operations - Quantum Technologies Intern, 8 Months | TORONTO, Ontario, Canada |  | 2026-09-25 | <a href="https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter-Student-Opportunities-Technology---Operations---Quantum-Computing-Specialist--8-Months_R-0000188860-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Montgomery Investment Technology, Inc. | Computer Programming Internship Winter 2027 | Cinnaminson, NJ, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6d6c63a2ec87116e24311" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 ## Summer 2027
 
-### Software engineering (667)
+<a id="summer-2027-software-engineering"></a>
+
+### Software engineering (664)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1564,11 +1574,10 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Wd | Summer 2027 Intern - Software Engineering | San Jose, CA, United States | $34-$46 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a7ccc65d77e8156a8e34520" target="_blank" rel="noopener noreferrer">Apply</a> |
 | York Space Systems | Flight Software Engineering Intern | Greenwood Village, CO, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a9986488a8b765bc55f376f" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Reflect Orbital | Mission Operations Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/7ec00657-344f-4a53-b1b2-b6623a8b95bc" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Reflect Orbital | Ground Software Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952" target="_blank" rel="noopener noreferrer">Apply</a> |
-| EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Arconic | Software Developer Intern | Davenport, IA |  | 2026-09-24 | <a href="https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114233" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Data science (292)
+<a id="summer-2027-data-science"></a>
+
+### Data science (289)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -1861,9 +1870,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Wd | Summer 2027 Intern - Software Engineering | San Jose, CA, United States | $34-$46 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a7ccc65d77e8156a8e34520" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Waymo | Intern - Multiple Teams | Mountain View, CA |  | 2026-09-24 | <a href="https://careers.withwaymo.com/jobs?gh_jid=8227640" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Corning | Measurements Engineering Intern - Summer 2027 | Corning, NY | $1,635.00 - $3,185.00 | 2026-09-24 | <a href="https://corningjobs.corning.com/job/Corning-Intern,-Measurements-Summer-2027-NY-14831/1433453700/?ats=successfactors" target="_blank" rel="noopener noreferrer">Apply</a> |
-| EQT Corporation | Water Infrastructure Engineering Intern | Canonsburg, PA |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5424757008" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Enterprise Holdings | Data Engineer Intern - IT | St. Louis, MO |  | 2026-09-24 | <a href="https://us-erac.icims.com/jobs/567651/job?mobile=true&amp;needsRedirect=false" target="_blank" rel="noopener noreferrer">Apply</a> |
+
+<a id="summer-2027-cyber-security"></a>
 
 ### Cyber security (122)
 
@@ -1992,7 +2000,9 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Mlc | Operational Technology (OT) Infrastructure Engineering Co-Op | Sainte Genevieve, MO, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6a8e025425fc4e7ae3dbf390" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Textron | 2027 Intern - Software Engineer (Electronic Systems) - Hunt Valley, MD | Hunt Valley, MD, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6207f634ec6aa7c0d2274" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Hardware engineering (222)
+<a id="summer-2027-hardware-engineering"></a>
+
+### Hardware engineering (221)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -2217,9 +2227,10 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Zurn Elkay Water Solutions | Embedded Firmware Intern (Summer 2027) | Milwaukee, WI |  | 2026-09-25 | <a href="https://elkay.wd1.myworkdayjobs.com/Elkay_External/job/Milwaukee-WI/Embedded-Firmware-Intern--Summer-2027-_REQ-020150-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Zurn Elkay Water Solutions | Embedded Hardware Intern (Summer 2027) | Milwaukee, WI |  | 2026-09-25 | <a href="https://elkay.wd1.myworkdayjobs.com/Elkay_External/job/Milwaukee-WI/Embedded-Hardware-Intern--Summer-2027-_REQ-020151" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Reflect Orbital | Mission Operations Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/7ec00657-344f-4a53-b1b2-b6623a8b95bc" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Reflect Orbital | Ground Software Engineering Intern | Hawthorne, CA | $27 – $31 per hour | 2026-09-24 | <a href="https://jobs.ashbyhq.com/reflect-orbital/c394615d-26c6-4435-ad84-3ca3269c2952" target="_blank" rel="noopener noreferrer">Apply</a> |
 
-### Fintech (161)
+<a id="summer-2027-fintech"></a>
+
+### Fintech (160)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -2383,11 +2394,12 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Royal Bank of Canada | 2027 CFO Winter Process Re-Engineering Intern (4 Months) | TORONTO, Ontario, Canada |  | 2026-09-25 | <a href="https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-CFO-Winter-Process-Re-Engineering-Intern--4-Months-_R-0000188575" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Royal Bank of Canada | 2027 Winter Student Opportunities Technology & Operations - Quantum Technologies Intern, 8 Months | TORONTO, Ontario, Canada |  | 2026-09-25 | <a href="https://rbc.wd3.myworkdayjobs.com/RBCEARLYTALENT1/job/TORONTO-Ontario-Canada/XMLNAME-2027-Winter-Student-Opportunities-Technology---Operations---Quantum-Computing-Specialist--8-Months_R-0000188860-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Textron | 2027 Summer Intern - Software/Computer Science Engineering - Fort Worth | Fort Worth, TX, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6207ab3db59402d0ffefb" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Voloridge Investment Management | Quantitative Trading Intern 2027 | Jupiter, FL |  | 2026-09-24 | <a href="https://job-boards.greenhouse.io/voloridgeinvestmentmanagement/jobs/4405530009" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 ## Later terms
 
-### Software engineering (39)
+<a id="later-software-engineering"></a>
+
+### Software engineering (38)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -2429,7 +2441,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Franklin Electric | Fall 2027 Electrical/Software Engineering Co-op | Fort Wayne, IN, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab3ea5b0e0ae54eeea455a7" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Homes.com | Embedded Software Engineering Intern | Sunnyvale, CA, United States | $40-$45 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6abed5d9064da25272e03421" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Indeed | Software Engineer Intern | Austin, TX, United States | $36.15-$45.38 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6b5bc634ec6aa7c0d41a7" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Arconic | Software Developer Intern | Davenport, IA |  | 2026-09-24 | <a href="https://hdnn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/114233" target="_blank" rel="noopener noreferrer">Apply</a> |
+
+<a id="later-data-science"></a>
 
 ### Data science (14)
 
@@ -2450,6 +2463,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Homes.com | Embedded Software Engineering Intern | Sunnyvale, CA, United States | $40-$45 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6abed5d9064da25272e03421" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Howmet Aerospace | Intern – Power Platform Applications (IT) | Pittsburgh, PA, United States | $20-$22 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab6c7ee39fd8792cb73c07a" target="_blank" rel="noopener noreferrer">Apply</a> |
 
+<a id="later-cyber-security"></a>
+
 ### Cyber security (5)
 
 | Company | Role | Location | Pay | Posted | Link |
@@ -2459,6 +2474,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Northrop Grumman | 2027 Software Engineer Intern - Rolling Meadows IL | Rolling Meadows, IL, United States |  | 2026-10-01 | <a href="https://jobright.ai/jobs/info/6abd4b3c8ff3fb9b3bc6fce6" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Northrop Grumman | 2027 Software Engineering Intern Dulles VA | Dulles, VA, United States |  | 2026-10-01 | <a href="https://jobright.ai/jobs/info/6abd4b228ff3fb9b3bc6fcd6" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Quantinuum | Quantum Compiler Intern - 992 | Broomfield, CO, United States |  | 2026-09-29 | <a href="https://jobright.ai/jobs/info/6aa4231a8275e3a21175f187" target="_blank" rel="noopener noreferrer">Apply</a> |
+
+<a id="later-hardware-engineering"></a>
 
 ### Hardware engineering (16)
 
@@ -2480,6 +2497,8 @@ Jump to: [Winter 2027](#winter-2027) | [Summer 2027](#summer-2027) | [Later term
 | Stryker | Electrical and Electronic Engineering Co-op - HeartSine R&D Team | Belfast, UK |  | 2026-09-29 | <a href="https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Belfast-United-Kingdom/Electrical-and-Electronic-Engineering-Co-Op_R572208" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Franklin Electric | Fall 2027 Electrical/Software Engineering Co-op | Fort Wayne, IN, United States |  | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6ab3ea5b0e0ae54eeea455a7" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Homes.com | Embedded Software Engineering Intern | Sunnyvale, CA, United States | $40-$45 /hr | 2026-09-25 | <a href="https://jobright.ai/jobs/info/6abed5d9064da25272e03421" target="_blank" rel="noopener noreferrer">Apply</a> |
+
+<a id="later-fintech"></a>
 
 ### Fintech (6)
 

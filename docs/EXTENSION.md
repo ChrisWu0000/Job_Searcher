@@ -9,8 +9,8 @@
   - A GitHub Copilot account with access to Claude Haiku 5.5
   - LiteLLM, installed as described below
 
-The extension supports Greenhouse, Lever, and Ashby application pages. Loading the extension
-does not require Bun, Node.js, or a build step.
+The extension supports Greenhouse, Lever, Ashby, and Workday application pages. Loading the
+extension does not require Bun, Node.js, or a build step.
 
 ## Install in Chrome
 

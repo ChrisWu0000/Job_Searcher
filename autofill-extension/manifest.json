@@ -1,7 +1,7 @@
 ﻿{
   "manifest_version": 3,
-  "name": "Quick Autofill (Greenhouse, Lever, Ashby)",
-  "description": "Autofills job applications on Greenhouse, Lever and Ashby from a profile stored locally in your browser.",
+  "name": "Quick Autofill (Greenhouse, Lever, Ashby, Workday)",
+  "description": "Autofills job applications on Greenhouse, Lever, Ashby and Workday from a profile stored locally in your browser.",
   "version": "1.0.0",
   "permissions": ["storage"],
   "host_permissions": ["http://127.0.0.1:4000/*"],
@@ -14,7 +14,9 @@
         "https://*.greenhouse.io/*",
         "https://jobs.lever.co/*",
         "https://jobs.eu.lever.co/*",
-        "https://jobs.ashbyhq.com/*"
+        "https://jobs.ashbyhq.com/*",
+        "https://*.myworkdayjobs.com/*",
+        "https://*.myworkday.com/*"
       ],
       "all_frames": true,
       "run_at": "document_idle",

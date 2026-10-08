@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { renderListings, renderListingsPage } from "@/lib/listings/render";
+import { jobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
+import { jobTermLabels, jobTerms } from "@/lib/ranking/terms";
 
 describe("interactive listings page", () => {
   it("uses the requested job-board title in both generated views", () => {
@@ -8,6 +10,21 @@ describe("interactive listings page", () => {
 
     expect(markdown.startsWith("# Chris Wu's Job Board")).toBe(true);
     expect(renderListingsPage()).toContain("<title>Chris Wu's Job Board</title>");
+  });
+
+  it("links to every term and category subsection in the generated README", () => {
+    const { markdown } = renderListings([], [], new Date("2026-10-06T00:00:00.000Z"));
+
+    for (const term of jobTerms) {
+      const termSlug = jobTermLabels[term].toLowerCase().replaceAll(" ", "-");
+      expect(markdown).toContain(`[${jobTermLabels[term]}](#${termSlug})`);
+      for (const category of jobCategories) {
+        expect(markdown).toContain(
+          `[${jobCategoryLabels[category]}](#${term}-${category})`,
+        );
+        expect(markdown).toContain(`<a id="${term}-${category}"></a>`);
+      }
+    }
   });
 
   it("renders the data-driven site shell and downloadable CSV link", () => {

@@ -45,10 +45,12 @@
     parts.push(el.getAttribute("aria-label") || "");
     if (!parts.join("").trim()) {
       const wrap = el.closest(
-        "label, .field, .application-field, [class*='field'], [class*='Field'], li, fieldset",
+        "label, .field, .application-field, [class*='field'], [class*='Field'], [data-automation-id='formField'], li, fieldset",
       );
       if (wrap) {
-        const lab = wrap.querySelector("label, legend, .application-label");
+        const lab = wrap.querySelector(
+          "label, legend, .application-label, [data-automation-id='formLabel']",
+        );
         parts.push(textOf(lab) || textOf(wrap).slice(0, 120));
       }
     }
@@ -69,7 +71,7 @@
   const MAX_ANSWERS = 500;
   const MAX_VALUE_LENGTH = 3000;
   const GROUP_SELECTOR =
-    "fieldset, [role='group'], [data-field-path], [class*='field'], [class*='Field'], [class*='question']";
+    "fieldset, [role='group'], [data-field-path], [data-automation-id='formField'], [class*='field'], [class*='Field'], [class*='question']";
 
   const questionText = (el) => {
     const parts = [];
@@ -80,7 +82,13 @@
     parts.push(el.getAttribute?.("aria-label") || "");
     if (!parts.join("").trim()) {
       const group = el.closest(GROUP_SELECTOR);
-      parts.push(textOf(group?.querySelector("legend, label, [class*='label']")));
+      parts.push(
+        textOf(
+          group?.querySelector(
+            "legend, label, [class*='label'], [data-automation-id='formLabel']",
+          ),
+        ),
+      );
     }
     return parts.join(" ");
   };
@@ -95,7 +103,11 @@
     const options = [...container.querySelectorAll("input[type='radio'], button[data-option]")];
     const isOption = (node) => options.some((o) => node.contains(o) || o.contains(node));
     return textOf(
-      [...container.querySelectorAll("legend, label, [class*='label']")].find(
+      [
+        ...container.querySelectorAll(
+          "legend, label, [class*='label'], [data-automation-id='formLabel']",
+        ),
+      ].find(
         (node) => !isOption(node) && textOf(node),
       ),
     );
@@ -256,7 +268,7 @@
     for (const radios of groups.values()) {
       if (radios.some((r) => r.checked)) continue;
       const container = radios[0].closest(
-        "fieldset, [role='group'], [class*='field'], [class*='Field'], [class*='question']",
+        "fieldset, [role='group'], [data-automation-id='formField'], [class*='field'], [class*='Field'], [class*='question']",
       );
       const question = groupLabel(container);
       const learned = answers[groupKey(container)]?.value?.toLowerCase();
@@ -443,7 +455,9 @@
   });
 
   const hasApplicationForm = () =>
-    document.querySelector("form input, form textarea, [data-field-path] input");
+    document.querySelector(
+      "form input, form textarea, [data-field-path] input, [data-automation-id='formField'] input",
+    );
   if (window.top === window || hasApplicationForm()) {
     if (hasApplicationForm()) mountPanel();
     else {
