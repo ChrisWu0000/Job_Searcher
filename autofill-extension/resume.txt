@@ -1,0 +1,118 @@
+# Extracted resume details (contact details omitted)
+
+Highlights
+•Academic Excellence:Ranked Top 3 in University of Waterloo Computer Engineering cohort (4.0 GPA);
+   recipient of the President’s Scholarship of Distinction
+•Systems & AI Automation:Built autonomous Python-based triage agents, LLM tool-calling workflows,
+   and distributed CI/CD integration pipelines at Ciena and Nokia
+•Embedded Systems & Infrastructure:Experience validating high-speed optical transceivers (WL6n),
+   CMIS telemetry, and DPI/DDoS mitigation platforms across Linux environments
+•Industry Certifications:CompTIA Security+ (SY0-701), Cisco CCNA, and Microsoft Azure
+   Fundamentals (AZ-900) covering network infrastructure, threat response, and cloud architecture
+•Security Clearance:Active Government of Canada Reliability Status clearance; trained in protocols for
+   handling protected information
+
+Education
+  University of Waterloo                                                                                        Sep.  2024 - Present
+  Bachelor of Applied Science in Computer Engineering (Co-op)                                                      Waterloo, ON
+
+      •  First in Class Engineering scholarship, President’s Scholarship of Distinction, 4.0 GPA
+
+      •  Relevant Coursework:Algorithms and Data Structures, Probability Theory and Statistics, Discrete
+         Mathematics and Logic, Chip Design and Tape Out, Embedded Microprocessor Systems, Systems
+         Programming and Concurrency, Digital Computers, Electronic Circuits
+
+Technical Skills
+  Languages:  Python, C, C++, Bash, TCL, VHDL, Java, JavaScript, TypeScript, HTML, CSS
+  Frameworks/Libraries:  NumPy, Pandas, LiteLLM, PyTorch, TensorFlow, Pytest, Pygame
+  Systems/Tools:  STM32, Ubuntu, Docker, Wireshark, Git, GitHub, GASH, PyShell
+  Cloud/DevOps:  Jenkins, Microsoft Azure, Cisco CLI, Nokia MDCLI, VS Code, PyCharm
+
+Experience
+  Software Developer                                                                                        May 2026 – Aug.  2026
+  Ciena – Embedded Software Integration Testing Team                                                                       Ottawa, ON
+
+      •  Automated test cases for WaveLogic 6 Nano (WL6n) 400G–800G coherent optical transceivers to validate
+         CMIS compliance, optical telemetry, and firmware states across 10+ Jenkins CI/CD pipelines
+
+      •  Developed agentic AI workflows in Python using LiteLLM to diagnose embedded test failures, query
+         build logs across Jenkins, and synthesize root-cause summaries across internal developer tools
+
+      •  Optimized embedded regression testing across OSFP800/QSFP-DD800 hardware testbeds, reducing
+         CI suite runtime by 25% through parallelized execution and dynamic Jenkins pipeline scheduling
+
+      •  Engineered an automated triage pipeline usingJira and Jenkins REST APIs to extract register
+         dumps from failed builds, auto-generating structured bug reports tocut triage latency by 30%
+
+      •  Created real-time OpenSearch observability dashboards and automated Confluence sync pipelines to
+         track 30+ physical-layer and firmware health metrics across release builds
+  Quality Assurance Engineer                                                                     Sep.  - Dec.  2025
+  Nokia - Application Assurance and Defender Mitigation System Teams                                           Ottawa, ON
+
+      •  Worked on leading-edge application identification technology for risk mitigation of DDoS attacks
+
+      •  Verified detection mechanisms to identify popular applications on Nokia 7750 SR series of IP routers
+
+      •  Developed automated test cases to validate new application signatures; modified and updated 80+
+         test automation scriptsprogrammed in TCL, Bash, and Python
+
+      •  Leveraged Pytest and PyShell in a Linux-based regression environment, translating and upgrading
+         legacy test scripts to Python-based platforms to improve testing readability, and maintenance
+
+      •  Routinely performed software and scripts source code and version control using Git-style toolkits
+  Azure Application Developer                                                                               Jan.  - Apr.  2025
+  MD Pharma                                                                                                                                       Waterloo, ON
+
+      •  Engineered a prototype AI wellness application leveraging Microsoft Azure Cognitive Services to process
+         and analyze user health inputs
+
+      •  Integrated Azure Text Analytics and Language Understanding (LUIS) models to extract key medical
+         entities and user intents, benchmarking performance against 35 datasets to achieve a 91% accuracy rate
+
+      •  Applied sentiment analysis to unstructured natural language data to accurately evaluate user emotional
+         context and health input severity, enabling dynamic, context-aware responses tailored each patient
+
+      •  Conducted comprehensive market research on emerging AI health technologies and competitor platforms,
+         synthesizing findings into structured technical reports and presentations
+
+Projects
+
+  Waterloo Rocketry|Python, Java, NumPy, ML                                              Sep.  2024 - Aug.  2026
+
+      •  Directed the software subteam as Software Lead, coordinating the development of the flight simulation
+         engine and telemetry pipelines through rigorous code reviews and cross-functional hardware integration
+
+      •  Engineered a Python flight simulation engine to model aerodynamics, propulsion curves, and apogee
+         targets, directly supporting the world-record amateur liquid rocket launch reaching 63,497 ft
+
+      •  Architected and maintained telemetry processing pipelines in Python and Java to ingest, decode, and
+         store real-time sensor streams from critical rocket subsystems
+
+      •  Delivered core analytics features to the Omnibus ground station dashboard to provide live trajectory
+         tracking and visualization during launch operations
+
+  WatRooms|C++, STM32, Bluetooth, Git
+
+      •  Designed and prototyped a campus study room access device using Bluetooth communication and
+         student number authentication for the Project Studio course
+
+      •  Developed a hardware booking and authentication system, integrating C++ on STM32 microcontrollers
+
+      •  Utilized HC-05 Bluetooth modules to manage secure communication over a Personal Area Network
+
+  Miedema’s Musical Massacre|Python, Pygame, Git
+
+      •  Led a team of 3 to design and program a desktop game using Pygame within a strict 3-month timeline
+
+      •  Managed all phases of the software development life cycle (SDLC): requirements gathering, high-level
+         architecture design, implementation, troubleshooting, and engineering technical documentation
+
+Certifications
+   •CompTIA Security+ (SY0-701)– Validated expertise across enterprise security architecture,
+       vulnerability management, threat response, and incident remediation operations (Obtained Sep.  2026)
+   •Cisco Certified Network Associate (CCNA)– Validated network access, IP connectivity, IP services,
+       and security fundamentals.  Completed configuration labs for Cisco routers/switches including VLANs,
+       trunking, ACLs, and OSPF (Obtained Apr.  2025)
+   •Microsoft Azure Fundamentals (AZ-900) & Azure AI Fundamentals (AI-900)– Demonstrated
+       foundational knowledge of cloud concepts, core Azure governance tools, and cloud-driven AI solution
+       development (Obtained Feb.  2025)

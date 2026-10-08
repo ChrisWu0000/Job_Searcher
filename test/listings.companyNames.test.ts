@@ -40,31 +40,15 @@ describe("company name display", () => {
     expect(renderCsv([listing])).toContain("Acme Robotics");
   });
 
-  it("renders only the requested eligibility indicators beside the company", () => {
-    const flaggedListing: Listing = {
-      ...listing,
-      requiresUSCitizenship: true,
-      noSponsorship: true,
-    };
-    const { markdown } = renderListings([flaggedListing], [], new Date("2026-10-06T00:00:00.000Z"));
-    const csv = renderCsv([flaggedListing]);
-
-    expect(markdown).toContain("| Acme Robotics 🛂 🇺🇸 |");
-    expect(markdown).toContain("- 🛂 Does not offer sponsorship");
-    expect(markdown).toContain("- 🇺🇸 Requires U.S. citizenship");
-    expect(csv).toContain("Acme Robotics 🛂 🇺🇸");
-  });
-
-  it("preserves eligibility indicators when sources share a listing URL", () => {
+  it("omits listings that require U.S. citizenship or do not sponsor visas", () => {
+    const date = new Date("2026-10-06T00:00:00.000Z");
     const citizenshipListing: Listing = { ...listing, requiresUSCitizenship: true };
-    const sponsorshipListing: Listing = { ...listing, id: "same-url", noSponsorship: true };
-    const { markdown } = renderListings(
-      [citizenshipListing, sponsorshipListing],
-      [],
-      new Date("2026-10-06T00:00:00.000Z"),
-    );
+    const sponsorshipListing: Listing = { ...listing, id: "no-sponsor", noSponsorship: true };
 
-    expect(markdown).toContain("| Acme Robotics 🛂 🇺🇸 |");
-    expect(renderCsv([citizenshipListing, sponsorshipListing])).toContain("Acme Robotics 🛂 🇺🇸");
+    for (const flagged of [citizenshipListing, sponsorshipListing]) {
+      expect(renderListings([flagged], [], date).markdown).not.toContain("Acme Robotics");
+      expect(renderCsv([flagged])).not.toContain("Acme Robotics");
+    }
+    expect(renderListings([listing], [], date).markdown).toContain("| Acme Robotics |");
   });
 });

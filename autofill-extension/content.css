@@ -44,3 +44,18 @@
   color: #777;
   padding: 0;
 }
+
+.qaf-ai-btn {
+  display: block;
+  margin: 4px 0 8px;
+  padding: 4px 10px;
+  border: 1px solid #0b8aa8;
+  border-radius: 6px;
+  background: #fff;
+  color: #0b8aa8;
+  font: 600 12px system-ui, sans-serif;
+  cursor: pointer;
+}
+.qaf-ai-btn:disabled {
+  opacity: 0.6;
+}

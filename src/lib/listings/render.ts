@@ -99,6 +99,10 @@ export function renderListingsPage(): string {
 `;
 }
 
+function isRestricted(listing: Listing): boolean {
+  return Boolean(listing.requiresUSCitizenship || listing.noSponsorship);
+}
+
 export const recentDays = 14;
 
 const csvHeaders = ["Term", "Category", "Company", "Role", "Location", "Pay", "Posted", "Link"];
@@ -111,7 +115,7 @@ export function renderCsv(listings: Listing[]): string {
   const rows: string[][] = [];
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
-    if (!isInternshipTitle(listing.title)) continue;
+    if (!isInternshipTitle(listing.title) || isRestricted(listing)) continue;
     const existing = unique.get(listing.url);
     unique.set(listing.url, {
       ...listing,
@@ -164,7 +168,12 @@ export function renderListings(
   const cutoff = new Date(updated.getTime() - recentDays * 86_400_000).toISOString();
   const unique = new Map<string, Listing>();
   for (const listing of listings) {
-    if (isInternshipTitle(listing.title) && listing.postedAt && listing.postedAt >= cutoff) {
+    if (
+      isInternshipTitle(listing.title) &&
+      !isRestricted(listing) &&
+      listing.postedAt &&
+      listing.postedAt >= cutoff
+    ) {
       const existing = unique.get(listing.url);
       unique.set(listing.url, {
         ...listing,

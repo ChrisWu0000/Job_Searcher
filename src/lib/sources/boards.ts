@@ -279,7 +279,11 @@ export function normalizeBoardJob(
     boardInfo.label.split("/")[0] ??
     boardInfo.label;
   const compensation =
-    text(row.compensation) ??
+    nestedText(
+      row.compensation,
+      "compensationTierSummary",
+      "scrapeableCompensationSalarySummary",
+    ) ??
     text(row.salary) ??
     text(row.compensationTierSummary) ??
     text(row.salaryText);

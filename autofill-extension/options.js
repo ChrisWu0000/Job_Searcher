@@ -58,10 +58,42 @@ chrome.storage.local.get("profile", ({ profile = {} }) => {
 });
 
 document.getElementById("save").addEventListener("click", () => {
-  const profile = { ...resume };
-  for (const [key] of [...FIELDS, ...YES_NO]) profile[key] = document.getElementById(key).value.trim();
-  chrome.storage.local.set({ profile }, () => {
-    status.textContent = "Saved";
-    setTimeout(() => (status.textContent = ""), 1500);
+  chrome.storage.local.get("profile", ({ profile: old = {} }) => {
+    const profile = { ...resume, aiBackground: old.aiBackground };
+    for (const [key] of [...FIELDS, ...YES_NO]) profile[key] = document.getElementById(key).value.trim();
+    chrome.storage.local.set({ profile }, () => {
+      status.textContent = "Saved";
+      setTimeout(() => (status.textContent = ""), 1500);
+    });
+  });
+});
+
+const answerCount = document.getElementById("answerCount");
+const showAnswerCount = () =>
+  chrome.storage.local.get("answers", ({ answers = {} }) => {
+    answerCount.textContent = `${Object.keys(answers).length} saved answers`;
+  });
+showAnswerCount();
+document.getElementById("clearAnswers").addEventListener("click", () => {
+  chrome.storage.local.remove("answers", showAnswerCount);
+});
+
+const aiForm = document.getElementById("aiForm");
+aiForm.insertAdjacentHTML(
+  "beforeend",
+  '<label for="ai_background">About me (resume text / talking points the AI may draw from)</label><textarea id="ai_background" rows="8" style="width:100%;box-sizing:border-box"></textarea>',
+);
+chrome.storage.local.get("profile", ({ profile = {} }) => {
+  document.getElementById("ai_background").value = profile.aiBackground || "";
+});
+document.getElementById("saveAi").addEventListener("click", () => {
+  const out = document.getElementById("aiStatus");
+  chrome.storage.local.get("profile", ({ profile = {} }) => {
+    profile.aiBackground = document.getElementById("ai_background").value.trim();
+    chrome.storage.local.set({ profile }, () => {
+      out.style.color = "#0a7";
+      out.textContent = "Saved";
+      setTimeout(() => (out.textContent = ""), 1500);
+    });
   });
 });
