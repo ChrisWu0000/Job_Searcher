@@ -104,7 +104,7 @@ function isRestricted(listing: Listing): boolean {
   return Boolean(listing.requiresUSCitizenship || listing.noSponsorship);
 }
 
-export const recentDays = 14;
+export const recentDays = 7;
 
 const csvHeaders = ["Term", "Category", "Company", "Role", "Location", "Pay", "Posted", "Link"];
 
@@ -229,7 +229,7 @@ export function renderListings(
 
   const header = [
     "# Chris Wu's Job Board",
-    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops in Canada, the United States, EU member countries, the United Kingdom, or remote worldwide are included; full-time roles are excluded. The tables show listings posted in the last 14 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
+    "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops in Canada, the United States, EU member countries, the United Kingdom, or remote worldwide are included; full-time roles are excluded. The tables show listings posted in the last 7 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
     "### Requirement icons\n\n- 🛂 Does not offer sponsorship\n- 🇺🇸 Requires U.S. citizenship",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
     [

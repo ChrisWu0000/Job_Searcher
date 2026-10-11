@@ -16,8 +16,25 @@ describe("classifyJobTerms", () => {
       "winter-2027",
     ]);
     expect(
+      classifyJobTerms(makeJob("j", { title: "Software Intern - Spring 2027" })),
+    ).toEqual(["winter-2027"]);
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Software Intern - Summer 2027" })),
+    ).toEqual(["summer-2027"]);
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Software Intern - Winter/Summer 2027" })),
+    ).toEqual(["winter-2027", "summer-2027"]);
+    expect(
       classifyJobTerms(makeJob("j", { title: "Intern", summary: "Starts May 2027." })),
     ).toEqual(["summer-2027"]);
+  });
+
+  it("prioritizes seasons named in the title over conflicting feed terms", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Intern - Spring 2027", terms: ["Summer 2027"] }),
+      ),
+    ).toEqual(["winter-2027"]);
   });
 
   it("does not treat dates as terms", () => {
@@ -38,6 +55,24 @@ describe("classifyJobTerms", () => {
         }),
       ),
     ).toEqual([]);
+  });
+
+  it("excludes eight-month internships unless the title says four to eight months", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern - 8 months - Summer 2027" }),
+      ),
+    ).toEqual([]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern - 4-8months - Summer 2027" }),
+      ),
+    ).toEqual(["summer-2027"]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Engineer Intern - 4–8 months - Winter 2027" }),
+      ),
+    ).toEqual(["winter-2027"]);
   });
 
   it("puts internships with no start date in both terms", () => {

@@ -35,4 +35,23 @@ describe("internship listing output", () => {
     expect(csv).toContain("https://example.com/intern");
     expect(csv).not.toContain("https://example.com/full-time");
   });
+
+  it("includes only postings from the last seven days in the README", () => {
+    const recent = { ...internship, postedAt: "2026-10-01T00:00:00.000Z" };
+    const old = {
+      ...internship,
+      id: "old",
+      url: "https://example.com/old",
+      postedAt: "2026-09-28T00:00:00.000Z",
+    };
+    const { markdown } = renderListings(
+      [recent, old],
+      [],
+      new Date("2026-10-06T00:00:00.000Z"),
+    );
+
+    expect(markdown).toContain("https://example.com/intern");
+    expect(markdown).not.toContain("https://example.com/old");
+    expect(markdown).toContain("last 7 days");
+  });
 });
