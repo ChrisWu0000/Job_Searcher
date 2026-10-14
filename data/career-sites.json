@@ -1,0 +1,502 @@
+[
+    {
+        "company":  "Adobe",
+        "url":  "https://careers.adobe.com/"
+    },
+    {
+        "company":  "Akamai",
+        "url":  "https://www.akamai.com/careers/students-and-recent-graduates"
+    },
+    {
+        "company":  "Amazon (Top100)",
+        "url":  "https://www.amazon.jobs/content/en/career-programs/university/internships-for-students"
+    },
+    {
+        "company":  "AMD",
+        "url":  "https://careers.amd.com/careers-home/jobs"
+    },
+    {
+        "company":  "Analog Devices",
+        "url":  "https://www.analog.com/en/careers/student-resources.html"
+    },
+    {
+        "company":  "Apple",
+        "url":  "https://jobs.apple.com/en-ca/search?team=internships-STDNT-INTRN"
+    },
+    {
+        "company":  "Applied Digital",
+        "url":  "https://www.applieddigital.com/careers"
+    },
+    {
+        "company":  "AppLovin",
+        "url":  "https://www.applovin.com/en/careers"
+    },
+    {
+        "company":  "Arista Networks",
+        "url":  "https://www.arista.com/en/careers"
+    },
+    {
+        "company":  "ARM",
+        "url":  "https://careers.arm.com/search-jobs?acm=ALL\u0026alrpm=ALL\u0026ascf=[%7B%22key%22:%22custom_fields.ExperienceLevel%22,%22value%22:%22Intern%22%7D]"
+    },
+    {
+        "company":  "ATPCO",
+        "url":  "https://atpco.net/careers/"
+    },
+    {
+        "company":  "ATS automation",
+        "url":  "https://jobs.atsautomation.com/go/Entry-\u0026-New-Graduates/4456001/"
+    },
+    {
+        "company":  "Autodesk",
+        "url":  "https://autodesk.wd1.myworkdayjobs.com/Ext?workerSubType=39f5af07b0c54bc588b1a47788da7f81"
+    },
+    {
+        "company":  "BMO",
+        "url":  "https://jobs.bmo.com/ca/en/interns-and-co-ops-search"
+    },
+    {
+        "company":  "Boeing",
+        "url":  "https://jobs.boeing.com/internships"
+    },
+    {
+        "company":  "Bombardier",
+        "url":  "https://jobs.bombardier.com/go/Internships-\u0026-New-Graduate-Programs/9387201/"
+    },
+    {
+        "company":  "C3 Ai",
+        "url":  "https://c3.ai/careers/"
+    },
+    {
+        "company":  "CAE",
+        "url":  "https://www.cae.com/careers/"
+    },
+    {
+        "company":  "Celestica",
+        "url":  "https://careers.celestica.com/go/Students-and-Interns/8944801/"
+    },
+    {
+        "company":  "CGI",
+        "url":  "https://www.cgi.com/us/en-us/careers/early-careers"
+    },
+    {
+        "company":  "CIBC",
+        "url":  "https://cibc.wd3.myworkdayjobs.com/en-US/campus"
+    },
+    {
+        "company":  "Ciena",
+        "url":  "https://ciena.wd5.myworkdayjobs.com/Careers"
+    },
+    {
+        "company":  "Cirrus logic",
+        "url":  "https://www.cirrus.com/careers/students"
+    },
+    {
+        "company":  "Cisco",
+        "url":  "https://careers.cisco.com/global/en/internships-and-co-ops"
+    },
+    {
+        "company":  "Cloudflare",
+        "url":  "https://www.cloudflare.com/en-ca/careers/jobs/?department=Early+Talent"
+    },
+    {
+        "company":  "Cognizant",
+        "url":  "https://careers.cognizant.com/ca-en/jobs/"
+    },
+    {
+        "company":  "Cohere AI",
+        "url":  "https://jobs.ashbyhq.com/cohere?employmentType=Intern"
+    },
+    {
+        "company":  "Comcast",
+        "url":  "https://jobs.comcast.com/search-jobs?acm=ALL\u0026alrpm=ALL\u0026ascf=[%7B%22key%22:%22custom_fields.InternRotational%22,%22value%22:%22Intern%22%7D]"
+    },
+    {
+        "company":  "Cox",
+        "url":  "https://jobs.coxenterprises.com/en/career-areas/early-career/internships/"
+    },
+    {
+        "company":  "Crowdstrike",
+        "url":  "https://crowdstrike.wd5.myworkdayjobs.com/en-CA/crowdstrikecareers?Job_Family=1408861ee6e2015adbe3e7f6b000de0b"
+    },
+    {
+        "company":  "Dassault systems",
+        "url":  "https://www.3ds.com/careers"
+    },
+    {
+        "company":  "Eletronics Arts",
+        "url":  "https://www.ea.com/en-ca/careers/early-careers"
+    },
+    {
+        "company":  "Entrust (now Sectigo)",
+        "url":  "https://www.entrust.com/company/careers"
+    },
+    {
+        "company":  "equinix (top100)",
+        "url":  "https://careers.equinix.com/global-internship"
+    },
+    {
+        "company":  "Ericsson",
+        "url":  "https://www.ericsson.com/en/careers/global-locations/canada"
+    },
+    {
+        "company":  "f5",
+        "url":  "https://ffive.wd5.myworkdayjobs.com/f5jobs?workerSubType=7a119632acd0109fce74cbf856cb3009"
+    },
+    {
+        "company":  "fastly (Top100)",
+        "url":  "https://www.fastly.com/about/careers"
+    },
+    {
+        "company":  "Ford",
+        "url":  "https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?location=Canada\u0026locationId=300000000425151\u0026locationLevel=country\u0026mode=location"
+    },
+    {
+        "company":  "Forescout",
+        "url":  "https://www.forescout.com/company/careers/"
+    },
+    {
+        "company":  "Fortinet",
+        "url":  "https://www.fortinet.com/corporate/careers/early-talent-program"
+    },
+    {
+        "company":  "Fulcrum Global Technologies (Top100)",
+        "url":  "https://fulcrumgt.com/careers"
+    },
+    {
+        "company":  "Generac",
+        "url":  "https://www.generac.com/about/careers/"
+    },
+    {
+        "company":  "General Dynamics Land Systems",
+        "url":  "https://www.gdls.com/careers/"
+    },
+    {
+        "company":  "General Dynamics Mission Systems",
+        "url":  "https://gdmissionsystems.ca/careers"
+    },
+    {
+        "company":  "Google",
+        "url":  "https://www.google.com/about/careers/applications/jobs/results/"
+    },
+    {
+        "company":  "Hexagon",
+        "url":  "https://hexagon.com/company/careers/job-listings"
+    },
+    {
+        "company":  "Hitachi",
+        "url":  "https://careers.hitachi.com/"
+    },
+    {
+        "company":  "Honeywell aerospace",
+        "url":  "https://careers.honeywell.com/en/sites/HoneywellCareerSite/pages/student-and-grads"
+    },
+    {
+        "company":  "IBM (Top100)",
+        "url":  "https://www.ibm.com/careers/search"
+    },
+    {
+        "company":  "Intel",
+        "url":  "https://intel.wd1.myworkdayjobs.com/External/page/f7af6f4ab7131001ecc380a588ca0000"
+    },
+    {
+        "company":  "Juniper networks (now HP enterpise)",
+        "url":  "https://careers.hpe.com/juniper"
+    },
+    {
+        "company":  "Kongsberg Geospatial",
+        "url":  "https://www.kongsberggeospatial.com/company/careers"
+    },
+    {
+        "company":  "Lila science",
+        "url":  "https://www.lila.ai/open-roles"
+    },
+    {
+        "company":  "Lockheed Martin Canada",
+        "url":  "https://www.lockheedmartin.com/en-ca/careers.html"
+    },
+    {
+        "company":  "Logitech",
+        "url":  "https://logitech.wd5.myworkdayjobs.com/Logitech"
+    },
+    {
+        "company":  "Magnet Forensics",
+        "url":  "https://www.magnetforensics.com/careers-at-magnet/"
+    },
+    {
+        "company":  "Marvell",
+        "url":  "https://www.marvell.com/company/careers.html"
+    },
+    {
+        "company":  "MDA Space",
+        "url":  "https://mda.space/careers"
+    },
+    {
+        "company":  "Medpace",
+        "url":  "https://careers.medpace.com/jobs"
+    },
+    {
+        "company":  "Meta",
+        "url":  "https://www.metacareers.com/careerprograms/students"
+    },
+    {
+        "company":  "Microchip",
+        "url":  "https://www.microchip.com/en-us/about/careers"
+    },
+    {
+        "company":  "Microsoft (Top100)",
+        "url":  "https://careers.microsoft.com/v2/global/en/students"
+    },
+    {
+        "company":  "Mitel",
+        "url":  "https://www.mitel.com/careers"
+    },
+    {
+        "company":  "Moloco",
+        "url":  "https://www.moloco.com/open-positions"
+    },
+    {
+        "company":  "Moog",
+        "url":  "https://moog.wd5.myworkdayjobs.com/MOOG_External_Career_Site"
+    },
+    {
+        "company":  "Motorola Solutions",
+        "url":  "https://www.motorolasolutions.com/en_us/about/careers.html"
+    },
+    {
+        "company":  "NAV can",
+        "url":  "https://www.navcanada.ca/en/careers.aspx"
+    },
+    {
+        "company":  "Navidia",
+        "url":  "https://www.nvidia.com/en-us/about-nvidia/careers/"
+    },
+    {
+        "company":  "Nightwing",
+        "url":  "https://nightwing.com/careers/"
+    },
+    {
+        "company":  "Nintendo",
+        "url":  "https://careers.nintendo.com/jobs"
+    },
+    {
+        "company":  "Noblis",
+        "url":  "https://careers.noblis.org/"
+    },
+    {
+        "company":  "NXP",
+        "url":  "https://www.nxp.com/company/about-nxp/careers:CAREERS"
+    },
+    {
+        "company":  "Onto Innovation",
+        "url":  "https://ontoinnovation.com/careers/"
+    },
+    {
+        "company":  "Palo Alto",
+        "url":  "https://jobs.paloaltonetworks.com/en/category/internships-jobs/47263/8829856/1"
+    },
+    {
+        "company":  "Philips",
+        "url":  "https://www.careers.philips.com/student/na/en/graduate-career"
+    },
+    {
+        "company":  "QinetiQ",
+        "url":  "https://www.qinetiq.com/en-ca/careers"
+    },
+    {
+        "company":  "Qlik",
+        "url":  "https://www.qlik.com/us/company/careers"
+    },
+    {
+        "company":  "Qualcom",
+        "url":  "https://careers.qualcomm.com/careers?domain=qualcomm.com\u0026start=0\u0026pid=\u0026sort_by=relevance\u0026filter_seniority=Intern"
+    },
+    {
+        "company":  "RBC",
+        "url":  "https://jobs.rbc.com/ca/en/featuredopportunities/student-early-talent-jobs"
+    },
+    {
+        "company":  "Renesas",
+        "url":  "https://jobs.renesas.com/interns-and-graduates"
+    },
+    {
+        "company":  "riverbed",
+        "url":  "https://www.riverbed.com/careers/"
+    },
+    {
+        "company":  "rocket Lab",
+        "url":  "https://rocketlabcorp.com/careers/"
+    },
+    {
+        "company":  "Rockwell Automation",
+        "url":  "https://www.rockwellautomation.com/en-us/careers.html"
+    },
+    {
+        "company":  "Rogers",
+        "url":  "https://jobs.rogers.com/"
+    },
+    {
+        "company":  "Rolls Royce",
+        "url":  "https://careers.rolls-royce.com/en/students-and-graduates"
+    },
+    {
+        "company":  "Ross Video",
+        "url":  "https://www.rossvideo.com/company/careers/"
+    },
+    {
+        "company":  "Salas O\u0027Brien",
+        "url":  "https://salasobrien.com/careers/"
+    },
+    {
+        "company":  "saleforce",
+        "url":  "https://www.salesforce.com/company/careers/jobs/?page=1"
+    },
+    {
+        "company":  "Samsung Semiconductor",
+        "url":  "https://semiconductor.samsung.com/about-us/careers/us/students/internships-in-engineering/"
+    },
+    {
+        "company":  "sandisk",
+        "url":  "https://www.sandisk.com/careers/students-grads"
+    },
+    {
+        "company":  "Sanmina",
+        "url":  "https://careers.sanmina.com/job-search?city=Ottawa"
+    },
+    {
+        "company":  "SAP (Top100)",
+        "url":  "https://jobs.sap.com/content/students/"
+    },
+    {
+        "company":  "SBM group",
+        "url":  "https://careers.sbmgroup.mu/"
+    },
+    {
+        "company":  "Schneider",
+        "url":  "https://www.se.com/ca/en/about-us/careers/overview/"
+    },
+    {
+        "company":  "Scotiabank",
+        "url":  "https://www.scotiabank.com/careers/en/careers/careers-students-and-new-grads.html"
+    },
+    {
+        "company":  "ServiceNow (Top100)",
+        "url":  "https://careers.servicenow.com/jobs/?search=\u0026jobPostingType=Intern\u0026pagesize=20#results"
+    },
+    {
+        "company":  "SharkNinja",
+        "url":  "https://careers.sharkninja.com/"
+    },
+    {
+        "company":  "Shopify",
+        "url":  "https://www.shopify.com/ca-fr/careers/vip-access"
+    },
+    {
+        "company":  "Shure",
+        "url":  "https://www.shure.com/en-us/careers"
+    },
+    {
+        "company":  "Siemens",
+        "url":  "https://www.siemens.com/en-us/company/jobs/"
+    },
+    {
+        "company":  "Skydio",
+        "url":  "https://www.skydio.com/careers"
+    },
+    {
+        "company":  "snowflake (Top100)",
+        "url":  "https://careers.snowflake.com/"
+    },
+    {
+        "company":  "Solace",
+        "url":  "https://solace.com/careers/"
+    },
+    {
+        "company":  "Sony Eletronics",
+        "url":  "https://www.sonyjobs.com/jobs.html"
+    },
+    {
+        "company":  "Synopsys",
+        "url":  "https://careers.synopsys.com/location/canada-jobs/44408/6251999/2"
+    },
+    {
+        "company":  "Syntronics",
+        "url":  "https://syntronic.com/career-americas/"
+    },
+    {
+        "company":  "TD",
+        "url":  "https://careers.td.com/student-new-grads/early-talent-programs/"
+    },
+    {
+        "company":  "Telesat",
+        "url":  "https://www.telesat.com/careers/jobs/"
+    },
+    {
+        "company":  "Tencent",
+        "url":  "https://careers.tencent.com/"
+    },
+    {
+        "company":  "TensTorrent",
+        "url":  "https://tenstorrent.com/careers"
+    },
+    {
+        "company":  "Teradyne",
+        "url":  "https://jobs.teradyne.com/go/Internships-\u0026-Co-Ops/8459800/"
+    },
+    {
+        "company":  "Tesla",
+        "url":  "https://www.tesla.com/careers/internships"
+    },
+    {
+        "company":  "Texas Instruments",
+        "url":  "https://careers.ti.com/students/"
+    },
+    {
+        "company":  "Thales",
+        "url":  "https://careers.thalesgroup.com/global/en/studentandgraduates2"
+    },
+    {
+        "company":  "Tonal",
+        "url":  "https://tonal.com/pages/careers?srsltid=AfmBOor3C7Yg1UGti5k2gKqtFIuqNrtOfTYJKEMxlAk7FGhqOvn9XG-F"
+    },
+    {
+        "company":  "Toshiba",
+        "url":  "https://toshiba.com/tic/about-us/careers/"
+    },
+    {
+        "company":  "Trend Micro",
+        "url":  "https://www.trendmicro.com/en/about/careers.html"
+    },
+    {
+        "company":  "Tyler Technologies",
+        "url":  "https://www.tylertech.com/careers/job-openings"
+    },
+    {
+        "company":  "Ulteig",
+        "url":  "https://ulteig.com/careers/highlighted-renewables-careers/"
+    },
+    {
+        "company":  "Verizon",
+        "url":  "https://mycareer.verizon.com/life-at-verizon/early-in-career/"
+    },
+    {
+        "company":  "Vista Robotics",
+        "url":  "https://vistarobotic.com/careers/"
+    },
+    {
+        "company":  "warner bros",
+        "url":  "https://careers.wbd.com/global/en/canada-jobs"
+    },
+    {
+        "company":  "Waymo",
+        "url":  "https://careers.withwaymo.com/jobs/search?page=1\u0026employment_type_uids%5B%5D=fa4c4a8317c6c87309f488cb0d63aa7c\u0026query="
+    },
+    {
+        "company":  "Wind river",
+        "url":  "https://www.windriver.com/company/careers"
+    },
+    {
+        "company":  "Xerox",
+        "url":  "https://xerox.avature.net/en_US/careers"
+    }
+]

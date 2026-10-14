@@ -13,7 +13,6 @@ Jump to:
 - [Winter 2027](#winter-2027): [Software engineering](#winter-2027-software-engineering) | [Data science](#winter-2027-data-science) | [Cyber security](#winter-2027-cyber-security) | [Hardware engineering](#winter-2027-hardware-engineering) | [Fintech](#winter-2027-fintech)
 - [Summer 2027](#summer-2027): [Software engineering](#summer-2027-software-engineering) | [Data science](#summer-2027-data-science) | [Cyber security](#summer-2027-cyber-security) | [Hardware engineering](#summer-2027-hardware-engineering) | [Fintech](#summer-2027-fintech)
 - [Later terms](#later-terms): [Software engineering](#later-software-engineering) | [Data science](#later-data-science) | [Cyber security](#later-cyber-security) | [Hardware engineering](#later-hardware-engineering) | [Fintech](#later-fintech)
-- [Sources](#sources)
 
 ## Winter 2027
 
@@ -1466,36 +1465,3 @@ Jump to:
 | GCM Grosvenor | 2027 Software Engineering Summer Intern | Chicago, IL, Chicago, Illinois, United States |  | 2026-10-09 | <a href="https://job-boards.greenhouse.io/gcmgrosvenor/jobs/8015792003" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Perpay - Career's Page | Super Day - Data Engineering Internship | Philadelphia, Pennsylvania, United States |  | 2026-10-08 | <a href="https://job-boards.greenhouse.io/perpay/jobs/5260444007" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Perpay - Career's Page | Super Day - Data Science Internship | Philadelphia, Pennsylvania, United States |  | 2026-10-08 | <a href="https://job-boards.greenhouse.io/perpay/jobs/5260960007" target="_blank" rel="noopener noreferrer">Apply</a> |
-
-## Sources
-
-To refresh all sources, push a commit to `main`. To refresh one source manually, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).
-
-| Source | Last scraped | Listings |
-| --- | --- | --- |
-| SimplifyJobs Summer 2027 | 2026-10-13 | 2524 |
-| zshah101 internships | 2026-10-13 | 770 |
-| aprameyak tech jobs | 2026-10-13 | 1775 |
-| intern-list.com | 2026-10-13 | 1347 |
-| Ashby boards | 2026-10-13 | 286 |
-| Greenhouse boards | 2026-10-13 | 1007 |
-| Lever boards | 2026-10-13 | 155 |
-| SmartRecruiters boards | 2026-10-13 | 106 |
-| Workable boards | 2026-10-13 | 29 |
-| Pinpoint boards | 2026-10-06 | 0 |
-| Gem boards | 2026-10-06 | 0 |
-| Workday boards | 2026-10-13 | 814 |
-
-- Download [data/listings.csv](data/listings.csv) for every scraped listing, including older ones and ones with no posted date.
-
-- **Posted** is the date the employer or job board published the listing, not the date it was scraped. It is blank when the source does not provide one.
-
-- **Pay** is shown only when the source or posting text states it.
-
-- A listing can appear under several categories or in both terms.
-
-- Categories and terms are inferred from titles, tags, and descriptions, so check the posting before applying.
-
-- Citizenship and sponsorship indicators are inferred from source descriptions or explicit eligibility fields; listings without accessible descriptions may not show an indicator.
-
-- Job boards (Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, Workday) are discovered from the community lists, so scrape those first. The optional Chrome extension is described in [docs/EXTENSION.md](docs/EXTENSION.md).

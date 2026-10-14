@@ -1,12 +1,15 @@
 import type { FetchLike } from "@/lib/ai/openrouter";
 import { classifyJobCategories, type JobCategory } from "@/lib/ranking/categories";
 import { payTextForJob } from "@/lib/ranking/prefilter";
-import { classifyJobTerms, type JobTerm } from "@/lib/ranking/terms";
+import { classifyJobTerms, isInternshipTitle, type JobTerm } from "@/lib/ranking/terms";
 import {
   discoverPublicBoards,
   fetchPublicBoardJobs,
+  type PublicBoard,
   type PublicBoardProvider,
+  publicBoardFromJobUrl,
 } from "@/lib/sources/boards";
+import { companyCareerSites, fetchCareerPage } from "@/lib/sources/companyCareers";
 import { fetchInternListJobs, internListFeed } from "@/lib/sources/internList";
 import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/publicFeeds";
 import type { Job } from "@/types/job";
@@ -31,7 +34,7 @@ export interface Listing {
 export interface ListingSource {
   id: string;
   label: string;
-  kind: "feed" | "board";
+  kind: "feed" | "board" | "career-sites";
 }
 
 const providers: { id: PublicBoardProvider; label: string }[] = [
@@ -48,6 +51,7 @@ const providers: { id: PublicBoardProvider; label: string }[] = [
 export const listingSources: ListingSource[] = [
   ...publicJobFeeds.map((feed) => ({ id: feed.id, label: feed.label, kind: "feed" as const })),
   { id: internListFeed.id, label: internListFeed.label, kind: "feed" as const },
+  { id: "company-careers", label: "Company career pages", kind: "career-sites" as const },
   ...providers.map((provider) => ({ ...provider, kind: "board" as const })),
 ];
 
@@ -221,10 +225,70 @@ export async function scrapeSource(
     return { listings: found, failures };
   }
 
+  if (source.kind === "career-sites") {
+    const sites = [...companyCareerSites];
+    const siteQueue = [...sites];
+    const boards = new Map<string, PublicBoard>();
+    const eligibilityDescriptionUrls = new Set<string>();
+    const addJob = (job: Job): void => {
+      if (!isInternshipTitle(job.title)) return;
+      const listing = toListing(job);
+      if (!listing) return;
+      if (needsEligibilityDescription(job, listing)) eligibilityDescriptionUrls.add(listing.url);
+      listings.set(listing.id, listing);
+    };
+    const siteWorker = async (): Promise<void> => {
+      for (let site = siteQueue.shift(); site; site = siteQueue.shift()) {
+        try {
+          const discovery = await fetchCareerPage(site, fetchImpl);
+          failures.push(
+            ...discovery.failures.map((failure) => `${site.company} career page: ${failure}`),
+          );
+          for (const job of discovery.jobs) addJob(job);
+          for (const board of discovery.boards) boards.set(board.id, board);
+        } catch (cause) {
+          failures.push(
+            `${site.company} career page: ${cause instanceof Error ? cause.message : String(cause)}`,
+          );
+        }
+      }
+    };
+    await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => siteWorker()));
+
+    const boardQueue = [...boards.values()];
+    const boardWorker = async (): Promise<void> => {
+      for (let board = boardQueue.shift(); board; board = boardQueue.shift()) {
+        try {
+          for (const job of await fetchPublicBoardJobs(board, fetchImpl)) addJob(job);
+        } catch (cause) {
+          failures.push(
+            `${board.provider} ${board.label}: ${cause instanceof Error ? cause.message : String(cause)}`,
+          );
+        }
+      }
+    };
+    await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => boardWorker()));
+    const found = [...listings.values()];
+    failures.push(...(await enrichListingDetails(found, fetchImpl, eligibilityDescriptionUrls)));
+    return { listings: found, failures };
+  }
+
   const seeds: Job[] = [];
   for (const feed of publicJobFeeds)
     seeds.push(...(await fetchFeedJobs(feed, fetchImpl, failures)));
-  const queue = discoverPublicBoards(seeds).filter((board) => board.provider === source.id);
+  const careerBoards = companyCareerSites
+    .map((site) => publicBoardFromJobUrl(site.url))
+    .filter(
+      (board): board is NonNullable<typeof board> =>
+        board !== undefined && board.provider === source.id,
+    );
+  const queue = [
+    ...new Map(
+      [...discoverPublicBoards(seeds), ...careerBoards]
+        .filter((board) => board.provider === source.id)
+        .map((board) => [board.id, board]),
+    ).values(),
+  ];
   const eligibilityDescriptionUrls = new Set<string>();
   const worker = async (): Promise<void> => {
     for (let board = queue.shift(); board; board = queue.shift()) {

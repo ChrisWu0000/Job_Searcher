@@ -167,7 +167,7 @@ export interface SourceStatus {
 
 export function renderListings(
   listings: Listing[],
-  statuses: SourceStatus[],
+  _statuses: SourceStatus[],
   updated: Date,
 ): { markdown: string; counts: ListingCounts } {
   const cutoff = new Date(updated.getTime() - recentDays * 86_400_000).toISOString();
@@ -245,26 +245,8 @@ export function renderListings(
             )
             .join(" | ")}`,
       ),
-      "- [Sources](#sources)",
     ].join("\n"),
   ].join("\n\n");
 
-  const sourceRows = statuses.map(
-    ({ source, count, scrapedAt }) =>
-      `| ${source.label} | ${scrapedAt ? scrapedAt.slice(0, 10) : "not scraped yet"} | ${count} |`,
-  );
-  const footer = [
-    "## Sources",
-    "To refresh all sources, push a commit to `main`. To refresh one source manually, open the **Actions** tab, choose **Scrape source**, click **Run workflow**, and pick the source (or run `bun run listings <source-id>` locally).",
-    ["| Source | Last scraped | Listings |", "| --- | --- | --- |", ...sourceRows].join("\n"),
-    "- Download [data/listings.csv](data/listings.csv) for every scraped listing, including older ones and ones with no posted date.",
-    "- **Posted** is the date the employer or job board published the listing, not the date it was scraped. It is blank when the source does not provide one.",
-    "- **Pay** is shown only when the source or posting text states it.",
-    "- A listing can appear under several categories or in both terms.",
-    "- Categories and terms are inferred from titles, tags, and descriptions, so check the posting before applying.",
-    "- Citizenship and sponsorship indicators are inferred from source descriptions or explicit eligibility fields; listings without accessible descriptions may not show an indicator.",
-    "- Job boards (Ashby, Greenhouse, Lever, SmartRecruiters, Workable, Pinpoint, Gem, Workday) are discovered from the community lists, so scrape those first. The optional Chrome extension is described in [docs/EXTENSION.md](docs/EXTENSION.md).",
-  ].join("\n\n");
-
-  return { markdown: `${[header, ...sections, footer].join("\n\n")}\n`, counts };
+  return { markdown: `${[header, ...sections].join("\n\n")}\n`, counts };
 }

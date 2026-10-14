@@ -150,7 +150,8 @@ export function publicBoardFromJobUrl(value: string): PublicBoard | undefined {
   const workdayHost = host.match(/^([a-z0-9-]+)\.wd\d+\.myworkdayjobs\.com$/);
   if (workdayHost) {
     const jobIndex = parts.findIndex((part) => part.toLowerCase() === "job");
-    const site = jobIndex > 0 ? parts[jobIndex - 1] : undefined;
+    const localePrefix = /^[a-z]{2}(?:-[a-z]{2})?$/i.test(parts[0] ?? "");
+    const site = jobIndex > 0 ? parts[jobIndex - 1] : parts[localePrefix ? 1 : 0];
     const tenant = workdayHost[1];
     if (!site || !tenant) return undefined;
     return board(
