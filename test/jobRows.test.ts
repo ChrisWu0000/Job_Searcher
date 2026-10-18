@@ -164,6 +164,7 @@ describe("job rows", () => {
     ["Cyber Security Analyst", "cyber-security"],
     ["Hardware Engineer", "hardware-engineering"],
     ["Fintech Platform Engineer", "fintech"],
+    ["Summer Software Engineering Intern", "summer"],
   ] as const)("recognizes %s as %s", (title, category) => {
     const rows = buildJobRows([makeJob("classified", { title })], []);
     expect(rows[0]?.categories).toContain(category);

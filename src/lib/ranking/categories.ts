@@ -6,6 +6,7 @@ export const jobCategories = [
   "cyber-security",
   "hardware-engineering",
   "fintech",
+  "summer",
 ] as const;
 
 export type JobCategory = (typeof jobCategories)[number];
@@ -16,6 +17,7 @@ export const jobCategoryLabels: Record<JobCategory, string> = {
   "cyber-security": "Cyber security",
   "hardware-engineering": "Hardware engineering",
   fintech: "Fintech",
+  summer: "Summer",
 };
 
 const categoryPatterns: Record<JobCategory, RegExp> = {
@@ -29,6 +31,7 @@ const categoryPatterns: Record<JobCategory, RegExp> = {
     /\b(?:hardware engineer|embedded (?:software|systems?)?|firmware|electrical engineer(?:ing)?|electronics engineer|fpga|asic|pcb|cad (?:designer|engineer|technician)|vlsi|semiconductor|board[ -]?level design|mechanical engineer)\b/i,
   fintech:
     /\b(?:fintech|financial technology|payments?|payment processing|digital banking|banking|bank|financial services|trading|trader|quant(?:itative)?|investment technology|capital markets|wealth|lending|credit|insurtech|insurance technology|crypto(?:currency)?|blockchain|defi|brokerage|fraud|risk engineer|treasury|ledger)\b/i,
+  summer: /\bsummer\b/i,
 };
 
 const fintechCompanies =
