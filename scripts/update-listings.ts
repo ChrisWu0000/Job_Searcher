@@ -9,7 +9,7 @@ import {
   type SourceStatus,
 } from "../src/lib/listings/render";
 import { isInternshipTitle } from "../src/lib/ranking/terms";
-import { internListFeed } from "../src/lib/sources/internList";
+import { internListFeed, isJobrightUrl } from "../src/lib/sources/internList";
 
 interface StoredSource {
   scrapedAt: string;
@@ -76,7 +76,15 @@ for (const source of listingSources.filter((candidate) => candidate.kind === "fe
 
 for (const source of listingSources) {
   const stored = load(source.id);
-  let listings = (stored?.listings ?? [])
+  const sourceListings = stored?.listings ?? [];
+  if (stored && source.id === internListFeed.id) {
+    const filtered = sourceListings.filter((listing) => !isJobrightUrl(listing.url));
+    if (filtered.length !== sourceListings.length) {
+      writeFileSync(fileFor(source.id), `${JSON.stringify({ ...stored, listings: filtered })}\n`);
+    }
+  }
+  let listings = sourceListings
+    .filter((listing) => !isJobrightUrl(listing.url))
     .filter((listing) => isInternshipTitle(listing.title))
     .map((listing) => {
       const host = new URL(listing.url).hostname;

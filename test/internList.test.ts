@@ -47,6 +47,17 @@ const payload = {
             g: "2027-Spring",
           },
         },
+        {
+          cellValuesByColumnId: {
+            a: "Software Engineer Intern",
+            b: { label: "Apply", url: "https://jobs.lever.co/gamma/3" },
+            c: "Gamma",
+            d: "Seattle, WA, United States",
+            e: "$30-$40 /hr",
+            f: "2026-10-08",
+            g: "2027-Summer",
+          },
+        },
       ],
     },
   },
@@ -63,12 +74,12 @@ describe("intern-list source", () => {
     const { jobs } = feedEntries(payload, internListFeed);
     expect(jobs).toHaveLength(1);
     expect(jobs[0]).toMatchObject({
-      company: "Acme",
-      url: "https://jobright.ai/jobs/info/1",
-      compensation: "$26-$35 /hr",
+      company: "Gamma",
+      url: "https://jobs.lever.co/gamma/3",
+      compensation: "$30-$40 /hr",
       terms: ["Summer 2027"],
     });
-    expect(jobs[0]?.postedAt).toContain("2026-10-07");
+    expect(jobs[0]?.postedAt).toContain("2026-10-08");
   });
 
   it("rejects an unexpected response shape", () => {

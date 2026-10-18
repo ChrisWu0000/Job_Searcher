@@ -13,6 +13,15 @@ export const internListFeed: PublicJobFeed = {
   parse: (payload) => parseInternListRows(payload),
 };
 
+export function isJobrightUrl(value: string): boolean {
+  try {
+    const hostname = new URL(value).hostname.toLowerCase();
+    return hostname === "jobright.ai" || hostname.endsWith(".jobright.ai");
+  } catch {
+    return false;
+  }
+}
+
 const columnKeys: Record<string, string> = {
   "Position Title": "title",
   Company: "company_name",
@@ -68,7 +77,10 @@ export function parseInternListRows(payload: unknown): unknown[] {
       }
     }
     const apply = applyId ? object(cells[applyId]) : undefined;
-    if (typeof apply?.url === "string") record.url = apply.url;
+    if (typeof apply?.url === "string") {
+      if (isJobrightUrl(apply.url)) return [];
+      record.url = apply.url;
+    }
     const hire = hireId ? cells[hireId] : undefined;
     if (typeof hire === "string") {
       const terms = internListTerms(hire);
