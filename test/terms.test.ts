@@ -15,12 +15,12 @@ describe("classifyJobTerms", () => {
     expect(classifyJobTerms(makeJob("j", { title: "Software Intern - Winter 2027" }))).toEqual([
       "winter-2027",
     ]);
-    expect(
-      classifyJobTerms(makeJob("j", { title: "Software Intern - Spring 2027" })),
-    ).toEqual(["winter-2027"]);
-    expect(
-      classifyJobTerms(makeJob("j", { title: "Software Intern - Summer 2027" })),
-    ).toEqual(["summer-2027"]);
+    expect(classifyJobTerms(makeJob("j", { title: "Software Intern - Spring 2027" }))).toEqual([
+      "winter-2027",
+    ]);
+    expect(classifyJobTerms(makeJob("j", { title: "Software Intern - Summer 2027" }))).toEqual([
+      "summer-2027",
+    ]);
     expect(
       classifyJobTerms(makeJob("j", { title: "Software Intern - Winter/Summer 2027" })),
     ).toEqual(["winter-2027", "summer-2027"]);
@@ -41,6 +41,34 @@ describe("classifyJobTerms", () => {
     expect(
       classifyJobTerms(makeJob("j", { title: "Engineer", summary: "Apply by May 27." })),
     ).toEqual([]);
+  });
+
+  it.each([
+    "2027 Summer Software Engineer Intern",
+    "Summer Intern - Software Engineering",
+    "Software Engineer Intern - SUMMER",
+  ])("assigns summer-only title %s to summer despite conflicting metadata", (title) => {
+    for (const overrides of [
+      {},
+      { terms: ["Winter 2027"] },
+      { workTerm: "Winter 2027" },
+      { summary: "Starts Winter 2027." },
+    ]) {
+      expect(classifyJobTerms(makeJob("j", { ...overrides, title }))).toEqual(["summer-2027"]);
+    }
+  });
+
+  it.each(["Spring/Summer Intern", "Winter/Summer Intern"])(
+    "preserves both terms for mixed-season title %s",
+    (title) => {
+      expect(classifyJobTerms(makeJob("j", { title }))).toEqual(["winter-2027", "summer-2027"]);
+    },
+  );
+
+  it("preserves later-year terms for summer titles", () => {
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Software Engineer Intern - Summer 2028" })),
+    ).toEqual(["later"]);
   });
 
   it("excludes full-time roles even when they mention an internship term", () => {

@@ -1,5 +1,11 @@
 import { type JobCategory, jobCategories, jobCategoryLabels } from "@/lib/ranking/categories";
-import { isInternshipTitle, type JobTerm, jobTermLabels, jobTerms } from "@/lib/ranking/terms";
+import {
+  isInternshipTitle,
+  type JobTerm,
+  jobTermLabels,
+  jobTerms,
+  titleAdjustedJobTerms,
+} from "@/lib/ranking/terms";
 import type { Listing, ListingSource } from "./collect";
 import { displayCompanyName, preferredCompanyName } from "./companyNames";
 import { filterAllowedLocations } from "./location";
@@ -137,7 +143,7 @@ export function renderCsv(listings: Listing[]): string {
       displayCompanyName(a.company).localeCompare(displayCompanyName(b.company)),
   );
   for (const listing of sorted) {
-    for (const term of listing.terms) {
+    for (const term of titleAdjustedJobTerms(listing.title, listing.terms)) {
       for (const category of listing.categories) {
         rows.push([
           jobTermLabels[term],
@@ -201,7 +207,7 @@ export function renderListings(
   const byTerm = new Map<JobTerm, Map<JobCategory, Listing[]>>();
   for (const term of jobTerms) byTerm.set(term, new Map());
   for (const listing of unique.values()) {
-    for (const term of listing.terms) {
+    for (const term of titleAdjustedJobTerms(listing.title, listing.terms)) {
       const bucket = byTerm.get(term);
       if (!bucket) continue;
       for (const category of listing.categories) {
@@ -230,6 +236,7 @@ export function renderListings(
   const header = [
     "# Chris Wu's Job Board",
     "Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops in Canada, the United States, EU member countries, the United Kingdom, or remote worldwide are included; full-time roles are excluded. The tables show listings posted in the last 7 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.",
+    'Titles containing "summer" but neither "spring" nor "winter" are assigned to Summer rather than Winter; later-year assignments are preserved.',
     "### Requirement icons\n\n- 🛂 Does not offer sponsorship\n- 🇺🇸 Requires U.S. citizenship",
     `Last updated: ${updated.toISOString().slice(0, 10)} | Winter 2027: ${counts.byTerm["winter-2027"]} | Summer 2027: ${counts.byTerm["summer-2027"]} | Later terms: ${counts.byTerm.later}`,
     [
@@ -239,10 +246,7 @@ export function renderListings(
           `- [${jobTermLabels[term]}](#${jobTermLabels[term]
             .toLowerCase()
             .replaceAll(" ", "-")}): ${jobCategories
-            .map(
-              (category) =>
-                `[${jobCategoryLabels[category]}](#${term}-${category})`,
-            )
+            .map((category) => `[${jobCategoryLabels[category]}](#${term}-${category})`)
             .join(" | ")}`,
       ),
     ].join("\n"),

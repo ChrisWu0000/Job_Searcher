@@ -2,12 +2,14 @@
 
 Software engineering, data science, cyber security, hardware engineering, and fintech internships for **Winter 2027** and **Summer 2027** (plus a **Later terms** section for Fall 2027 and beyond), gathered from public community lists and company job boards. Only roles identified as internships or co-ops in Canada, the United States, EU member countries, the United Kingdom, or remote worldwide are included; full-time roles are excluded. The tables show listings posted in the last 7 days, newest first. Older listings and listings with no posted date are in [data/listings.csv](data/listings.csv). For Apply links that open in a new tab, use the [interactive listings page](https://chriswu0000.github.io/Job_Searcher/). All sources are scraped when a commit is pushed to `main`; individual sources can also be scraped manually.
 
+Titles containing "summer" but neither "spring" nor "winter" are assigned to Summer rather than Winter; later-year assignments are preserved.
+
 ### Requirement icons
 
 - 🛂 Does not offer sponsorship
 - 🇺🇸 Requires U.S. citizenship
 
-Last updated: 2026-10-18 | Winter 2027: 224 | Summer 2027: 345 | Later terms: 11
+Last updated: 2026-10-19 | Winter 2027: 205 | Summer 2027: 318 | Later terms: 11
 
 Jump to:
 - [Winter 2027](#winter-2027): [Software engineering](#winter-2027-software-engineering) | [Data science](#winter-2027-data-science) | [Cyber security](#winter-2027-cyber-security) | [Hardware engineering](#winter-2027-hardware-engineering) | [Fintech](#winter-2027-fintech) | [Summer](#winter-2027-summer)
@@ -18,7 +20,7 @@ Jump to:
 
 <a id="winter-2027-software-engineering"></a>
 
-### Software engineering (75)
+### Software engineering (68)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -27,7 +29,6 @@ Jump to:
 | D2l | Software Developer Co-op - Custom Development Services | Kitchener, ON, Canada |  | 2026-10-16 | <a href="https://www.d2l.com/careers/jobs/?job_id=8289767&amp;gh_jid=8289767" target="_blank" rel="noopener noreferrer">Apply</a> |
 | AgZen | Software Engineer Co-op | Somerville, MA |  | 2026-10-16 | <a href="https://jobs.ashbyhq.com/agzen/4cff4edd-3e9a-4ea1-8138-80c7241a2d3a/application?embed=true" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Altera | Software Engineer - Intern | Toronto, Ontario, Canada | $95K – $100K CAD | 2026-10-16 | <a href="https://altera.wd1.myworkdayjobs.com/altera/job/Toronto-Ontario-Canada/Software-Engineer----Intern_R03320" target="_blank" rel="noopener noreferrer">Apply</a> |
-| ICF International | 2027 Summer Intern, Cloud Engineer (AWS/Azure) (Reston, VA) | Reston, VA | $27 per hour | 2026-10-16 | <a href="https://icf.wd5.myworkdayjobs.com/icfexternal_career_site/job/Reston-VA/XMLNAME-2027-Summer-Intern--Cloud-Engineer--AWS-Azure---Reston--VA-_R2603554" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Entrust | Software Engineering Co-op | United States - Shakopee, MN (GHQ) | $25.00 - $25.00 per hour | 2026-10-16 | <a href="https://entrust.wd1.myworkdayjobs.com/entrustcareers/job/United-States---Shakopee-MN-GHQ/Software-Engineering-Co-op_R004425" target="_blank" rel="noopener noreferrer">Apply</a> |
 | AeroVironment | Software Engineering Intern | Moorpark, CA |  | 2026-10-16 | <a href="https://avav.wd1.myworkdayjobs.com/AVAV/job/Moorpark-CA/Software-Engineering-Intern_9094" target="_blank" rel="noopener noreferrer">Apply</a> |
 | G-Research | Software Engineering Internship | London, UK |  | 2026-10-16 | <a href="https://gresearch.wd103.myworkdayjobs.com/G-Research/job/London-UK/Software-Engineering-Intern_R3746" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -54,8 +55,6 @@ Jump to:
 | Astreya | AI Infrastructure DC Design Intern | Remote, CA |  | 2026-10-14 | <a href="https://astreya.wd5.myworkdayjobs.com/life-at-astreya-opportunities/job/Remote-CA/AI-Infrastructure-DC-Design-Intern_R0017929" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astreya | AI Infrastructure DC Design Intern | Remote, CA |  | 2026-10-14 | <a href="https://astreya.wd5.myworkdayjobs.com/life-at-astreya-opportunities/job/Remote-CA/AI-Infrastructure-DC-Design-Intern_R0017927" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Monolithic Power Systems | Applications Engineer Intern | San Jose, CA | $40/hr | 2026-10-14 | <a href="https://monolithicpower.wd12.myworkdayjobs.com/MPS_Careers/job/San-Jose-CA/Applications-Engineer-Intern_R-2035" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Summer Intern 2027 - Software Engineering | Waterloo, Ontario | $52,650 CAD to $70,200 CAD | 2026-10-14 | <a href="https://manulife.wd3.myworkdayjobs.com/MFCJH_adminJobs/job/Waterloo-Ontario/Summer-Intern-2027---Software-Engineering_JR26081686-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Summer Intern 2027 - Software Engineering (12 Months) | Waterloo, Ontario | $52,650 CAD to $70,200 CAD | 2026-10-14 | <a href="https://manulife.wd3.myworkdayjobs.com/MFCJH_adminJobs/job/Waterloo-Ontario/Summer-Intern-2027---Software-Engineering--12-Months-_JR26091053-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Nissan Global | Software Engineer Intern - Spring 2027 - Santa Clara, CA | Santa Clara, California - United States of America |  | 2026-10-14 | <a href="https://alliance.wd3.myworkdayjobs.com/nissanjobs/job/Santa-Clara-California---United-States-of-America/Software-Engineer-Intern---Spring-2027---Santa-Clara--CA_R00214269" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Lseg | Intern - Software Engineer | London, UK, London, United Kingdom |  | 2026-10-14 | <a href="https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/London-United-Kingdom/Intern---Software-Engineer_R0124267" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Lseg | Intern - Software Engineer | New York City, United States | $55,500 - $92,500 | 2026-10-14 | <a href="https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/New-York-City-United-States/Intern---Software-Engineer_R0124266-1" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -77,9 +76,7 @@ Jump to:
 | KLA Corporation | Software Engineer Intern - AI | Ann Arbor, MI | $0.00 - $0.00 Per Hour | 2026-10-13 | <a href="https://kla.wd1.myworkdayjobs.com/Search/job/Ann-Arbor-MI/Software-Engineer-Intern---AI_2641817" target="_blank" rel="noopener noreferrer">Apply</a> |
 | KLA Corporation | Software Engineering Intern | Ann Arbor, MI | $24.00 - $40.00 Per Hour | 2026-10-13 | <a href="https://kla.wd1.myworkdayjobs.com/Search/job/Ann-Arbor-MI/Software-Engineering-Intern_2641821" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Soti | Software Developer Intern - SOTI MobiControl Apple HQ (January 2027 12 Months) | Mississauga, ON, Canada, Mississauga, Canada – Meadowvale Office (HQ) |  | 2026-10-13 | <a href="https://soti.wd3.myworkdayjobs.com/SOTI-Next-Gen/job/Mississauga-Canada--Meadowvale-Office-HQ/Software-Developer-Intern---SOTI-MobiControl-Apple-HQ--January-2027-12-Months-_R10551-2" target="_blank" rel="noopener noreferrer">Apply</a> |
-| American Family Insurance Group | Summer Internship 2027- Web Develper Intern | WI Madison |  | 2026-10-13 | <a href="https://amfam.wd1.myworkdayjobs.com/AmFamGroupInternCareers/job/WI-Madison/Web-Develper-Intern_R39373" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs Early Career - North America 2027 | Firmware Engineer Intern Fall Co-op | Vancouver. BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739956005" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Astera Labs Early Career - North America 2027 | Firmware Engineer Intern Summer Co-op | Vancouver, BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739957005" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs | Firmware Engineer Intern Spring Co-Op | Vancouver, BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739544005" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Vestmark | Software Engineer Co-op | Boston, MA |  | 2026-10-13 | <a href="https://job-boards.greenhouse.io/vestmark/jobs/8204509" target="_blank" rel="noopener noreferrer">Apply</a> |
 | EQT Corporation | Civil Construction Intern | Waynesburg, PA |  | 2026-10-13 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5450042008" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -89,18 +86,16 @@ Jump to:
 | KLA Corporation | AI/ML Software Engineer - Intern | Ann Arbor, MI | $24.00 - $32.00 Per Hour | 2026-10-12 | <a href="https://kla.wd1.myworkdayjobs.com/Search/job/Ann-Arbor-MI/AI-ML-Software-Engineer---Intern_2641701-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | KLA Corporation | AI/ML Software Engineer - Intern | Ann Arbor, MI | $24.00 - $32.00 Per Hour | 2026-10-12 | <a href="https://kla.wd1.myworkdayjobs.com/UR/job/Ann-Arbor-MI/AI-ML-Software-Engineer---Intern_2641701" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Manulife Financial | Winter Co-op 2027 - Software Engineering | Toronto, Ontario | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---Software-Engineering_JR26081663-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Life Fitness | Android Software Intern | Schaumburg, IL, Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Android-Software-Intern_JR-025277" target="_blank" rel="noopener noreferrer">Apply</a> |
+| Life Fitness | Android Software Intern | Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Android-Software-Intern_JR-025277" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Life Fitness | Embedded Software Intern | Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Embedded-Software-Intern_JR-025276" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Symbotic | Intern- Software Engineer | USA Wilmington, MA - HQ |  | 2026-10-12 | <a href="https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Software-Engineer_R7963" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs Early Career - North America 2027 | CyberSecurity Engineer Intern | San Jose, CA | $35/hour | 2026-10-12 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4743021005" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Acronaviation | Software Engineer Intern - Phoenix Site | Phoenix, AZ |  | 2026-10-12 | <a href="https://jobs.lever.co/acronaviation/17b5f12d-f590-432d-a421-d6f90274ae9a" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Group | Software Function Developer Intern | Budapest, hu |  | 2026-10-12 | <a href="https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000155020017" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Software Engineer Co-op | Toronto, ON, Canada | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---Software-Engineering_JR26081663-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Software Engineering Co-op | Toronto, ON, Canada | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---Software-Engineering--8-Months-_JR26081664-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 <a id="winter-2027-data-science"></a>
 
-### Data science (74)
+### Data science (66)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -114,14 +109,12 @@ Jump to:
 | Arch Capital Group | Data and Analytics Intern | Farmington, CT United States of America | hourly rate is $26-28 | 2026-10-16 | <a href="https://archgroup.wd1.myworkdayjobs.com/careers/job/Farmington-CT-United-States-of-America/Data-and-Analytics-Intern_R26_845" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Alliaxis | Manufacturing Excellence Co-op Student | Oakville, ON, Canada |  | 2026-10-16 | <a href="https://aliaxis.wd3.myworkdayjobs.com/aliaxis/job/CA---Oakville-3---Office/Manufacturing-Excellence-Co-Op-Student--Winter-2027---Etudiant-Coop-excellence-manufacturire--Hiver-2027_R-58664-2" target="_blank" rel="noopener noreferrer">Apply</a> |
 | J.M. Smucker | Finance Technology Intern | Orrville, OH |  | 2026-10-16 | <a href="https://smucker.wd5.myworkdayjobs.com/US_External_Careers/job/Orrville-OH/Finance-Technology-Intern--Spring-2027_116016" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Cigna Group | Healthcare Analytics Summer Intern - Morris Plains, NJ - Start Date: May 24, 2027 | Morris Plains, NJ | $28.00 an hour | 2026-10-15 | <a href="https://cigna.wd5.myworkdayjobs.com/cignacareers/job/Morris-Plains-NJ/Healthcare-Analytics-Summer-Intern---Morris-Plains--NJ---Start-Date--May-24--2027_26009483" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Biogen | Co-op, Data Science & AI Innovation | Remote, USA |  | 2026-10-15 | <a href="https://biibhr.wd3.myworkdayjobs.com/external/job/Remote-USA/Co-op--Data-Science---AI-Innovation_REQ24209" target="_blank" rel="noopener noreferrer">Apply</a> |
 | G-Research | Machine Learning Engineer Internship | London, UK |  | 2026-10-15 | <a href="https://gresearch.wd103.myworkdayjobs.com/G-Research/job/London-UK/Machine-Learning-Engineer-Intern_R3773" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Rivian | Software Engineer Intern Co-op - Machine Learning Research - Perception | Palo Alto, CA | $33.00-51.00/HR | 2026-10-15 | <a href="https://careers.rivian.com/jobs/33801?icims=1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Duolingo University Recruitment | Data Scientist, Intern | Pittsburgh, PA, New York, NY | $54 - $56 USD | 2026-10-15 | <a href="https://job-boards.greenhouse.io/duolingounirecruitment/jobs/8888785002" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Deloitte | Audit & Assurance Intern - AI and Data Science | LA | $36.83/hour | 2026-10-15 | <a href="https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-AI-and-Data-Science-Winter-2027/361857" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Deloitte | Audit & Assurance Intern - Valuation & Analytics | Atlanta, GA | $29.64/hour | 2026-10-15 | <a href="https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Valuation-Analytics-Winter-2027/361853" target="_blank" rel="noopener noreferrer">Apply</a> |
-| PA Consulting | 2027 Summer Internship - Applied Scientist - Cambridge | Melbourn, gb |  | 2026-10-15 | <a href="https://api.smartrecruiters.com/v1/companies/PAConsulting/postings/744000155679795" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Johnson & Johnson | Data Operations & Analytics Spring Co-op | Somerset County, NJ, Hopewell Township, NJ | $23.50 per hour | 2026-10-15 | <a href="https://jj.wd5.myworkdayjobs.com/JJ/job/Somerset-New-Jersey-United-States-of-America/Data-Operations---Analytics-Spring-Co-op_R-104450" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Symbotic | Robot Manipulation Co-op | Wilmington, MA |  | 2026-10-15 | <a href="https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Co-op--Robot-Manipulation_R8257" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Agco | AI & Data Science Intern | Champaign, IL | $24 -$30/hour | 2026-10-14 | <a href="https://careers.agcocorp.com/job/Champaign-AI-&amp;-Data-Science-Intern-Spring-2027-IL/1440146300/?ats=successfactors" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -138,7 +131,6 @@ Jump to:
 | Later | Data Science Co-op | Vancouver, BC, Canada, Vancouver, British Columbia, Canada | $4,000 per month | 2026-10-14 | <a href="https://job-boards.greenhouse.io/later/jobs/8889650002" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Kensington | Intern - Analytics | Toronto, ON, Canada | $20 per hour | 2026-10-14 | <a href="https://job-boards.greenhouse.io/kensingtontours/jobs/5262680007" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Aecom | Engineering/Data Analytics Intern – Hiring Event with AECOM – Atlanta, GA | Atlanta, GA, us |  | 2026-10-14 | <a href="https://api.smartrecruiters.com/v1/companies/AECOM2/postings/744000155565444" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Point72 | 2027 Summer Internship - MS/PhD Data Scientist, Proprietary Research | New York, NY | $130,000–$175,000 | 2026-10-14 | <a href="https://boards.greenhouse.io/point72/jobs/8885299002?gh_jid=8885299002" target="_blank" rel="noopener noreferrer">Apply</a> |
 | EQT Corporation | Civil Engineering Services Intern | Canonsburg, PA |  | 2026-10-14 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5450028008" target="_blank" rel="noopener noreferrer">Apply</a> |
 | EQT Corporation | Finance Intern | Canonsburg, PA/Houston, TX |  | 2026-10-14 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5445051008" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Avery Dennison | Internship: Business Intelligence and Finance Excellence | Oegstgeest, ZH, nl |  | 2026-10-14 | <a href="https://api.smartrecruiters.com/v1/companies/AveryDennison/postings/744000155457544" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -173,11 +165,6 @@ Jump to:
 | 1password | Finance Intern - Corporate Accounting & Tax - Winter 2027 | Remote (United States \| Canada) |  | 2026-10-12 | <a href="https://jobs.ashbyhq.com/1password/519a2f66-66ce-4903-9da9-56b8cf3aa4d8" target="_blank" rel="noopener noreferrer">Apply</a> |
 | 1password | Finance Intern - Finance Operations - Winter 2027 | Remote (United States \| Canada) |  | 2026-10-12 | <a href="https://jobs.ashbyhq.com/1password/25a06bd3-2367-4cfc-8624-4c6d7c938459" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Group | Internship Data Analytics | Mechelen, Vlaanderen, be | 1116.90/month | 2026-10-12 | <a href="https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000155002879" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | AI Co-op | Toronto, ON, Canada | $54,600 CAD to $72,150 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---AI_JR26081677-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Data Engineering Co-op | Toronto, ON, Canada | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---Data-Engineering_JR26081658-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Manulife Financial | Data Engineering Co-op | Waterloo, ON, Canada | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_adminJobs/job/Waterloo-Ontario/Winter-Co-op-2027---Data-Engineering_JR26081660-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Rochester Regional Health | Information Systems & Technology Co-op | Rochester, NY |  | 2026-10-12 | <a href="https://rrhs.wd5.myworkdayjobs.com/RRH/job/Riedman---Remote/RIT-Co-op--Information-Systems---Technology_REQ_243093" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Valmont | Product Analyst Intern | Nebraska, Valley, NE |  | 2026-10-12 | <a href="https://valmont.wd1.myworkdayjobs.com/ValmontCareers/job/Valley-NE/Product-Analyst-Intern--Part-Time-_R29081" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 <a id="winter-2027-cyber-security"></a>
 
@@ -205,12 +192,11 @@ Jump to:
 
 <a id="winter-2027-hardware-engineering"></a>
 
-### Hardware engineering (40)
+### Hardware engineering (36)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
 | Tesla | Firmware Intern - SoC Firmware Engineer - SI Hardware Infrastructure | Austin, TX |  | 2026-10-18 | <a href="https://www.tesla.com/careers/search/job/287024" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Allegion | Summer Intern - Firmware Engineer | Farmington, CT | $25-$26/hour | 2026-10-16 | <a href="https://allegion.wd5.myworkdayjobs.com/careers/job/Farmington-CT/Firmware-Engineer-Intern_JR37449-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Entrust | Mechanical CAD Designer Internship | United States - Shakopee, MN (GHQ) | $20.00 - $25.00 per hour | 2026-10-16 | <a href="https://entrust.wd1.myworkdayjobs.com/entrustcareers/job/United-States---Shakopee-MN-GHQ/Mechanical-CAD-Designer--Internship_R004435" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Agzen | Software Engineering Co-op | Somerville, MA |  | 2026-10-16 | <a href="https://jobs.ashbyhq.com/agzen/4cff4edd-3e9a-4ea1-8138-80c7241a2d3a" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Agzen | Research & Development Engineering Co-op | Somerville, MA |  | 2026-10-16 | <a href="https://jobs.ashbyhq.com/agzen/a828d0cd-1e72-45db-9ef0-244cfc61271a" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -219,7 +205,6 @@ Jump to:
 | AeroVironment | Electrical Engineer Intern | Pottstown, PA |  | 2026-10-15 | <a href="https://avav.wd1.myworkdayjobs.com/AVAV/job/Pottstown-PA/Electrical-Engineer-Intern_9103" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Nokia | Embedded C/C++ Software Developer Co-op Intern | Ottawa, ON, Canada |  | 2026-10-15 | <a href="https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/41311" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Cirrus | 2027 Internship - Systems Engineering - Power & Control | Austin, Texas |  | 2026-10-15 | <a href="https://jobs.eu.lever.co/cirrus/76f89050-2cda-4c96-b796-94346c98f896" target="_blank" rel="noopener noreferrer">Apply</a> |
-| PA Consulting | 2027 Summer Internship - Mechanical Engineer - Cambridge | Melbourn, gb |  | 2026-10-15 | <a href="https://api.smartrecruiters.com/v1/companies/PAConsulting/postings/744000155777369" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Group | Extracurricular Internship: Gateway Firmware Engineer (f/m/div.) | Aveiro, pt |  | 2026-10-15 | <a href="https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000155702622" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Ciena | Embedded Software Developer Intern | Ottawa, ON, Canada | $25.50 to $35.00 | 2026-10-15 | <a href="https://ciena.wd5.myworkdayjobs.com/Careers/job/Ottawa/Wavelogic-Embedded-Software-Developer-Intern--Winter-2027-_R031890" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs Early Career - North America 2027 | Business Development Intern | San Jose, CA | $35/hour | 2026-10-14 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4743826005" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -230,10 +215,8 @@ Jump to:
 | Nokia | Optoelectronics Test Development Co-op | Allentown, PA |  | 2026-10-14 | <a href="https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/41124" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Amazon | Hardware Development Engineer Intern | North Reading, MA, Hawthorne, CA, Sunnyvale, CA | 107,270.00 USD Annually | 2026-10-14 | <a href="https://amazon.jobs/en/jobs/10578090/hardware-development-engineer-intern-summer-2027" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Lumentum | Electrical Engineer Intern Co-op | Ottawa, ON, Canada | $24-35/hr | 2026-10-14 | <a href="https://lumentum.wd5.myworkdayjobs.com/LITE/job/Canada---Ottawa-Bill-Leathem/Electrical-Engineer-Co-op-Intern_20261433" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Syska Hennessy Group | Mechanical Engineer Summer Intern | Tampa, FL |  | 2026-10-13 | <a href="https://job-boards.greenhouse.io/syskahennessy/jobs/8267624" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bose | Embedded Audio ML Engineer Co-op | Framingham, MA, US, MA - Framingham | $40.00-$51.25 per hour | 2026-10-13 | <a href="https://boseallaboutme.wd503.myworkdayjobs.com/Bose_Careers/job/US-MA---Framingham/Audio-Machine-Learning-Engineer-Co-op_R28719" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs Early Career - North America 2027 | Firmware Engineer Intern Fall Co-op | Vancouver. BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739956005" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Astera Labs Early Career - North America 2027 | Firmware Engineer Intern Summer Co-op | Vancouver, BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739957005" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Amazon | Hardware Development Engineer Intern Co-op - Robotics | North Reading, MA, Westborough, MA | 107,270.00 USD Annually | 2026-10-13 | <a href="https://amazon.jobs/en/jobs/10535282/hardware-development-engineer-intern-co-op-robotics-2027" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Rivian | Electronics Design Engineering Intern - Low Voltage Electronics | Champaign, IL | $25.00-40.00 per hour | 2026-10-13 | <a href="https://careers.rivian.com/jobs/34370?icims=1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Astera Labs | Firmware Engineer Intern Spring Co-Op | Vancouver, BC, Canada | CAD $45/hour | 2026-10-13 | <a href="https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4739544005" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -252,7 +235,7 @@ Jump to:
 
 <a id="winter-2027-fintech"></a>
 
-### Fintech (58)
+### Fintech (56)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -283,7 +266,6 @@ Jump to:
 | Deloitte | Audit & Assurance Intern - Valuation & Analytics | Atlanta, GA | $29.64/hour | 2026-10-15 | <a href="https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Valuation-Analytics-Winter-2027/361853" target="_blank" rel="noopener noreferrer">Apply</a> |
 | BMO Financial Group | Public Relations Intern, Winter 2027 (Co-op/Internship) - 4 Months | Toronto, ON, CAN | $45,000.00 - $100,000.00 | 2026-10-14 | <a href="https://bmo.wd3.myworkdayjobs.com/Privileged/job/Toronto-ON-CAN/Public-Relations-Intern--Winter-2027--Co-op-Internship----4-Months_R260027583" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Visa | VCA Intern (IDS) | GB - London, United Kingdom |  | 2026-10-14 | <a href="https://visa.wd5.myworkdayjobs.com/visa_early_careers/job/GB---London-United-Kingdom/VCA-Intern--IDS-_REF086121W" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Bp | Summer Internship - Supply, Trading & Shipping - UK | London, UK, United Kingdom - London |  | 2026-10-14 | <a href="https://bpinternational.wd3.myworkdayjobs.com/bpEarlyCareers/job/United-Kingdom---London/Summer-Internship---Supply--Trading---Shipping---UK_RQ117128" target="_blank" rel="noopener noreferrer">Apply</a> |
 | The Federal Reserve System | 2027 Intern - Community Banking Organizations (Houston) | Houston, TX |  | 2026-10-14 | <a href="https://rb.wd5.myworkdayjobs.com/FRS/job/Houston-TX/XMLNAME-2027-Intern---Community-Banking-Organizations--Houston-_R-0000033578-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Cerity Partners | Wealth Management Internship | Santa Barbara, CA | Hourly Rate: $25 | 2026-10-14 | <a href="https://ceritypartners.wd12.myworkdayjobs.com/ceritypartnerscareers/job/Santa-Barbara-CA/Wealth-Management-Internship_R985" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Lseg | Intern - Quantitative Services | Boston, MA, Boston, Massachusetts | $44,500 - $74,100 | 2026-10-14 | <a href="https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/Boston-Massachusetts/Intern---Quantitative-Services_R0124310-2" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -295,7 +277,6 @@ Jump to:
 | CIBC | Product Analyst Co-op, IE Product Development & Delivery – Winter 2027 | Toronto, ON | $56,500 to $77,000 | 2026-10-14 | <a href="https://cibc.wd3.myworkdayjobs.com/campus/job/Toronto-ON/Product-Analyst-Co-op--IE-Product-Development---Delivery---Winter-2027_2620681" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Anduril Industries | Winter 2027 Research Engineer Co-op | Santa Ana, California, United States | $60 - $75 USD | 2026-10-14 | <a href="https://boards.greenhouse.io/andurilindustries/jobs/5265127007?gh_jid=5265127007" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Kensington | Intern - Analytics | Toronto, ON, Canada | $20 per hour | 2026-10-14 | <a href="https://job-boards.greenhouse.io/kensingtontours/jobs/5262680007" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Point72 | 2027 Summer Internship - MS/PhD Data Scientist, Proprietary Research | New York, NY | $130,000–$175,000 | 2026-10-14 | <a href="https://boards.greenhouse.io/point72/jobs/8885299002?gh_jid=8885299002" target="_blank" rel="noopener noreferrer">Apply</a> |
 | EQT Corporation | Finance Intern | Canonsburg, PA/Houston, TX |  | 2026-10-14 | <a href="https://job-boards.greenhouse.io/eqtcorporation/jobs/5445051008" target="_blank" rel="noopener noreferrer">Apply</a> |
 | The Brattle Group | Research Associate Intern | San Francisco, California, United States | $2,500.00 per week | 2026-10-14 | <a href="https://job-boards.greenhouse.io/thebrattlegroup/jobs/4743566005" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Interac | Payments Product Intern | Toronto, ON, Canada |  | 2026-10-14 | <a href="https://interac.wd3.myworkdayjobs.com/Interac/job/Toronto/Payments-Product-intern_REQ-2389" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -325,7 +306,7 @@ _No listings right now._
 
 <a id="summer-2027-software-engineering"></a>
 
-### Software engineering (127)
+### Software engineering (117)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -436,7 +417,7 @@ _No listings right now._
 | KLA Corporation | AI/ML Software Engineer - Intern | Ann Arbor, MI | $24.00 - $32.00 Per Hour | 2026-10-12 | <a href="https://kla.wd1.myworkdayjobs.com/Search/job/Ann-Arbor-MI/AI-ML-Software-Engineer---Intern_2641701-1" target="_blank" rel="noopener noreferrer">Apply</a> |
 | KLA Corporation | AI/ML Software Engineer - Intern | Ann Arbor, MI | $24.00 - $32.00 Per Hour | 2026-10-12 | <a href="https://kla.wd1.myworkdayjobs.com/UR/job/Ann-Arbor-MI/AI-ML-Software-Engineer---Intern_2641701" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Manulife Financial | Winter Co-op 2027 - Software Engineering | Toronto, Ontario | $52,650 CAD to $70,200 CAD | 2026-10-12 | <a href="https://manulife.wd3.myworkdayjobs.com/MFCJH_adminJobs/job/Toronto-Ontario/Winter-Co-op-2027---Software-Engineering_JR26081663-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Life Fitness | Android Software Intern | Schaumburg, IL, Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Android-Software-Intern_JR-025277" target="_blank" rel="noopener noreferrer">Apply</a> |
+| Life Fitness | Android Software Intern | Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Android-Software-Intern_JR-025277" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Life Fitness | Embedded Software Intern | Schaumburg, IL 60173 | $24.00 - $27.00 per hour | 2026-10-12 | <a href="https://lifefitness.wd1.myworkdayjobs.com/searchLFN/job/Schaumburg-IL-60173/Embedded-Software-Intern_JR-025276" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Symbotic | Intern- Software Engineer | USA Wilmington, MA - HQ |  | 2026-10-12 | <a href="https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Software-Engineer_R7963" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Databricks | Software Engineer Intern | Bellevue, WA, Mountain View, CA, Vancouver, BC, Canada |  | 2026-10-12 | <a href="https://boards.greenhouse.io/embed/job_app?token=6865687002" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -446,20 +427,10 @@ _No listings right now._
 | Google | Forward Deployed Engineer Intern | Sunnyvale, CA | $98000 - $131000 | 2026-10-12 | <a href="https://www.google.com/about/careers/applications/jobs/results/75665705386549958" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Home Comfort | AI Business Solutions Intern | Coventry, UK |  | 2026-10-12 | <a href="https://jobs.smartrecruiters.com/BoschGroup/744000154992819" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Group | Software Function Developer Intern | Budapest, hu |  | 2026-10-12 | <a href="https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000155020017" target="_blank" rel="noopener noreferrer">Apply</a> |
-| AtkinsRéalis | Software Developer Intern - Summer 2027 | Denver, CO, US.CO.Denver |  | 2026-10-12 | <a href="https://slihrms.wd3.myworkdayjobs.com/careers/job/USCODenver/Software-Developer-Intern---Summer-2027_R-161580-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Corewell Health | Digital Services Development Support and Operations Internship | Grand Rapids, MI, Southfield, MI, St Joseph, MI |  | 2026-10-12 | <a href="https://spectrumhealth.wd5.myworkdayjobs.com/CorewellHealthCareers/job/Grand-Rapids-MI/Digital-Services-Development-Support-and-Operations-Internship-Summer-2027_R227468" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Expedia Group | Mobile Engineer Intern | Seattle, WA, Austin, TX, San Jose, CA |  | 2026-10-12 | <a href="https://expedia.wd108.myworkdayjobs.com/search/job/Austin-Domain-11---HomeAway/Mobile-Engineering-Intern---2027---Austin--San-Jose--Seattle_R-110306-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Expedia Group | Software Development Engineer Intern | Seattle, WA, Austin, TX, San Jose, CA | $45 per hour | 2026-10-12 | <a href="https://expedia.wd108.myworkdayjobs.com/search/job/Washington---Seattle-Campus/Software-Development-Engineering-Intern---2027---Austin--San-Jose--Seattle_R-110311-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Kainos | Placement Technologist Intern | Londonderry, UK |  | 2026-10-12 | <a href="https://kainos.wd3.myworkdayjobs.com/kainos/job/Derry-Londonderry/Placement-Technologist--L-Derry----June-2027-Start-Date_JR_18557-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Kainos | Technologist Intern | Belfast, UK |  | 2026-10-12 | <a href="https://kainos.wd3.myworkdayjobs.com/kainos/job/Belfast/Placement-Technologist--Belfast----June-2027-Start-Date_JR_18556" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Kainos | Technologist Intern | Birmingham, UK |  | 2026-10-12 | <a href="https://kainos.wd3.myworkdayjobs.com/kainos/job/Birmingham/Placement-Technologist--Birmingham----July-2027-Start-Date_JR_18558" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Lseg | Engineering Intern | Nottingham, UK |  | 2026-10-12 | <a href="https://lseg.wd3.myworkdayjobs.com/Graduate_Careers/job/Nottingham-United-Kingdom/Engineering-Summer-Internship-Programme_R0124221" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan Global | Financial AI Engineer Intern | Franklin, TN |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Financial-AI-Engineering-Intern---Summer-2027---Franklin--TN_R00214241" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Stantec | Bridge Design Intern - Infrastructure (Summer 2027) | Columbia, SC, United States |  | 2026-10-12 | <a href="https://hdhl.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1008240" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 <a id="summer-2027-data-science"></a>
 
-### Data science (123)
+### Data science (106)
 
 | Company | Role | Location | Pay | Posted | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -560,7 +531,7 @@ _No listings right now._
 | Adt | Data, Analytics & AI Internship | Boca Raton, FL, United States |  | 2026-10-13 | <a href="https://fa-erqb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3022387" target="_blank" rel="noopener noreferrer">Apply</a> |
 | DriveTime | Data Analytics Intern | Dallas, TX, Tempe, AZ |  | 2026-10-13 | <a href="https://drivetime.wd1.myworkdayjobs.com/DriveTime/job/1720-W-Rio-Salado-Pkwy-Tempe-AZ-85281/Analyst-Intern--Summer-2027-_R16502" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Scout Clean Energy | Geospatial Intern | Boulder, CO |  | 2026-10-12 | <a href="https://apply.workable.com/scout-clean-energy/j/56C8F2E503/apply" target="_blank" rel="noopener noreferrer">Apply</a> |
-| American Family Insurance Group | Summer 2027 Data Analyst Intern - Agency Performance, Insights and Operations | Madison, WI, WI Madison |  | 2026-10-12 | <a href="https://amfam.wd1.myworkdayjobs.com/AmFamGroupInternCareers/job/WI-Madison/Summer-2027-Data-Analyst-Intern---Agency-Performance--Insights-and-Operations_R39513" target="_blank" rel="noopener noreferrer">Apply</a> |
+| American Family Insurance Group | Summer 2027 Data Analyst Intern - Agency Performance, Insights and Operations | WI Madison |  | 2026-10-12 | <a href="https://amfam.wd1.myworkdayjobs.com/AmFamGroupInternCareers/job/WI-Madison/Summer-2027-Data-Analyst-Intern---Agency-Performance--Insights-and-Operations_R39513" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Symbotic | Intern- Data Engineer | USA Wilmington, MA - HQ |  | 2026-10-12 | <a href="https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/Data-Engineer_R7967" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Symbotic | Intern- PhD Applied Scientist, Routing | USA Wilmington, MA - HQ |  | 2026-10-12 | <a href="https://symbotic.wd504.myworkdayjobs.com/Symbotic/job/USA-Wilmington--MA---HQ/PhD-Applied-Scientist--Routing_R7966" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Ascension | Master Data Management Intern | St. Louis, MO |  | 2026-10-12 | <a href="https://jobs.ascension.org/us/en/job/2026-465180" target="_blank" rel="noopener noreferrer">Apply</a> |
@@ -569,23 +540,6 @@ _No listings right now._
 | Chs | Data Analyst Intern | Inver Grove Heights, MN | $17.00 - $25.00 /hr | 2026-10-12 | <a href="https://careers.chsinc.com/job/Inver-Grove-Heights-Data-Analyst-Intern-MN-55077-1721/1439313500/?ats=successfactors" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Western Digital | Spring Co-op - Recording Electronics Data Analytics & Optimization | Rochester, MN, us |  | 2026-10-12 | <a href="https://api.smartrecruiters.com/v1/companies/WesternDigital/postings/744000155109379" target="_blank" rel="noopener noreferrer">Apply</a> |
 | Bosch Group | Internship Data Analytics | Mechelen, Vlaanderen, be | 1116.90/month | 2026-10-12 | <a href="https://api.smartrecruiters.com/v1/companies/BoschGroup/postings/744000155002879" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Expedia Group | Applied Science Intern | Seattle, WA, Austin, TX, San Jose, CA |  | 2026-10-12 | <a href="https://expedia.wd108.myworkdayjobs.com/search/job/Austin-Domain-11---HomeAway/Applied-Science-Intern---PhD---2027---Austin--San-Jose--Seattle_R-110382-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Expedia Group | Applied Science Intern | Seattle, WA, Austin, TX, San Jose, CA |  | 2026-10-12 | <a href="https://expedia.wd108.myworkdayjobs.com/search/job/Austin-Domain-11---HomeAway/Applied-Science-Intern---Masters---2027---Austin--San-Jose--Seattle_R-110379-1" target="_blank" rel="noopener noreferrer">Apply</a> |
-| General Motors | 2027 Summer Intern - Research and Development - AI/Machine Learning | Mountain View, CA, Mountain View, California, United States of America | $10,300–$13,600 monthly | 2026-10-12 | <a href="https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Mountain-View-California-United-States-of-America/XMLNAME-2027-Summer-Intern---Research-and-Development---AI-Machine-Learning_JR-202621620" target="_blank" rel="noopener noreferrer">Apply</a> |
-| General Motors | 2027 Summer Intern - Research and Development - Machine Learning for Automation | Warren, MI, Warren, Michigan, United States of America |  | 2026-10-12 | <a href="https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Research-and-Development---Machine-Learning-for-Automation_JR-202621724" target="_blank" rel="noopener noreferrer">Apply</a> |
-| General Motors | Research and Development Intern - Smart Manufacturing Systems | Warren, MI |  | 2026-10-12 | <a href="https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Summer-2027-Intern---Research-and-Development---Smart-Manufacturing-Systems_JR-202621657" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Johnson & Johnson | IDAR Summer Intern - C&SP | Spring House, PA, Raritan, NJ, Hopewell Township, NJ | $23.50 per hour | 2026-10-12 | <a href="https://jj.wd5.myworkdayjobs.com/JJ/job/Raritan-New-Jersey-United-States-of-America/IDAR-Summer-Intern--C-SP-_R-103534" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Johnson & Johnson | IDAR Summer Intern - Ease | Spring House, PA, Raritan, NJ | $23.50 per hour | 2026-10-12 | <a href="https://jj.wd5.myworkdayjobs.com/JJ/job/Raritan-New-Jersey-United-States-of-America/IDAR-Summer-Intern--EASE-_R-102328" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan | AI & Data Analytics Intern | Franklin, TN, Irving, TX |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/AI---Data-Analytics-Intern---Summer-2027---Irving--TX-or-Franklin--TN_R00214223" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan | Data Science Intern - Summer 2027 - Franklin, TN | Franklin, Tennessee - United States of America |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Data-Science-Intern---Summer-2027---Franklin--TN_R00214250" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan | Data Science Intern - Summer 2027 - Smyrna, TN | Smyrna, Tennessee - United States of America |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/nissanjobs/job/Smyrna-Tennessee---United-States-of-America/Data-Science-Intern---Summer-2027---Smyrna--TN_R00215331" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan | Financial AI Engineering Intern - Summer 2027 - Franklin, TN | Franklin, Tennessee - United States of America |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Financial-AI-Engineering-Intern---Summer-2027---Franklin--TN_R00214241" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan Global | Data Science Intern | Franklin, TN |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Data-Science-Intern---Summer-2027---Franklin--TN_R00214250" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan Global | Data Science Intern | Smyrna, TN |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Smyrna-Tennessee---United-States-of-America/Data-Science-Intern---Summer-2027---Smyrna--TN_R00215331" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Nissan Global | Purchasing Aftersales Intern | Franklin, TN |  | 2026-10-12 | <a href="https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/Purchasing-Aftersales-Intern---Summer-2027---Franklin--TN_R00214278" target="_blank" rel="noopener noreferrer">Apply</a> |
-| NVIDIA | Differentiable Simulation Research Intern | Santa Clara, CA |  | 2026-10-12 | <a href="https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Differentiable-Simulation-Research-Intern---Summer-2027_JR2027561" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Realty Income | Technology Intern | San Diego, CA | $21.00 – $25.00 | 2026-10-12 | <a href="https://realtyincome.wd108.myworkdayjobs.com/realty_income_careers/job/San-Diego-California/Technology-Intern---Multiple-Opportunities_R-100339" target="_blank" rel="noopener noreferrer">Apply</a> |
-| Tiaa | Enterprise Analytics Intern | Dallas, TX, Charlotte, NC | $22.00/hr | 2026-10-12 | <a href="https://tiaa.wd1.myworkdayjobs.com/Search/job/Charlotte-NC-USA/XMLNAME-2027-Early-Talent-Internship--TIAA-Enterprise-Analytics_R261000118-2" target="_blank" rel="noopener noreferrer">Apply</a> |
 
 <a id="summer-2027-cyber-security"></a>
 

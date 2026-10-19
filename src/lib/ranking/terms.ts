@@ -26,12 +26,22 @@ const otherTermPattern =
 
 export function isInternshipTitle(title: string): boolean {
   return (
-    internshipTitle.test(title) &&
-    (!eightMonthTerm.test(title) || fourToEightMonthTerm.test(title))
+    internshipTitle.test(title) && (!eightMonthTerm.test(title) || fourToEightMonthTerm.test(title))
   );
 }
 
+export function titleAdjustedJobTerms(title: string, terms: readonly JobTerm[]): JobTerm[] {
+  if (/\bsummer\b/i.test(title) && !/\b(?:spring|winter)\b/i.test(title)) {
+    return [...new Set(terms.map((term) => (term === "winter-2027" ? "summer-2027" : term)))];
+  }
+  return [...terms];
+}
+
 export function classifyJobTerms(job: Job): JobTerm[] {
+  return titleAdjustedJobTerms(job.title, classifyTerms(job));
+}
+
+function classifyTerms(job: Job): JobTerm[] {
   if (!isInternshipTitle(job.title)) return [];
 
   const titleMatches = jobTerms.filter((term) => termPatterns[term].test(job.title));
