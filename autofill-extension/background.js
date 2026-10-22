@@ -1,5 +1,5 @@
 const LITELLM_URL = "http://127.0.0.1:4000";
-const MODEL = "github_copilot/claude-haiku-5.5";
+const MODEL = "github_copilot/gpt-6-luna";
 
 chrome.storage.local.remove("ai");
 

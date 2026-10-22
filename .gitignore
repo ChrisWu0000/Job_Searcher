@@ -6,5 +6,6 @@ _site/
 *.log
 .env*
 stats.html
+.venv-litellm/
 
 public/resumes/

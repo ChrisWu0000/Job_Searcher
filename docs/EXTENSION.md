@@ -6,8 +6,9 @@
 - The repository downloaded or cloned to your computer
 - For AI-generated long answers only:
   - Python 3.12 recommended
-  - A GitHub Copilot account with access to Claude Haiku 5.5
-  - LiteLLM, installed as described below
+  - A GitHub Copilot account with access to GPT-6 Luna
+  - Bash (Git Bash on Windows, or Bash on macOS/Linux)
+  - LiteLLM, installed automatically by the launcher below
 
 The extension supports Greenhouse, Lever, Ashby, and Workday application pages. Loading the
 extension does not require Bun, Node.js, or a build step.
@@ -27,22 +28,28 @@ pages.
 ## Optional: enable AI answers
 
 The extension sends requests to a local LiteLLM proxy configured for GitHub Copilot's
-`claude-haiku-5.5` model. To install and authorize the proxy, open PowerShell and run:
+`gpt-6-luna` model. From the repository root, open **Git Bash** on Windows (not
+PowerShell), or a Bash terminal on macOS/Linux, and run:
 
-```powershell
-python -m pip install "litellm[proxy]"
-python -c "from litellm.llms.github_copilot.authenticator import Authenticator; Authenticator().get_access_token()"
+```bash
+bash run.sh
 ```
 
-When the sign-in command displays a code, visit <https://github.com/login/device> and authorize
-LiteLLM with your GitHub account. Then start the proxy in PowerShell:
+The launcher creates an isolated `.venv-litellm` environment in the repository, installs missing
+LiteLLM proxy dependencies, checks GitHub authorization, and starts the proxy. Subsequent runs
+reuse the environment and saved authorization. On first sign-in, follow the displayed device
+code instructions at <https://github.com/login/device> to authorize LiteLLM with your account.
+Chrome's **Load unpacked** installation above still needs to be done manually.
 
-```powershell
-$env:LITELLM_DANGEROUSLY_PERMIT_WEAK_OR_UNSET_MASTER_KEY = "true"
-python -m litellm.proxy.proxy_cli --model github_copilot/claude-haiku-5.5 --host 127.0.0.1 --port 4000
+To select a specific Python installation when creating the environment:
+
+```bash
+PYTHON="/path/to/python" bash run.sh
 ```
 
-Keep that PowerShell window open while using AI answers. The proxy is configured without an API
+Keep that terminal open while using AI answers; press **Ctrl+C** to stop the proxy. Run
+`bash run.sh` again whenever you need AI answers after closing the terminal or restarting.
+The proxy is configured without an API
 key, so keep it bound to `127.0.0.1`; do not change the host to `0.0.0.0` or expose it to your
 network.
 

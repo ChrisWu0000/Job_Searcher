@@ -12,9 +12,11 @@ import {
 import { companyCareerSites, fetchCareerPage } from "@/lib/sources/companyCareers";
 import { fetchInternListJobs, internListFeed } from "@/lib/sources/internList";
 import { feedEntries, type PublicJobFeed, publicJobFeeds } from "@/lib/sources/publicFeeds";
+import { nowIso } from "@/lib/time";
 import type { Job } from "@/types/job";
 import { displayCompanyName } from "./companyNames";
 import { payFromHtml, payFromText, textFromHtml } from "./pay";
+import { checkPosting, type PostingCache } from "./postings";
 import { classifyEmploymentRequirements, classifyEmploymentRequirementText } from "./requirements";
 
 export interface Listing {
@@ -93,22 +95,76 @@ async function fetchFeedJobs(
 }
 
 const payLookbackDays = 14;
+const boardProviderIds = new Set<string>(providers.map((provider) => provider.id));
 
-function hasDescription(job: Job): boolean {
-  if (job.detailScrapedAt) return true;
-  const detailText = [
-    job.responsibilities,
-    job.qualifications,
-    ...Object.entries(job.fields ?? {})
-      .filter(([key]) => /description|responsibilit|qualifications?/i.test(key))
-      .map(([, value]) => value),
-  ];
-  if (detailText.some((value) => typeof value === "string" && value.trim().length > 0)) return true;
-  return false;
+function readFromBoardApi(job: Job): boolean {
+  return boardProviderIds.has(job.source ?? "") && job.detailScrapedAt !== undefined;
 }
 
-function needsEligibilityDescription(job: Job, listing: Listing): boolean {
-  return !hasDescription(job) && !(listing.requiresUSCitizenship && listing.noSponsorship);
+export function withPostingText(job: Job, text: string, now: string = nowIso()): Job {
+  const summary = [text, job.summary].filter(Boolean).join("\n");
+  return { ...job, summary, rawText: summary, detailScrapedAt: now };
+}
+
+export interface PostingVerification {
+  listings: Listing[];
+  openedIds: Set<string>;
+  closed: number;
+  failures: string[];
+}
+
+export async function verifyJobPostings(
+  jobs: Job[],
+  fetchImpl: FetchLike,
+  concurrency = 12,
+  cache?: PostingCache,
+): Promise<PostingVerification> {
+  const results: (Listing | undefined)[] = [];
+  const openedIds = new Set<string>();
+  const failures = new Map<string, { count: number; sample: string }>();
+  let closed = 0;
+  let next = 0;
+  const worker = async (): Promise<void> => {
+    while (next < jobs.length) {
+      const index = next++;
+      const job = jobs[index];
+      const initial = job ? toListing(job) : undefined;
+      if (!job?.url || !initial) continue;
+      if (readFromBoardApi(job)) {
+        results[index] = initial;
+        continue;
+      }
+      const check = await checkPosting(job.url, fetchImpl, cache);
+      openedIds.add(initial.id);
+      if (check.status === "closed") {
+        closed++;
+        continue;
+      }
+      if (check.status === "unavailable") {
+        const current = failures.get(check.reason);
+        failures.set(check.reason, {
+          count: (current?.count ?? 0) + 1,
+          sample: current?.sample ?? `${initial.company}: ${initial.title}`,
+        });
+        results[index] = initial;
+        continue;
+      }
+      const listing = toListing(withPostingText(job, check.text));
+      if (!listing) continue;
+      if (!listing.pay && check.pay) listing.pay = check.pay;
+      results[index] = listing;
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, concurrency) }, () => worker()));
+  return {
+    listings: results.filter((listing): listing is Listing => listing !== undefined),
+    openedIds,
+    closed,
+    failures: [...failures].map(
+      ([reason, { count, sample }]) =>
+        `could not open posting (${reason}) for ${count} listing${count === 1 ? "" : "s"} (e.g. ${sample})`,
+    ),
+  };
 }
 
 export async function enrichListingDetails(
@@ -185,57 +241,58 @@ export async function enrichListingDetails(
 export interface ScrapeResult {
   listings: Listing[];
   failures: string[];
+  closed: number;
+}
+
+async function verifiedResult(
+  jobs: Iterable<Job>,
+  fetchImpl: FetchLike,
+  failures: string[],
+  postingCache?: PostingCache,
+): Promise<ScrapeResult> {
+  const verification = await verifyJobPostings([...jobs], fetchImpl, 12, postingCache);
+  failures.push(...verification.failures);
+  const unread = verification.listings.filter((listing) => !verification.openedIds.has(listing.id));
+  failures.push(...(await enrichListingDetails(unread, fetchImpl)));
+  return { listings: verification.listings, failures, closed: verification.closed };
 }
 
 export async function scrapeSource(
   sourceId: string,
   fetchImpl: FetchLike,
   boardConcurrency = 8,
+  postingCache?: PostingCache,
 ): Promise<ScrapeResult> {
   const source = listingSources.find((candidate) => candidate.id === sourceId);
   if (!source) throw new Error(`Unknown source: ${sourceId}`);
   const failures: string[] = [];
-  const listings = new Map<string, Listing>();
+  const jobs = new Map<string, Job>();
+  const addJob = (job: Job): void => {
+    const existing = jobs.get(job.id);
+    if (!existing || (!existing.detailScrapedAt && job.detailScrapedAt)) jobs.set(job.id, job);
+  };
 
   if (source.id === internListFeed.id) {
     try {
-      for (const job of await fetchInternListJobs(fetchImpl)) {
-        const listing = toListing(job);
-        if (listing) listings.set(listing.id, listing);
-      }
+      for (const job of await fetchInternListJobs(fetchImpl)) addJob(job);
     } catch (cause) {
       failures.push(`${source.label}: ${cause instanceof Error ? cause.message : String(cause)}`);
     }
-    return { listings: [...listings.values()], failures };
+    return verifiedResult(jobs.values(), fetchImpl, failures, postingCache);
   }
 
   if (source.kind === "feed") {
     const feed = publicJobFeeds.find((candidate) => candidate.id === source.id);
     if (!feed) throw new Error(`Unknown feed: ${sourceId}`);
-    const eligibilityDescriptionUrls = new Set<string>();
-    for (const job of await fetchFeedJobs(feed, fetchImpl, failures)) {
-      const listing = toListing(job);
-      if (listing) {
-        if (needsEligibilityDescription(job, listing)) eligibilityDescriptionUrls.add(listing.url);
-        listings.set(listing.id, listing);
-      }
-    }
-    const found = [...listings.values()];
-    failures.push(...(await enrichListingDetails(found, fetchImpl, eligibilityDescriptionUrls)));
-    return { listings: found, failures };
+    for (const job of await fetchFeedJobs(feed, fetchImpl, failures)) addJob(job);
+    return verifiedResult(jobs.values(), fetchImpl, failures, postingCache);
   }
 
   if (source.kind === "career-sites") {
-    const sites = [...companyCareerSites];
-    const siteQueue = [...sites];
+    const siteQueue = [...companyCareerSites];
     const boards = new Map<string, PublicBoard>();
-    const eligibilityDescriptionUrls = new Set<string>();
-    const addJob = (job: Job): void => {
-      if (!isInternshipTitle(job.title)) return;
-      const listing = toListing(job);
-      if (!listing) return;
-      if (needsEligibilityDescription(job, listing)) eligibilityDescriptionUrls.add(listing.url);
-      listings.set(listing.id, listing);
+    const addInternship = (job: Job): void => {
+      if (isInternshipTitle(job.title)) addJob(job);
     };
     const siteWorker = async (): Promise<void> => {
       for (let site = siteQueue.shift(); site; site = siteQueue.shift()) {
@@ -244,7 +301,7 @@ export async function scrapeSource(
           failures.push(
             ...discovery.failures.map((failure) => `${site.company} career page: ${failure}`),
           );
-          for (const job of discovery.jobs) addJob(job);
+          for (const job of discovery.jobs) addInternship(job);
           for (const board of discovery.boards) boards.set(board.id, board);
         } catch (cause) {
           failures.push(
@@ -259,7 +316,7 @@ export async function scrapeSource(
     const boardWorker = async (): Promise<void> => {
       for (let board = boardQueue.shift(); board; board = boardQueue.shift()) {
         try {
-          for (const job of await fetchPublicBoardJobs(board, fetchImpl)) addJob(job);
+          for (const job of await fetchPublicBoardJobs(board, fetchImpl)) addInternship(job);
         } catch (cause) {
           failures.push(
             `${board.provider} ${board.label}: ${cause instanceof Error ? cause.message : String(cause)}`,
@@ -268,9 +325,7 @@ export async function scrapeSource(
       }
     };
     await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => boardWorker()));
-    const found = [...listings.values()];
-    failures.push(...(await enrichListingDetails(found, fetchImpl, eligibilityDescriptionUrls)));
-    return { listings: found, failures };
+    return verifiedResult(jobs.values(), fetchImpl, failures, postingCache);
   }
 
   const seeds: Job[] = [];
@@ -289,18 +344,10 @@ export async function scrapeSource(
         .map((board) => [board.id, board]),
     ).values(),
   ];
-  const eligibilityDescriptionUrls = new Set<string>();
   const worker = async (): Promise<void> => {
     for (let board = queue.shift(); board; board = queue.shift()) {
       try {
-        for (const job of await fetchPublicBoardJobs(board, fetchImpl)) {
-          const listing = toListing(job);
-          if (listing) {
-            if (needsEligibilityDescription(job, listing))
-              eligibilityDescriptionUrls.add(listing.url);
-            listings.set(listing.id, listing);
-          }
-        }
+        for (const job of await fetchPublicBoardJobs(board, fetchImpl)) addJob(job);
       } catch (cause) {
         failures.push(
           `${board.provider} ${board.label}: ${cause instanceof Error ? cause.message : String(cause)}`,
@@ -309,7 +356,5 @@ export async function scrapeSource(
     }
   };
   await Promise.all(Array.from({ length: Math.max(1, boardConcurrency) }, () => worker()));
-  const found = [...listings.values()];
-  failures.push(...(await enrichListingDetails(found, fetchImpl, eligibilityDescriptionUrls)));
-  return { listings: found, failures };
+  return verifiedResult(jobs.values(), fetchImpl, failures, postingCache);
 }

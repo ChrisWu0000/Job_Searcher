@@ -136,6 +136,162 @@ describe("classifyJobTerms", () => {
       ),
     ).toEqual([]);
   });
+
+  it.each([
+    ["The internship runs May - Aug 2027.", ["summer-2027"]],
+    ["Dates: 28th June 2027 - 17th September 2027", ["summer-2027"]],
+    ["Work term: May 4 to August 28, 2027", ["summer-2027"]],
+    ["Duration: January 4 – April 30, 2027", ["winter-2027"]],
+    ["This co-op runs Jan. 2027 through Apr. 2027.", ["winter-2027"]],
+    ["Placement: Sept 2027 - Dec 2027", ["later"]],
+    ["Start date: June 1, 2027", ["summer-2027"]],
+    ["Available positions: Summer and Fall 2027", ["summer-2027", "later"]],
+    ["Join our 2027 summer program.", ["summer-2027"]],
+  ] as const)("reads the term from the description: %s", (summary, expected) => {
+    expect(classifyJobTerms(makeJob("j", { title: "Software Engineer Co-op", summary }))).toEqual(
+      expected,
+    );
+  });
+
+  it("uses the start of a date range rather than the end", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Engineering Intern", summary: "February - May 2027" }),
+      ),
+    ).toEqual([]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Engineering Intern", summary: "May - September 2027" }),
+      ),
+    ).toEqual(["summer-2027"]);
+  });
+
+  it("ignores graduation, deadline, and interview dates", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Software Engineer Intern",
+          summary: [
+            "This is a 12-week internship from May to August 2027.",
+            "Candidates must be graduating in December 2027 or later.",
+            "Applications close November 30, 2026; interviews in January 2027.",
+          ].join("\n"),
+        }),
+      ),
+    ).toEqual(["summer-2027"]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Software Engineer Intern",
+          summary: "Open to students with an expected graduation date of May 2028.",
+        }),
+      ),
+    ).toEqual(["winter-2027", "summer-2027"]);
+  });
+
+  it.each([
+    [
+      "Applicants should be available for an 8-month co-op period from January 2027 to end of August 2027.",
+      ["winter-2027"],
+    ],
+    [
+      "Must be available for the full program dates: 21st June – 27th August 2027.\nMust be graduating with an undergraduate or master's degree in a technical subject (e.g. Computer Science, Information Technology) between December 2027 and July 2028",
+      ["summer-2027"],
+    ],
+    [
+      "Programme starts: June 2027. You are due to complete your degree on or before summer 2028.",
+      ["summer-2027"],
+    ],
+    [
+      "A 12-week internship starting in May 2027 and ending August 2027 in the Toronto office.",
+      ["summer-2027"],
+    ],
+    [
+      "Available to work 20 hours/week during spring/fall semesters or 40 hours/week during summer.",
+      ["winter-2027", "summer-2027"],
+    ],
+    ["Benefits shown are current *As of July 2026.", ["winter-2027", "summer-2027"]],
+    [
+      "Dates : 10 week program, starting June 7th 2027 - August 13th, 2027.\nRising juniors, or students expected to be ready for full time employment between December 2027 - June 2028",
+      ["summer-2027"],
+    ],
+    [
+      "2027 Internship Program Dates: May/June–August/September 2027. Final dates will be based on student schedules.",
+      ["summer-2027"],
+    ],
+    [
+      "University - 2027 Summer Games, Systems Engineer Intern\nScheduled to obtain a Bachelor's degree in a Technology field by Summer 2028 or Summer 2029",
+      ["summer-2027"],
+    ],
+    [
+      "Grad Intern – Machine Learning Engineer (Summer 2027)\nMust be available to commit to future full-time employment by July 2028, if offered",
+      ["summer-2027"],
+    ],
+    [
+      "This internship spans ten weeks from June through August 2027. Currently pursuing an MBA with an expectation that your degree will be obtained by August 2028 or earlier",
+      ["summer-2027"],
+    ],
+    [
+      "We are offering Spring, Summer, and Fall 2027 research internships.",
+      ["winter-2027", "summer-2027", "later"],
+    ],
+  ] as const)("reads real posting wording: %s", (summary, expected) => {
+    expect(
+      classifyJobTerms(makeJob("j", { title: "Software Engineering Co-op", summary })),
+    ).toEqual(expected);
+  });
+
+  it("does not treat off-cycle internships as summer roles", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Off Cycle Internship Programme 2027",
+          summary: "More in-depth exposure compared to our summer internships.",
+        }),
+      ),
+    ).toEqual(["winter-2027", "summer-2027"]);
+  });
+
+  it("drops postings whose dates are for a past term", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Data & Analytics Intern",
+          summary:
+            "This 12-week Internship Program (May 18-Aug 7, 2026) is a gateway to full-time roles. Expected graduation date of May 2027.",
+        }),
+      ),
+    ).toEqual([]);
+  });
+
+  it("prefers dates in the posting over listed feed terms", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Software Engineer Co-op",
+          terms: ["Winter 2027"],
+          summary: "This co-op runs May - Aug 2027.",
+        }),
+      ),
+    ).toEqual(["summer-2027"]);
+  });
+
+  it("uses season keywords when the posting has no year", () => {
+    expect(
+      classifyJobTerms(
+        makeJob("j", {
+          title: "Software Engineer Intern",
+          summary: "Join us for a 12-week summer internship in London.",
+        }),
+      ),
+    ).toEqual(["summer-2027"]);
+    expect(
+      classifyJobTerms(
+        makeJob("j", { title: "Software Co-op", summary: "Work term: May - August." }),
+      ),
+    ).toEqual(["summer-2027"]);
+    expect(classifyJobTerms(makeJob("j", { title: "Fall Co-op - Firmware" }))).toEqual(["later"]);
+  });
 });
 
 describe("feed terms", () => {

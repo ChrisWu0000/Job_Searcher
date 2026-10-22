@@ -218,6 +218,12 @@ function descriptionFor(row: Record<string, unknown>): string | undefined {
     text(row.responsibilities) ?? text(row.responsibility),
     text(row.qualifications) ?? text(row.qualification),
     text(row.requirements),
+    ...(Array.isArray(row.lists)
+      ? row.lists.map((entry) =>
+          [nestedText(entry, "text"), nestedText(entry, "content")].filter(Boolean).join("\n"),
+        )
+      : []),
+    text(row.additionalPlain) ?? text(row.additional),
   ]
     .filter((value): value is string => Boolean(value))
     .map((value) =>
